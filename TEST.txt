@@ -1,1 +1,9 @@
+<<<<<<< HEAD
 fhghghghgh
+=======
+<<<<<<< HEAD
+Randy
+=======
+KRISTEN
+>>>>>>> cea72c4b1fe72baa8095e42dce161cba1db69b55
+>>>>>>> 8ff42f7d053eb67d297d32efb61a0cfa91892fb2
