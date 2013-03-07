@@ -15,14 +15,6 @@ public class Agent {
     private int trn, phone;
     private Newspaper[] newspaperArr;
     private String fname, lname, password;
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
     private Date dob;
 
     public Agent(int trn, int phone, String fname, String lname, String password, Date dob,int numPaper) {
@@ -35,7 +27,10 @@ public class Agent {
         newspaperArr = new Newspaper[numPaper];
     }
     
-    public void addNewspaperToArray(){}
+    public void addNewspaperToArray(Newspaper[] papers){
+        newspaperArr = papers;
+    }
+    
     public int getTrn() {
         return trn;
     }
@@ -74,6 +69,14 @@ public class Agent {
 
     public void setDob(Date dob) {
         this.dob = dob;
+    }
+    
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
     
 }
