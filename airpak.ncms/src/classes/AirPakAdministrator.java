@@ -1,21 +1,27 @@
-/*
+ /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
 package classes;
+
+import java.util.Date;
 
 /**
  *
  * @author Matt
  */
 public class AirPakAdministrator {
-    private String firstName, lastName;
+    private String firstName, lastName, address;
+    private Date dob;
     private int trn;
     
-    public AirPakAdministrator(String fname, String lname, int trn){
+    public AirPakAdministrator(String fname, String lname, String add, int trn, Date dob){
         firstName = fname;
         lastName = lname;
         this.trn = trn;
+        address = add;
+        this.dob = dob;
+        
     }
     
     public String getFirstName() {
@@ -40,5 +46,21 @@ public class AirPakAdministrator {
 
     public void setTrn(int trn) {
         this.trn = trn;
+    }
+    
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public Date getDob() {
+        return dob;
+    }
+
+    public void setDob(Date dob) {
+        this.dob = dob;
     }
 }
