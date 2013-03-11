@@ -50,7 +50,7 @@ public class CRUD_Manifest{
     
     public void read() throws Exception
     {
-        PreparedStatement statement = conn.prepareStatement("select * from Manifests");
+        PreparedStatement statement = conn.prepareStatement("select * from Manifest");
         ResultSet result = statement.executeQuery();
         System.out.println("SQL query executed.");
         while (result.next())

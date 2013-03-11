@@ -16,12 +16,14 @@ public class Manifest {
     private ArrayList <Agent> agents;
     private TruckDriver driver;
     private String hubAddress;
+    private Newspaper[] papers;
 
-    public Manifest(int id, TruckDriver driver, String hubAddress) {
+    public Manifest(int id, TruckDriver driver, String hubAddress, int numPapers) {
         this.id = id;
         this.driver = driver;
         this.hubAddress = hubAddress;
         agents = new ArrayList();
+        papers = new Newspaper[numPapers];
     }
 
     public int getId() {
@@ -79,5 +81,17 @@ public class Manifest {
         this.hubAddress = hubAddress;
     }   
     
+    public Newspaper[] getPapers() {
+        return papers;
+    }
+
+    public void setPapers(Newspaper[] papers) {
+        this.papers = papers;
+    }
+    
+    public void addPaper (Newspaper paper, int i)
+    {
+        papers[i] = paper;
+    }
     
 }
