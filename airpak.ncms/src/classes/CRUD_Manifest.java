@@ -4,6 +4,7 @@
  */
 package classes;
 import java.sql.*;
+import javax.sql.*;
 /**
  *
  * @author Kris
@@ -15,9 +16,11 @@ public class CRUD_Manifest{
     
     public static Connection getConnection() throws SQLException, ClassNotFoundException
     {
+        System.out.println("In getConnection()");
+        
         String driver = "com.microsoft.jdbc.sqlserver.SQLServerDriver";
         Class.forName(driver);
-        Connection conn = DriverManager.getConnection("localhost\\sqlexpress");
+        Connection conn = DriverManager.getConnection("localhost\\sqlexpress\\NCMS");
         //Connection conn = database.getConnection();
         return conn;
     }
@@ -51,6 +54,7 @@ public class CRUD_Manifest{
     
     public static void read() throws Exception
     {
+        Connection conn = getConnection();
         statement = conn.prepareCall("{call GetAllManifest()}");
         //PreparedStatement statement = conn.prepareStatement("select * from Manifest");
         ResultSet result = statement.executeQuery();
