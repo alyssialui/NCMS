@@ -10,13 +10,14 @@ import java.sql.*;
  */
 public class CRUD_Manifest{
     
-    Connection conn;
+    private static Connection conn;
+    private static PreparedStatement statement;
     
     public static Connection getConnection() throws SQLException, ClassNotFoundException
     {
         String driver = "com.microsoft.jdbc.sqlserver.SQLServerDriver";
         Class.forName(driver);
-        Connection conn = DriverManager.getConnection("localhost");
+        Connection conn = DriverManager.getConnection("localhost\\sqlexpress");
         //Connection conn = database.getConnection();
         return conn;
     }
@@ -29,7 +30,7 @@ public class CRUD_Manifest{
     }
   
     public void create(Manifest man) throws Exception{
-        PreparedStatement statement = conn.prepareStatement("INSERT INTO Manifest"
+        statement = conn.prepareStatement("INSERT INTO Manifest"
                 + "VALUES(" + man.getId() + ", " 
                             + man.getDriver().getTrn() + ", "
                             + man.getHubAddress() + ")");
@@ -48,9 +49,10 @@ public class CRUD_Manifest{
         }
     }
     
-    public void read() throws Exception
+    public static void read() throws Exception
     {
-        PreparedStatement statement = conn.prepareStatement("select * from Manifest");
+        statement = conn.prepareCall("{call GetAllManifest()}");
+        //PreparedStatement statement = conn.prepareStatement("select * from Manifest");
         ResultSet result = statement.executeQuery();
         System.out.println("SQL query executed.");
         while (result.next())
@@ -59,8 +61,7 @@ public class CRUD_Manifest{
             result.getString(1) + " " + 
             result.getString(2) + " " + 
             result.getString(3) + " " + 
-            result.getString(4) + " " + 
-            result.getString(5));
+            result.getString(4));
         }
     } 
     
