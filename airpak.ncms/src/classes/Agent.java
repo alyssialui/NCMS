@@ -14,12 +14,24 @@ import java.util.Date;
 public class Agent {
     private int trn, phone;
     private Newspaper[] newspaperArr;
-    private String fname, lname, password;
+    private String fname, lname, cname, password;
     private Date dob;
 
     public Agent(int trn, int phone, String fname, String lname, String password, Date dob,int numPaper) {
         this.trn = trn;
         this.phone = phone;
+        this.fname = fname;
+        this.lname = lname;
+        this.password = password;
+        this.dob = dob;
+        newspaperArr = new Newspaper[numPaper];
+    }
+    
+    public Agent(int trn, int phone, String cname, String fname, String lname, String password, Date dob, int numPaper)
+    {
+        this.trn = trn;
+        this.phone = phone;
+        this.cname = cname;
         this.fname = fname;
         this.lname = lname;
         this.password = password;
