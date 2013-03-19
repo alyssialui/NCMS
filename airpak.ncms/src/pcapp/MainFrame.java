@@ -35,10 +35,49 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         backgroundPanel = new javax.swing.JPanel();
         loginPanel = new javax.swing.JPanel();
+        welcomeToNCMSLabel = new javax.swing.JLabel();
         loginButton = new javax.swing.JButton();
+        loginUsernameLabel = new javax.swing.JLabel();
+        loginPasswordLabel = new javax.swing.JLabel();
+        loginUsernameField = new javax.swing.JTextField();
+        loginPasswordField = new javax.swing.JPasswordField();
         homePanel = new javax.swing.JPanel();
         welcomeLabel = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        addUserButton = new javax.swing.JButton();
+        homeIdlePanel = new javax.swing.JPanel();
+        selectionPanel = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        addUserPanel = new javax.swing.JPanel();
+        addUsernameLabel = new javax.swing.JLabel();
+        addUsernameField = new javax.swing.JTextField();
+        addPasswordLabel = new javax.swing.JLabel();
+        addConfirmPasswordLabel = new javax.swing.JLabel();
+        addPasswordField = new javax.swing.JPasswordField();
+        addConfirmPasswordField = new javax.swing.JPasswordField();
+        addfname = new javax.swing.JLabel();
+        addfnameField = new javax.swing.JTextField();
+        addlname = new javax.swing.JLabel();
+        addlnameField = new javax.swing.JTextField();
+        addUserSubmitButton = new javax.swing.JButton();
+        addUserCancelButton = new javax.swing.JButton();
+        manifestPanel = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        addNewspaperPanel = new javax.swing.JPanel();
+        addNewspaperNameLabel = new javax.swing.JLabel();
+        addNewspaperNameField = new javax.swing.JTextField();
+        addPublisherNameLabel = new javax.swing.JLabel();
+        addPublisherNameField = new javax.swing.JTextField();
+        addNewspaperOkButton = new javax.swing.JButton();
+        addNewspaperCancelButton = new javax.swing.JButton();
+        trackNewspaperPanel = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        generateInvoicesPanel = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        generateManifestButton = new javax.swing.JButton();
+        addNewspaperButton = new javax.swing.JButton();
+        trackNewspaperButton = new javax.swing.JButton();
+        generateInvoicesButton = new javax.swing.JButton();
+        logoutButton = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
         exitMenuItem = new javax.swing.JMenuItem();
@@ -52,11 +91,16 @@ public class MainFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("AirPak NCMS");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setPreferredSize(Toolkit.getDefaultToolkit().getScreenSize());
 
         backgroundPanel.setBackground(new java.awt.Color(255, 255, 255));
         backgroundPanel.setPreferredSize(new java.awt.Dimension(150, 150));
         backgroundPanel.setLayout(new java.awt.CardLayout());
+
+        loginPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        welcomeToNCMSLabel.setFont(new java.awt.Font("Myriad Pro", 0, 24)); // NOI18N
+        welcomeToNCMSLabel.setText("Welcome To NCMS");
+        loginPanel.add(welcomeToNCMSLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, -1, -1));
 
         loginButton.setText("Login");
         loginButton.addActionListener(new java.awt.event.ActionListener() {
@@ -64,52 +108,352 @@ public class MainFrame extends javax.swing.JFrame {
                 loginButtonActionPerformed(evt);
             }
         });
+        loginPanel.add(loginButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 180, -1, -1));
 
-        javax.swing.GroupLayout loginPanelLayout = new javax.swing.GroupLayout(loginPanel);
-        loginPanel.setLayout(loginPanelLayout);
-        loginPanelLayout.setHorizontalGroup(
-            loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(loginPanelLayout.createSequentialGroup()
-                .addGap(163, 163, 163)
-                .addComponent(loginButton)
-                .addContainerGap(43, Short.MAX_VALUE))
-        );
-        loginPanelLayout.setVerticalGroup(
-            loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginPanelLayout.createSequentialGroup()
-                .addContainerGap(176, Short.MAX_VALUE)
-                .addComponent(loginButton)
-                .addGap(80, 80, 80))
-        );
+        loginUsernameLabel.setFont(new java.awt.Font("Myriad Pro", 0, 14)); // NOI18N
+        loginUsernameLabel.setText("Username");
+        loginPanel.add(loginUsernameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, -1, -1));
+
+        loginPasswordLabel.setFont(new java.awt.Font("Myriad Pro", 0, 14)); // NOI18N
+        loginPasswordLabel.setText("Password");
+        loginPanel.add(loginPasswordLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, -1, -1));
+        loginPanel.add(loginUsernameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, 110, -1));
+
+        loginPasswordField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loginPasswordFieldActionPerformed(evt);
+            }
+        });
+        loginPanel.add(loginPasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 110, -1));
 
         backgroundPanel.add(loginPanel, "loginCard");
 
         welcomeLabel.setText("Welcome To The Homescreen");
 
-        jButton2.setText("jButton2");
+        addUserButton.setText("Add User");
+        addUserButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addUserButtonActionPerformed(evt);
+            }
+        });
+
+        homeIdlePanel.setBackground(new java.awt.Color(255, 255, 255));
+        homeIdlePanel.setLayout(new java.awt.CardLayout());
+
+        jLabel1.setText("Please select an option from the left.");
+
+        javax.swing.GroupLayout selectionPanelLayout = new javax.swing.GroupLayout(selectionPanel);
+        selectionPanel.setLayout(selectionPanelLayout);
+        selectionPanelLayout.setHorizontalGroup(
+            selectionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 210, Short.MAX_VALUE)
+            .addGroup(selectionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(selectionPanelLayout.createSequentialGroup()
+                    .addGap(0, 6, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 7, Short.MAX_VALUE)))
+        );
+        selectionPanelLayout.setVerticalGroup(
+            selectionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 239, Short.MAX_VALUE)
+            .addGroup(selectionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(selectionPanelLayout.createSequentialGroup()
+                    .addGap(0, 1, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 2, Short.MAX_VALUE)))
+        );
+
+        homeIdlePanel.add(selectionPanel, "selectionCard");
+
+        addUsernameLabel.setText("Username");
+
+        addPasswordLabel.setText("Password");
+
+        addConfirmPasswordLabel.setText("Confirm Password");
+
+        addfname.setText("First Name");
+
+        addlname.setText("Last Name");
+
+        addUserSubmitButton.setText("OK");
+
+        addUserCancelButton.setText("Cancel");
+        addUserCancelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addUserCancelButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout addUserPanelLayout = new javax.swing.GroupLayout(addUserPanel);
+        addUserPanel.setLayout(addUserPanelLayout);
+        addUserPanelLayout.setHorizontalGroup(
+            addUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(addUserPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(addUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(addUserSubmitButton)
+                    .addGroup(addUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(addUsernameLabel)
+                        .addComponent(addPasswordLabel)
+                        .addComponent(addConfirmPasswordLabel)
+                        .addComponent(addfname)
+                        .addComponent(addlname)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(addUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(addUserPanelLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(addUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(addfnameField)
+                            .addComponent(addUsernameField)
+                            .addComponent(addPasswordField)
+                            .addComponent(addConfirmPasswordField, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE)
+                            .addComponent(addlnameField)))
+                    .addGroup(addUserPanelLayout.createSequentialGroup()
+                        .addComponent(addUserCancelButton)
+                        .addGap(0, 29, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        addUserPanelLayout.setVerticalGroup(
+            addUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(addUserPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(addUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addfname)
+                    .addComponent(addfnameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(addUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addlname)
+                    .addComponent(addlnameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(addUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addUsernameLabel)
+                    .addComponent(addUsernameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(addUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addPasswordLabel)
+                    .addComponent(addPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(addUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addConfirmPasswordLabel)
+                    .addComponent(addConfirmPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(70, 70, 70)
+                .addGroup(addUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addUserSubmitButton)
+                    .addComponent(addUserCancelButton))
+                .addContainerGap())
+        );
+
+        homeIdlePanel.add(addUserPanel, "addUserCard");
+
+        jLabel3.setText("E-manifest Management Panel");
+
+        javax.swing.GroupLayout manifestPanelLayout = new javax.swing.GroupLayout(manifestPanel);
+        manifestPanel.setLayout(manifestPanelLayout);
+        manifestPanelLayout.setHorizontalGroup(
+            manifestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 210, Short.MAX_VALUE)
+            .addGroup(manifestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(manifestPanelLayout.createSequentialGroup()
+                    .addGap(0, 6, Short.MAX_VALUE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 7, Short.MAX_VALUE)))
+        );
+        manifestPanelLayout.setVerticalGroup(
+            manifestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 239, Short.MAX_VALUE)
+            .addGroup(manifestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(manifestPanelLayout.createSequentialGroup()
+                    .addGap(0, 1, Short.MAX_VALUE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 2, Short.MAX_VALUE)))
+        );
+
+        homeIdlePanel.add(manifestPanel, "manifestCard");
+
+        addNewspaperNameLabel.setText("Newspaper");
+
+        addPublisherNameLabel.setText("Publisher");
+
+        addNewspaperOkButton.setText("OK");
+
+        addNewspaperCancelButton.setText("Cancel");
+        addNewspaperCancelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addNewspaperCancelButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout addNewspaperPanelLayout = new javax.swing.GroupLayout(addNewspaperPanel);
+        addNewspaperPanel.setLayout(addNewspaperPanelLayout);
+        addNewspaperPanelLayout.setHorizontalGroup(
+            addNewspaperPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(addNewspaperPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(addNewspaperPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(addNewspaperOkButton)
+                    .addGroup(addNewspaperPanelLayout.createSequentialGroup()
+                        .addGroup(addNewspaperPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(addNewspaperNameLabel)
+                            .addComponent(addPublisherNameLabel))
+                        .addGap(35, 35, 35)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(addNewspaperPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(addNewspaperPanelLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(addNewspaperPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(addNewspaperNameField, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE)
+                            .addComponent(addPublisherNameField)))
+                    .addGroup(addNewspaperPanelLayout.createSequentialGroup()
+                        .addComponent(addNewspaperCancelButton)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        addNewspaperPanelLayout.setVerticalGroup(
+            addNewspaperPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(addNewspaperPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(addNewspaperPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addNewspaperNameLabel)
+                    .addComponent(addNewspaperNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(addNewspaperPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addPublisherNameLabel)
+                    .addComponent(addPublisherNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 148, Short.MAX_VALUE)
+                .addGroup(addNewspaperPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addNewspaperOkButton)
+                    .addComponent(addNewspaperCancelButton))
+                .addContainerGap())
+        );
+
+        homeIdlePanel.add(addNewspaperPanel, "addNewspaperCard");
+
+        jLabel4.setText("Track Newspapers Panel");
+
+        javax.swing.GroupLayout trackNewspaperPanelLayout = new javax.swing.GroupLayout(trackNewspaperPanel);
+        trackNewspaperPanel.setLayout(trackNewspaperPanelLayout);
+        trackNewspaperPanelLayout.setHorizontalGroup(
+            trackNewspaperPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 210, Short.MAX_VALUE)
+            .addGroup(trackNewspaperPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(trackNewspaperPanelLayout.createSequentialGroup()
+                    .addGap(0, 6, Short.MAX_VALUE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 7, Short.MAX_VALUE)))
+        );
+        trackNewspaperPanelLayout.setVerticalGroup(
+            trackNewspaperPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 239, Short.MAX_VALUE)
+            .addGroup(trackNewspaperPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(trackNewspaperPanelLayout.createSequentialGroup()
+                    .addGap(0, 1, Short.MAX_VALUE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 2, Short.MAX_VALUE)))
+        );
+
+        homeIdlePanel.add(trackNewspaperPanel, "trackNewspapersCard");
+
+        jLabel5.setText("Generate Invoices here.");
+
+        javax.swing.GroupLayout generateInvoicesPanelLayout = new javax.swing.GroupLayout(generateInvoicesPanel);
+        generateInvoicesPanel.setLayout(generateInvoicesPanelLayout);
+        generateInvoicesPanelLayout.setHorizontalGroup(
+            generateInvoicesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 210, Short.MAX_VALUE)
+            .addGroup(generateInvoicesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(generateInvoicesPanelLayout.createSequentialGroup()
+                    .addGap(0, 6, Short.MAX_VALUE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 7, Short.MAX_VALUE)))
+        );
+        generateInvoicesPanelLayout.setVerticalGroup(
+            generateInvoicesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 239, Short.MAX_VALUE)
+            .addGroup(generateInvoicesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(generateInvoicesPanelLayout.createSequentialGroup()
+                    .addGap(0, 1, Short.MAX_VALUE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 2, Short.MAX_VALUE)))
+        );
+
+        homeIdlePanel.add(generateInvoicesPanel, "generateInvoicesCard");
+
+        generateManifestButton.setText("E-Manifests");
+        generateManifestButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                generateManifestButtonActionPerformed(evt);
+            }
+        });
+
+        addNewspaperButton.setText("Add Newspaper");
+        addNewspaperButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addNewspaperButtonActionPerformed(evt);
+            }
+        });
+
+        trackNewspaperButton.setText("Track Newspapers");
+        trackNewspaperButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                trackNewspaperButtonActionPerformed(evt);
+            }
+        });
+
+        generateInvoicesButton.setText("Generate Invoices");
+        generateInvoicesButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                generateInvoicesButtonActionPerformed(evt);
+            }
+        });
+
+        logoutButton.setText("Log Out");
+        logoutButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logoutButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout homePanelLayout = new javax.swing.GroupLayout(homePanel);
         homePanel.setLayout(homePanelLayout);
         homePanelLayout.setHorizontalGroup(
             homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(homePanelLayout.createSequentialGroup()
-                .addGroup(homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(homePanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButton2))
-                    .addGroup(homePanelLayout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addComponent(welcomeLabel)))
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(trackNewspaperButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(generateManifestButton, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(addNewspaperButton, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(addUserButton, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(generateInvoicesButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(logoutButton))
+                .addGap(37, 37, 37)
+                .addComponent(homeIdlePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(homePanelLayout.createSequentialGroup()
+                .addGap(109, 109, 109)
+                .addComponent(welcomeLabel)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         homePanelLayout.setVerticalGroup(
             homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(homePanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(welcomeLabel)
-                .addGap(15, 15, 15)
-                .addComponent(jButton2)
-                .addContainerGap(216, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(homePanelLayout.createSequentialGroup()
+                        .addComponent(addUserButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(addNewspaperButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(generateManifestButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(trackNewspaperButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(generateInvoicesButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(logoutButton))
+                    .addComponent(homeIdlePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         backgroundPanel.add(homePanel, "homeCard");
@@ -143,11 +487,11 @@ public class MainFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(backgroundPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 263, Short.MAX_VALUE)
+            .addComponent(backgroundPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 378, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(backgroundPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 279, Short.MAX_VALUE)
+            .addComponent(backgroundPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 282, Short.MAX_VALUE)
         );
 
         pack();
@@ -161,8 +505,59 @@ public class MainFrame extends javax.swing.JFrame {
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout)(backgroundPanel.getLayout());
-    c.show(backgroundPanel, "homeCard");
+        c.show(backgroundPanel, "homeCard");
     }//GEN-LAST:event_loginButtonActionPerformed
+
+    private void loginPasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginPasswordFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_loginPasswordFieldActionPerformed
+
+    private void addUserButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addUserButtonActionPerformed
+        // TODO add your handling code here:
+        CardLayout c = (CardLayout)(homeIdlePanel.getLayout());
+        c.show(homeIdlePanel, "addUserCard");
+    }//GEN-LAST:event_addUserButtonActionPerformed
+
+    private void generateManifestButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generateManifestButtonActionPerformed
+        // TODO add your handling code here:
+        CardLayout c = (CardLayout)(homeIdlePanel.getLayout());
+        c.show(homeIdlePanel, "manifestCard");
+    }//GEN-LAST:event_generateManifestButtonActionPerformed
+
+    private void addNewspaperButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNewspaperButtonActionPerformed
+        // TODO add your handling code here:
+        CardLayout c = (CardLayout)(homeIdlePanel.getLayout());
+        c.show(homeIdlePanel, "addNewspaperCard");
+    }//GEN-LAST:event_addNewspaperButtonActionPerformed
+
+    private void addUserCancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addUserCancelButtonActionPerformed
+        // TODO add your handling code here:
+        CardLayout c = (CardLayout)(homeIdlePanel.getLayout());
+        c.show(homeIdlePanel, "selectionCard");
+    }//GEN-LAST:event_addUserCancelButtonActionPerformed
+
+    private void addNewspaperCancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNewspaperCancelButtonActionPerformed
+        // TODO add your handling code here:
+        CardLayout c = (CardLayout)(homeIdlePanel.getLayout());
+        c.show(homeIdlePanel, "selectionCard");
+    }//GEN-LAST:event_addNewspaperCancelButtonActionPerformed
+
+    private void trackNewspaperButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_trackNewspaperButtonActionPerformed
+        // TODO add your handling code here:
+        CardLayout c = (CardLayout)(homeIdlePanel.getLayout());
+        c.show(homeIdlePanel, "trackNewspapersCard");
+    }//GEN-LAST:event_trackNewspaperButtonActionPerformed
+
+    private void generateInvoicesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generateInvoicesButtonActionPerformed
+        // TODO add your handling code here:
+        CardLayout c = (CardLayout)(homeIdlePanel.getLayout());
+        c.show(homeIdlePanel, "generateInvoicesCard");
+    }//GEN-LAST:event_generateInvoicesButtonActionPerformed
+
+    private void logoutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutButtonActionPerformed
+        // TODO add your handling code here:
+
+   }//GEN-LAST:event_logoutButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -208,16 +603,55 @@ public class MainFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem aboutAirpakMenuItem;
     private javax.swing.JMenuItem aboutNCMSMenuItem;
+    private javax.swing.JPasswordField addConfirmPasswordField;
+    private javax.swing.JLabel addConfirmPasswordLabel;
+    private javax.swing.JButton addNewspaperButton;
+    private javax.swing.JButton addNewspaperCancelButton;
+    private javax.swing.JTextField addNewspaperNameField;
+    private javax.swing.JLabel addNewspaperNameLabel;
+    private javax.swing.JButton addNewspaperOkButton;
+    private javax.swing.JPanel addNewspaperPanel;
+    private javax.swing.JPasswordField addPasswordField;
+    private javax.swing.JLabel addPasswordLabel;
+    private javax.swing.JTextField addPublisherNameField;
+    private javax.swing.JLabel addPublisherNameLabel;
+    private javax.swing.JButton addUserButton;
+    private javax.swing.JButton addUserCancelButton;
+    private javax.swing.JPanel addUserPanel;
+    private javax.swing.JButton addUserSubmitButton;
+    private javax.swing.JTextField addUsernameField;
+    private javax.swing.JLabel addUsernameLabel;
+    private javax.swing.JLabel addfname;
+    private javax.swing.JTextField addfnameField;
+    private javax.swing.JLabel addlname;
+    private javax.swing.JTextField addlnameField;
     private javax.swing.JPanel backgroundPanel;
     private javax.swing.JMenuItem exitMenuItem;
     private javax.swing.JMenu fileMenu;
+    private javax.swing.JButton generateInvoicesButton;
+    private javax.swing.JPanel generateInvoicesPanel;
+    private javax.swing.JButton generateManifestButton;
     private javax.swing.JMenu helpMenu;
+    private javax.swing.JPanel homeIdlePanel;
     private javax.swing.JPanel homePanel;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JButton loginButton;
     private javax.swing.JPanel loginPanel;
+    private javax.swing.JPasswordField loginPasswordField;
+    private javax.swing.JLabel loginPasswordLabel;
+    private javax.swing.JTextField loginUsernameField;
+    private javax.swing.JLabel loginUsernameLabel;
+    private javax.swing.JButton logoutButton;
+    private javax.swing.JPanel manifestPanel;
+    private javax.swing.JPanel selectionPanel;
+    private javax.swing.JButton trackNewspaperButton;
+    private javax.swing.JPanel trackNewspaperPanel;
     private javax.swing.JLabel welcomeLabel;
+    private javax.swing.JLabel welcomeToNCMSLabel;
     // End of variables declaration//GEN-END:variables
 }
