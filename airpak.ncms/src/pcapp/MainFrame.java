@@ -4,8 +4,13 @@
  */
 package pcapp;
 
+<<<<<<< HEAD
 import java.awt.CardLayout;
+=======
+import classes.CRUD_Manifest;
+>>>>>>> 55ffa0c41d1833cd12e0026e662990a7a8250773
 import java.awt.Toolkit;
+import java.util.*;
 
 /**
  *
@@ -34,6 +39,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabel2 = new javax.swing.JLabel();
         backgroundPanel = new javax.swing.JPanel();
+<<<<<<< HEAD
         loginPanel = new javax.swing.JPanel();
         welcomeToNCMSLabel = new javax.swing.JLabel();
         loginButton = new javax.swing.JButton();
@@ -78,6 +84,10 @@ public class MainFrame extends javax.swing.JFrame {
         trackNewspaperButton = new javax.swing.JButton();
         generateInvoicesButton = new javax.swing.JButton();
         logoutButton = new javax.swing.JButton();
+=======
+        jPanel1 = new javax.swing.JPanel();
+        jTextField1 = new javax.swing.JTextField();
+>>>>>>> 55ffa0c41d1833cd12e0026e662990a7a8250773
         jMenuBar1 = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
         exitMenuItem = new javax.swing.JMenuItem();
@@ -96,6 +106,7 @@ public class MainFrame extends javax.swing.JFrame {
         backgroundPanel.setPreferredSize(new java.awt.Dimension(150, 150));
         backgroundPanel.setLayout(new java.awt.CardLayout());
 
+<<<<<<< HEAD
         loginPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         welcomeToNCMSLabel.setFont(new java.awt.Font("Myriad Pro", 0, 24)); // NOI18N
@@ -374,6 +385,47 @@ public class MainFrame extends javax.swing.JFrame {
                     .addGap(0, 1, Short.MAX_VALUE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 2, Short.MAX_VALUE)))
+=======
+        jTextField1.setText("jTextField1");
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(31, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(69, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout backgroundPanelLayout = new javax.swing.GroupLayout(backgroundPanel);
+        backgroundPanel.setLayout(backgroundPanelLayout);
+        backgroundPanelLayout.setHorizontalGroup(
+            backgroundPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(backgroundPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(290, Short.MAX_VALUE))
+        );
+        backgroundPanelLayout.setVerticalGroup(
+            backgroundPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(backgroundPanelLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(157, Short.MAX_VALUE))
+>>>>>>> 55ffa0c41d1833cd12e0026e662990a7a8250773
         );
 
         homeIdlePanel.add(generateInvoicesPanel, "generateInvoicesCard");
@@ -502,6 +554,7 @@ public class MainFrame extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_exitMenuItemActionPerformed
 
+<<<<<<< HEAD
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout)(backgroundPanel.getLayout());
@@ -558,11 +611,17 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
 
    }//GEN-LAST:event_logoutButtonActionPerformed
+=======
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+>>>>>>> 55ffa0c41d1833cd12e0026e662990a7a8250773
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        Scanner scan = new Scanner(System.in);
         /*
          * Set the Nimbus look and feel
          */
@@ -590,6 +649,15 @@ public class MainFrame extends javax.swing.JFrame {
         }
         //</editor-fold>
 
+        System.out.println("Executed read manifests");
+        try{
+            CRUD_Manifest.read();
+        }
+        catch (Exception e){
+            System.out.println("Error");
+        }
+        String ans = scan.next();
+        
         /*
          * Create and display the form
          */
@@ -640,6 +708,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JMenuBar jMenuBar1;
+<<<<<<< HEAD
     private javax.swing.JButton loginButton;
     private javax.swing.JPanel loginPanel;
     private javax.swing.JPasswordField loginPasswordField;
@@ -653,5 +722,9 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel trackNewspaperPanel;
     private javax.swing.JLabel welcomeLabel;
     private javax.swing.JLabel welcomeToNCMSLabel;
+=======
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jTextField1;
+>>>>>>> 55ffa0c41d1833cd12e0026e662990a7a8250773
     // End of variables declaration//GEN-END:variables
 }

@@ -4,7 +4,7 @@
  */
 package classes;
 import java.sql.*;
-import javax.sql.*;
+//import javax.sql.*;
 /**
  *
  * @author Kris
@@ -18,11 +18,18 @@ public class CRUD_Manifest{
     {
         System.out.println("In getConnection()");
         
-        String driver = "com.microsoft.jdbc.sqlserver.SQLServerDriver";
-        Class.forName(driver);
-        Connection conn = DriverManager.getConnection("localhost\\sqlexpress\\NCMS");
-        //Connection conn = database.getConnection();
-        return conn;
+        String driver = "com.sql.jdbc.Driver";
+        try {
+            String url = "jdbc:sqlserver://localhost:1433/sqlexpress;databaseName=NCMS;integrateSecurity=true";
+            Class.forName(driver);
+            conn = DriverManager.getConnection(url);
+            //Connection conn = database.getConnection();
+            return conn;
+        }
+        catch (Exception e){
+            System.out.println("Error in getConnection" + e);
+            return null;
+        }
     }
 	
     public static void processException(SQLException e)
@@ -54,7 +61,8 @@ public class CRUD_Manifest{
     
     public static void read() throws Exception
     {
-        Connection conn = getConnection();
+        System.out.print("In read()");
+        conn = getConnection();
         statement = conn.prepareCall("{call GetAllManifest()}");
         //PreparedStatement statement = conn.prepareStatement("select * from Manifest");
         ResultSet result = statement.executeQuery();
