@@ -4,6 +4,7 @@
  */
 package pcapp;
 
+import java.awt.CardLayout;
 import java.awt.Toolkit;
 
 /**
@@ -33,6 +34,11 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabel2 = new javax.swing.JLabel();
         backgroundPanel = new javax.swing.JPanel();
+        loginPanel = new javax.swing.JPanel();
+        loginButton = new javax.swing.JButton();
+        homePanel = new javax.swing.JPanel();
+        welcomeLabel = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
         exitMenuItem = new javax.swing.JMenuItem();
@@ -49,17 +55,64 @@ public class MainFrame extends javax.swing.JFrame {
         setPreferredSize(Toolkit.getDefaultToolkit().getScreenSize());
 
         backgroundPanel.setBackground(new java.awt.Color(255, 255, 255));
+        backgroundPanel.setPreferredSize(new java.awt.Dimension(150, 150));
+        backgroundPanel.setLayout(new java.awt.CardLayout());
 
-        javax.swing.GroupLayout backgroundPanelLayout = new javax.swing.GroupLayout(backgroundPanel);
-        backgroundPanel.setLayout(backgroundPanelLayout);
-        backgroundPanelLayout.setHorizontalGroup(
-            backgroundPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        loginButton.setText("Login");
+        loginButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loginButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout loginPanelLayout = new javax.swing.GroupLayout(loginPanel);
+        loginPanel.setLayout(loginPanelLayout);
+        loginPanelLayout.setHorizontalGroup(
+            loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(loginPanelLayout.createSequentialGroup()
+                .addGap(163, 163, 163)
+                .addComponent(loginButton)
+                .addContainerGap(43, Short.MAX_VALUE))
         );
-        backgroundPanelLayout.setVerticalGroup(
-            backgroundPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 279, Short.MAX_VALUE)
+        loginPanelLayout.setVerticalGroup(
+            loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginPanelLayout.createSequentialGroup()
+                .addContainerGap(176, Short.MAX_VALUE)
+                .addComponent(loginButton)
+                .addGap(80, 80, 80))
         );
+
+        backgroundPanel.add(loginPanel, "loginCard");
+
+        welcomeLabel.setText("Welcome To The Homescreen");
+
+        jButton2.setText("jButton2");
+
+        javax.swing.GroupLayout homePanelLayout = new javax.swing.GroupLayout(homePanel);
+        homePanel.setLayout(homePanelLayout);
+        homePanelLayout.setHorizontalGroup(
+            homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(homePanelLayout.createSequentialGroup()
+                .addGroup(homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(homePanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton2))
+                    .addGroup(homePanelLayout.createSequentialGroup()
+                        .addGap(47, 47, 47)
+                        .addComponent(welcomeLabel)))
+                .addContainerGap(75, Short.MAX_VALUE))
+        );
+        homePanelLayout.setVerticalGroup(
+            homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(homePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(welcomeLabel)
+                .addGap(15, 15, 15)
+                .addComponent(jButton2)
+                .addContainerGap(216, Short.MAX_VALUE))
+        );
+
+        backgroundPanel.add(homePanel, "homeCard");
 
         fileMenu.setText("File");
 
@@ -90,11 +143,11 @@ public class MainFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(backgroundPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(backgroundPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 263, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(backgroundPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(backgroundPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 279, Short.MAX_VALUE)
         );
 
         pack();
@@ -104,6 +157,12 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_exitMenuItemActionPerformed
+
+    private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
+        // TODO add your handling code here:
+        CardLayout c = (CardLayout)(backgroundPanel.getLayout());
+    c.show(backgroundPanel, "homeCard");
+    }//GEN-LAST:event_loginButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -153,7 +212,12 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JMenuItem exitMenuItem;
     private javax.swing.JMenu fileMenu;
     private javax.swing.JMenu helpMenu;
+    private javax.swing.JPanel homePanel;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JButton loginButton;
+    private javax.swing.JPanel loginPanel;
+    private javax.swing.JLabel welcomeLabel;
     // End of variables declaration//GEN-END:variables
 }
