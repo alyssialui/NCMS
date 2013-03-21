@@ -177,6 +177,12 @@ public class MainFrame extends javax.swing.JFrame {
 
         addfname.setText("First Name");
 
+        addfnameField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addfnameFieldActionPerformed(evt);
+            }
+        });
+
         addlname.setText("Last Name");
 
         addUserSubmitButton.setText("OK");
@@ -568,6 +574,10 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
 
    }//GEN-LAST:event_logoutButtonActionPerformed
+
+    private void addfnameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addfnameFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addfnameFieldActionPerformed
 
     /**
      * @param args the command line arguments
