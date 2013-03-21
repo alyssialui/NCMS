@@ -4,6 +4,7 @@
  */
 package pcapp;
 
+import classes.Newspaper;
 import java.awt.CardLayout;
 import java.awt.Toolkit;
 
@@ -44,6 +45,11 @@ public class MainFrame extends javax.swing.JFrame {
         homePanel = new javax.swing.JPanel();
         welcomeLabel = new javax.swing.JLabel();
         addUserButton = new javax.swing.JButton();
+        generateManifestButton = new javax.swing.JButton();
+        addNewspaperButton = new javax.swing.JButton();
+        trackNewspaperButton = new javax.swing.JButton();
+        generateInvoicesButton = new javax.swing.JButton();
+        logoutButton = new javax.swing.JButton();
         homeIdlePanel = new javax.swing.JPanel();
         selectionPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -69,15 +75,17 @@ public class MainFrame extends javax.swing.JFrame {
         addPublisherNameField = new javax.swing.JTextField();
         addNewspaperOkButton = new javax.swing.JButton();
         addNewspaperCancelButton = new javax.swing.JButton();
+        saveNewspaperLabel = new javax.swing.JLabel();
         trackNewspaperPanel = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         generateInvoicesPanel = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        generateManifestButton = new javax.swing.JButton();
-        addNewspaperButton = new javax.swing.JButton();
-        trackNewspaperButton = new javax.swing.JButton();
-        generateInvoicesButton = new javax.swing.JButton();
-        logoutButton = new javax.swing.JButton();
+        selectUserPanel = new javax.swing.JPanel();
+        selectUserLabel1 = new javax.swing.JLabel();
+        selectUserLabel2 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox();
+        selectUserOkButton = new javax.swing.JButton();
+        selectUserCancelButton = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
         exitMenuItem = new javax.swing.JMenuItem();
@@ -137,10 +145,43 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        generateManifestButton.setText("E-Manifests");
+        generateManifestButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                generateManifestButtonActionPerformed(evt);
+            }
+        });
+
+        addNewspaperButton.setText("Add Newspaper");
+        addNewspaperButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addNewspaperButtonActionPerformed(evt);
+            }
+        });
+
+        trackNewspaperButton.setText("Track Newspapers");
+        trackNewspaperButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                trackNewspaperButtonActionPerformed(evt);
+            }
+        });
+
+        generateInvoicesButton.setText("Generate Invoices");
+        generateInvoicesButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                generateInvoicesButtonActionPerformed(evt);
+            }
+        });
+
+        logoutButton.setText("Log Out");
+        logoutButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logoutButtonActionPerformed(evt);
+            }
+        });
+
         homeIdlePanel.setBackground(new java.awt.Color(255, 255, 255));
         homeIdlePanel.setLayout(new java.awt.CardLayout());
-
-        selectionPanel.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setText("Please select an option from the left.");
 
@@ -148,26 +189,24 @@ public class MainFrame extends javax.swing.JFrame {
         selectionPanel.setLayout(selectionPanelLayout);
         selectionPanelLayout.setHorizontalGroup(
             selectionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 210, Short.MAX_VALUE)
+            .addGap(0, 217, Short.MAX_VALUE)
             .addGroup(selectionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(selectionPanelLayout.createSequentialGroup()
-                    .addGap(0, 6, Short.MAX_VALUE)
+                    .addGap(0, 10, Short.MAX_VALUE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 7, Short.MAX_VALUE)))
+                    .addGap(0, 10, Short.MAX_VALUE)))
         );
         selectionPanelLayout.setVerticalGroup(
             selectionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 239, Short.MAX_VALUE)
+            .addGap(0, 258, Short.MAX_VALUE)
             .addGroup(selectionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(selectionPanelLayout.createSequentialGroup()
-                    .addGap(0, 1, Short.MAX_VALUE)
+                    .addGap(0, 11, Short.MAX_VALUE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 2, Short.MAX_VALUE)))
+                    .addGap(0, 11, Short.MAX_VALUE)))
         );
 
         homeIdlePanel.add(selectionPanel, "selectionCard");
-
-        addUserPanel.setBackground(new java.awt.Color(255, 255, 255));
 
         addUsernameLabel.setText("Username");
 
@@ -220,7 +259,7 @@ public class MainFrame extends javax.swing.JFrame {
                             .addComponent(addlnameField)))
                     .addGroup(addUserPanelLayout.createSequentialGroup()
                         .addComponent(addUserCancelButton)
-                        .addGap(0, 29, Short.MAX_VALUE)))
+                        .addGap(0, 36, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         addUserPanelLayout.setVerticalGroup(
@@ -234,7 +273,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(addUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(addlname)
                     .addComponent(addlnameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                 .addGroup(addUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(addUsernameLabel)
                     .addComponent(addUsernameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -255,40 +294,41 @@ public class MainFrame extends javax.swing.JFrame {
 
         homeIdlePanel.add(addUserPanel, "addUserCard");
 
-        manifestPanel.setBackground(new java.awt.Color(255, 255, 255));
-
         jLabel3.setText("E-manifest Management Panel");
 
         javax.swing.GroupLayout manifestPanelLayout = new javax.swing.GroupLayout(manifestPanel);
         manifestPanel.setLayout(manifestPanelLayout);
         manifestPanelLayout.setHorizontalGroup(
             manifestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 210, Short.MAX_VALUE)
+            .addGap(0, 217, Short.MAX_VALUE)
             .addGroup(manifestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(manifestPanelLayout.createSequentialGroup()
-                    .addGap(0, 6, Short.MAX_VALUE)
+                    .addGap(0, 10, Short.MAX_VALUE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 7, Short.MAX_VALUE)))
+                    .addGap(0, 10, Short.MAX_VALUE)))
         );
         manifestPanelLayout.setVerticalGroup(
             manifestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 239, Short.MAX_VALUE)
+            .addGap(0, 258, Short.MAX_VALUE)
             .addGroup(manifestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(manifestPanelLayout.createSequentialGroup()
-                    .addGap(0, 1, Short.MAX_VALUE)
+                    .addGap(0, 11, Short.MAX_VALUE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 2, Short.MAX_VALUE)))
+                    .addGap(0, 11, Short.MAX_VALUE)))
         );
 
         homeIdlePanel.add(manifestPanel, "manifestCard");
-
-        addNewspaperPanel.setBackground(new java.awt.Color(255, 255, 255));
 
         addNewspaperNameLabel.setText("Newspaper");
 
         addPublisherNameLabel.setText("Publisher");
 
         addNewspaperOkButton.setText("OK");
+        addNewspaperOkButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addNewspaperOkButtonActionPerformed(evt);
+            }
+        });
 
         addNewspaperCancelButton.setText("Cancel");
         addNewspaperCancelButton.addActionListener(new java.awt.event.ActionListener() {
@@ -303,23 +343,26 @@ public class MainFrame extends javax.swing.JFrame {
             addNewspaperPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(addNewspaperPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(addNewspaperPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(addNewspaperOkButton)
-                    .addGroup(addNewspaperPanelLayout.createSequentialGroup()
-                        .addGroup(addNewspaperPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(addNewspaperNameLabel)
-                            .addComponent(addPublisherNameLabel))
-                        .addGap(35, 35, 35)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(addNewspaperPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(saveNewspaperLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(addNewspaperPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(addNewspaperPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(addNewspaperNameField, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE)
-                            .addComponent(addPublisherNameField)))
-                    .addGroup(addNewspaperPanelLayout.createSequentialGroup()
-                        .addComponent(addNewspaperCancelButton)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGroup(addNewspaperPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(addNewspaperPanelLayout.createSequentialGroup()
+                                .addGroup(addNewspaperPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(addNewspaperNameLabel)
+                                    .addComponent(addPublisherNameLabel))
+                                .addGap(35, 35, 35))
+                            .addComponent(addNewspaperOkButton))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(addNewspaperPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(addNewspaperPanelLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addGroup(addNewspaperPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(addNewspaperNameField, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE)
+                                    .addComponent(addPublisherNameField)))
+                            .addGroup(addNewspaperPanelLayout.createSequentialGroup()
+                                .addComponent(addNewspaperCancelButton)
+                                .addGap(0, 33, Short.MAX_VALUE)))))
                 .addContainerGap())
         );
         addNewspaperPanelLayout.setVerticalGroup(
@@ -333,7 +376,9 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(addNewspaperPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(addPublisherNameLabel)
                     .addComponent(addPublisherNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 148, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                .addComponent(saveNewspaperLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(73, 73, 73)
                 .addGroup(addNewspaperPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(addNewspaperOkButton)
                     .addComponent(addNewspaperCancelButton))
@@ -342,29 +387,27 @@ public class MainFrame extends javax.swing.JFrame {
 
         homeIdlePanel.add(addNewspaperPanel, "addNewspaperCard");
 
-        trackNewspaperPanel.setBackground(new java.awt.Color(255, 255, 255));
-
         jLabel4.setText("Track Newspapers Panel");
 
         javax.swing.GroupLayout trackNewspaperPanelLayout = new javax.swing.GroupLayout(trackNewspaperPanel);
         trackNewspaperPanel.setLayout(trackNewspaperPanelLayout);
         trackNewspaperPanelLayout.setHorizontalGroup(
             trackNewspaperPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 210, Short.MAX_VALUE)
+            .addGap(0, 217, Short.MAX_VALUE)
             .addGroup(trackNewspaperPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(trackNewspaperPanelLayout.createSequentialGroup()
-                    .addGap(0, 6, Short.MAX_VALUE)
+                    .addGap(0, 10, Short.MAX_VALUE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 7, Short.MAX_VALUE)))
+                    .addGap(0, 10, Short.MAX_VALUE)))
         );
         trackNewspaperPanelLayout.setVerticalGroup(
             trackNewspaperPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 239, Short.MAX_VALUE)
+            .addGap(0, 258, Short.MAX_VALUE)
             .addGroup(trackNewspaperPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(trackNewspaperPanelLayout.createSequentialGroup()
-                    .addGap(0, 1, Short.MAX_VALUE)
+                    .addGap(0, 11, Short.MAX_VALUE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 2, Short.MAX_VALUE)))
+                    .addGap(0, 11, Short.MAX_VALUE)))
         );
 
         homeIdlePanel.add(trackNewspaperPanel, "trackNewspapersCard");
@@ -375,59 +418,86 @@ public class MainFrame extends javax.swing.JFrame {
         generateInvoicesPanel.setLayout(generateInvoicesPanelLayout);
         generateInvoicesPanelLayout.setHorizontalGroup(
             generateInvoicesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 210, Short.MAX_VALUE)
+            .addGap(0, 217, Short.MAX_VALUE)
             .addGroup(generateInvoicesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(generateInvoicesPanelLayout.createSequentialGroup()
-                    .addGap(0, 6, Short.MAX_VALUE)
+                    .addGap(0, 10, Short.MAX_VALUE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 7, Short.MAX_VALUE)))
+                    .addGap(0, 10, Short.MAX_VALUE)))
         );
         generateInvoicesPanelLayout.setVerticalGroup(
             generateInvoicesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 239, Short.MAX_VALUE)
+            .addGap(0, 258, Short.MAX_VALUE)
             .addGroup(generateInvoicesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(generateInvoicesPanelLayout.createSequentialGroup()
-                    .addGap(0, 1, Short.MAX_VALUE)
+                    .addGap(0, 11, Short.MAX_VALUE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 2, Short.MAX_VALUE)))
+                    .addGap(0, 11, Short.MAX_VALUE)))
         );
 
         homeIdlePanel.add(generateInvoicesPanel, "generateInvoicesCard");
 
-        generateManifestButton.setText("E-Manifests");
-        generateManifestButton.addActionListener(new java.awt.event.ActionListener() {
+        selectUserLabel1.setText("Please select what type of");
+
+        selectUserLabel2.setText("user to add to the system.");
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "AirPak Administrator", "Facilities Operator", "Truck Driver", "Street Vendor", "Company Vendor" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                generateManifestButtonActionPerformed(evt);
+                jComboBox1ActionPerformed(evt);
             }
         });
 
-        addNewspaperButton.setText("Add Newspaper");
-        addNewspaperButton.addActionListener(new java.awt.event.ActionListener() {
+        selectUserOkButton.setText("OK");
+        selectUserOkButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addNewspaperButtonActionPerformed(evt);
+                selectUserOkButtonActionPerformed(evt);
             }
         });
 
-        trackNewspaperButton.setText("Track Newspapers");
-        trackNewspaperButton.addActionListener(new java.awt.event.ActionListener() {
+        selectUserCancelButton.setText("Cancel");
+        selectUserCancelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                trackNewspaperButtonActionPerformed(evt);
+                selectUserCancelButtonActionPerformed(evt);
             }
         });
 
-        generateInvoicesButton.setText("Generate Invoices");
-        generateInvoicesButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                generateInvoicesButtonActionPerformed(evt);
-            }
-        });
+        javax.swing.GroupLayout selectUserPanelLayout = new javax.swing.GroupLayout(selectUserPanel);
+        selectUserPanel.setLayout(selectUserPanelLayout);
+        selectUserPanelLayout.setHorizontalGroup(
+            selectUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(selectUserPanelLayout.createSequentialGroup()
+                .addGroup(selectUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(selectUserPanelLayout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addGroup(selectUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(selectUserLabel2)
+                            .addComponent(selectUserLabel1)
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(selectUserPanelLayout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addComponent(selectUserOkButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(selectUserCancelButton)))
+                .addContainerGap(51, Short.MAX_VALUE))
+        );
+        selectUserPanelLayout.setVerticalGroup(
+            selectUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(selectUserPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(selectUserLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(selectUserLabel2)
+                .addGap(18, 18, 18)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
+                .addGroup(selectUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(selectUserOkButton)
+                    .addComponent(selectUserCancelButton))
+                .addGap(66, 66, 66))
+        );
 
-        logoutButton.setText("Log Out");
-        logoutButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                logoutButtonActionPerformed(evt);
-            }
-        });
+        homeIdlePanel.add(selectUserPanel, "selectUserCard");
 
         javax.swing.GroupLayout homePanelLayout = new javax.swing.GroupLayout(homePanel);
         homePanel.setLayout(homePanelLayout);
@@ -444,7 +514,7 @@ public class MainFrame extends javax.swing.JFrame {
                         .addComponent(generateInvoicesButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(logoutButton))
                 .addGap(37, 37, 37)
-                .addComponent(homeIdlePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(homeIdlePanel, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE))
             .addGroup(homePanelLayout.createSequentialGroup()
                 .addGap(109, 109, 109)
                 .addComponent(welcomeLabel)
@@ -503,11 +573,11 @@ public class MainFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(backgroundPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 378, Short.MAX_VALUE)
+            .addComponent(backgroundPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 385, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(backgroundPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 282, Short.MAX_VALUE)
+            .addComponent(backgroundPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 301, Short.MAX_VALUE)
         );
 
         pack();
@@ -531,7 +601,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void addUserButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addUserButtonActionPerformed
         // TODO add your handling code here:
         CardLayout c = (CardLayout)(homeIdlePanel.getLayout());
-        c.show(homeIdlePanel, "addUserCard");
+        c.show(homeIdlePanel, "selectUserCard");
     }//GEN-LAST:event_addUserButtonActionPerformed
 
     private void generateManifestButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generateManifestButtonActionPerformed
@@ -554,6 +624,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void addNewspaperCancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNewspaperCancelButtonActionPerformed
         // TODO add your handling code here:
+        saveNewspaperLabel.setText("");
         CardLayout c = (CardLayout)(homeIdlePanel.getLayout());
         c.show(homeIdlePanel, "selectionCard");
     }//GEN-LAST:event_addNewspaperCancelButtonActionPerformed
@@ -575,9 +646,43 @@ public class MainFrame extends javax.swing.JFrame {
 
    }//GEN-LAST:event_logoutButtonActionPerformed
 
+<<<<<<< HEAD
     private void addfnameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addfnameFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_addfnameFieldActionPerformed
+=======
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void selectUserOkButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectUserOkButtonActionPerformed
+        // TODO add your handling code here:
+        CardLayout c = (CardLayout)(homeIdlePanel.getLayout());
+        c.show(homeIdlePanel, "addUserCard");
+    }//GEN-LAST:event_selectUserOkButtonActionPerformed
+
+    private void selectUserCancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectUserCancelButtonActionPerformed
+        // TODO add your handling code here:
+        CardLayout c = (CardLayout)(homeIdlePanel.getLayout());
+        c.show(homeIdlePanel, "selectionCard");
+    }//GEN-LAST:event_selectUserCancelButtonActionPerformed
+
+    private void addNewspaperOkButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNewspaperOkButtonActionPerformed
+        // TODO add your handling code here:
+        if(addNewspaperNameField.getText().equals("") || addPublisherNameField.getText().equals(""))
+        {
+            saveNewspaperLabel.setText("There is an empty field.");
+        }
+        else
+        {
+            Newspaper newspaper = new Newspaper(addNewspaperNameField.getText(),addPublisherNameField.getText(),1000);
+
+            addNewspaperNameField.setText("");
+            addPublisherNameField.setText("");
+            saveNewspaperLabel.setText("Newspaper added to NCMS system.");
+        }
+    }//GEN-LAST:event_addNewspaperOkButtonActionPerformed
+>>>>>>> b437558edc84e41f87e3a46ab0c650db3c35ae6c
 
     /**
      * @param args the command line arguments
@@ -654,6 +759,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JMenu helpMenu;
     private javax.swing.JPanel homeIdlePanel;
     private javax.swing.JPanel homePanel;
+    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -668,6 +774,12 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel loginUsernameLabel;
     private javax.swing.JButton logoutButton;
     private javax.swing.JPanel manifestPanel;
+    private javax.swing.JLabel saveNewspaperLabel;
+    private javax.swing.JButton selectUserCancelButton;
+    private javax.swing.JLabel selectUserLabel1;
+    private javax.swing.JLabel selectUserLabel2;
+    private javax.swing.JButton selectUserOkButton;
+    private javax.swing.JPanel selectUserPanel;
     private javax.swing.JPanel selectionPanel;
     private javax.swing.JButton trackNewspaperButton;
     private javax.swing.JPanel trackNewspaperPanel;
