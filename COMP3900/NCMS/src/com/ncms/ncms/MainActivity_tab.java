@@ -6,7 +6,7 @@ import java.util.Map;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
-import android.view.View;
+//import android.view.View;
 import android.widget.SimpleExpandableListAdapter;
 
 public class MainActivity_tab extends Activity {
