@@ -1,49 +1,50 @@
 package com.ncms.ncms;
 
-import java.util.List;
-import java.util.Map;
-
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
-//import android.view.View;
-import android.widget.SimpleExpandableListAdapter;
+import android.view.View;
+import android.widget.ExpandableListView;
+import android.widget.ExpandableListView.OnChildClickListener;
+import android.widget.TabHost;
+import android.widget.Toast;
 
 public class MainActivity_tab extends Activity {
 
+	ExpandableListView exv;
+	TabHost tbh;
+	int numDeliveries;
+	int numStops; //areas to deliver papers in delivery
+	int numAgents; //agents within area to delivery papers to
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		try{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main_activity_tab);
 		
-		List<? extends Map<String, ?>> manifest_list = null;
-		int groupLayout =0, childLayout = 0;
-		int[] groupTo = new int[10];
-		int[] childTo = new int[10];
-		String[] groupFrom = new String[10];
-		String[] childFrom = new String[10];
-		List<? extends List<? extends Map<String, ?>>> childData = null;
-		SimpleExpandableListAdapter expListAdapter =
-            new SimpleExpandableListAdapter(this, manifest_list, groupLayout, groupFrom, groupTo, childData , childLayout, childFrom, childTo);
-            setListAdapter( expListAdapter );       // setting the adapter in the list.
- 
-        }catch(Exception e){
-            System.out.println("Errrr +++ " + e.getMessage());
-        }
+		exv = (ExpandableListView)findViewById(R.id.expandableListView1);
+		exv.setAdapter(new MyAdapter(this));
 		
-//		findViewById(R.id.sign_in_button).setOnClickListener(
-//				new View.OnClickListener() {
-//					@Override
-//					public void onClick(View view) {
-//						attemptLogin();
-//					}
-//				});
-	}
+		//tbh = getTabHost();
+		
+		exv.setOnChildClickListener(new OnChildClickListener(){
 
-	private void setListAdapter(SimpleExpandableListAdapter expListAdapter) {
-		// TODO Auto-generated method stub
+			@Override
+			public boolean onChildClick(ExpandableListView parent, View v,
+					int groupPosition, int childPosition, long id) {
+				// TODO Auto-generated method stub
+				//change mapView
+				//change tabs
+				//when specific tab selected - zoom in on area and show agents
+				String itemClicked = MyAdapter.childList[groupPosition][childPosition];
+				Toast.makeText(MainActivity_tab.this, itemClicked + " is clicked", Toast.LENGTH_SHORT).show();
+				return false;
+			}
+	
+		});
 		
+		numDeliveries = exv.getCount();
+		//tbh = (TabHost)findViewById(R.id.tab1);
 	}
 
 	@Override

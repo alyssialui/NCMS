@@ -1,18 +1,20 @@
 package com.ncms.ncms;
 
 import java.util.List;
-import com.google.android.maps.MapActivity;
-import com.google.android.maps.MapView;
+
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
 //import com.google.android.maps.MyLocationOverlay;
 //import com.google.android.maps.Overlay;
 
+import android.app.Activity;
 import android.os.Bundle;
 //import android.view.Menu;
 //import android.view.MotionEvent;
 
-public class GoogleMapActivity extends MapActivity {
+public class GoogleMapActivity extends Activity {
 
-	MapView map;
+	GoogleMap map;
 	long start,stop;
 	//MyLocationOverlay compass;
 	
@@ -21,8 +23,8 @@ public class GoogleMapActivity extends MapActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_map);
 		
-		map = (MapView)findViewById(R.id.map);
-		map.setBuiltInZoomControls(true);
+		map = ((MapFragment) getFragmentManager().findFragmentById(R.id.map))
+		        .getMap();
 		
 //		Touch t = new Touch();
 //		List<Overlay> overlayList = map.getOverlays();
@@ -35,12 +37,6 @@ public class GoogleMapActivity extends MapActivity {
 //		getMenuInflater().inflate(R.menu.map, menu);
 //		return true;
 //	}
-
-	@Override
-	protected boolean isRouteDisplayed() {
-		// TODO Auto-generated method stub
-		return false;
-	}
 	
 //	class Touch extends Overlay{
 //		public boolean onTouchEvent(MotionEvent e, MapView m){
