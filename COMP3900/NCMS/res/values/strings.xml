@@ -8,5 +8,6 @@
     <string name="title_activity_agent_activity_tab">AgentActivity_tab</string>
     <string name="title_activity_google_map">GoogleMapActivity</string>
     <string name="title_activity_map">MapActivity</string>
+    <string name="title_activity_scanner">ScannerActivity</string>
 
 </resources>
