@@ -1,0 +1,6 @@
+ <FrameLayout
+    android:layout_width="200dip"
+    android:layout_height="200dip"
+ 	android:layout_gravity="center_horizontal">
+           <include layout="@layout/capture"/>
+ </FrameLayout>

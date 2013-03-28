@@ -1,0 +1,7 @@
+package com.ncms.ncms;
+
+import com.google.android.maps.ItemizedOverlay;
+
+public class MyItemizedOverlay extends ItemizedOverlay<Item> {
+
+}
