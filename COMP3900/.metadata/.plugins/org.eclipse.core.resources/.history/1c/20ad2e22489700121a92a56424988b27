@@ -1,7 +1,0 @@
-package com.ncms.ncms;
-
-import com.google.zxing.client.android.CaptureActivity;
-
-public class ScannerActivity extends CaptureActivity {
-
-}

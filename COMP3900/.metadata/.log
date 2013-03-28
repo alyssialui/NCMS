@@ -1,507 +1,4 @@
-!SESSION 2013-03-27 19:47:00.184 -----------------------------------------------
-eclipse.buildId=M20130204-1200
-java.version=1.7.0_17
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
-Framework arguments:  -product org.eclipse.epp.package.java.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
-
-This is a continuation of log file C:\Users\Randy\Documents\School\Third Year\CS39Q - Research Project\Project\NCMS\COMP3900\.metadata\.bak_1.log
-Created Time: 2013-03-27 21:15:50.386
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:15:50.387
-!MESSAGE Conflicting handlers for org.eclipse.ui.navigate.goToResource: {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.GotoResourceAction@29ecf669)} vs {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.GotoResourceAction@43d104ed)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:15:50.387
-!MESSAGE Conflicting handlers for org.eclipse.ui.file.properties: {ActionHandler(org.eclipse.ui.dialogs.PropertyDialogAction@60067362)} vs {ActionHandler(org.eclipse.ui.dialogs.PropertyDialogAction@391e7c2)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:15:50.388
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addBookmark: {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@1691adef)} vs {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@3632317c)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:15:50.388
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addTask: {ActionHandler(org.eclipse.ui.actions.AddTaskAction@701d0663)} vs {ActionHandler(org.eclipse.ui.actions.AddTaskAction@18e8716)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:15:50.389
-!MESSAGE Conflicting handlers for org.eclipse.ui.file.refresh: {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$2@320b1cac)} vs {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$2@778779de)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:15:50.390
-!MESSAGE Conflicting handlers for org.eclipse.ui.project.buildProject: {ActionHandler(org.eclipse.ui.actions.BuildAction@22b8da93)} vs {ActionHandler(org.eclipse.ui.actions.BuildAction@fba95ae)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:15:50.391
-!MESSAGE Conflicting handlers for org.eclipse.ui.project.openProject: {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@1add81b5)} vs {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@446e9fda)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:15:50.391
-!MESSAGE Conflicting handlers for org.eclipse.ui.project.closeProject: {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@350583c4)} vs {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@7d0dd40d)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:15:50.392
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@49a5271)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@2f9a7b13)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:15:50.393
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@6330428d)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@756169da)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:17:00.426
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.copy: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CopyActionHandler@52b93dfa)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CopyToClipboardAction@3d56da4e)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:17:28.006
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.delete: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.DeleteAction@48613d82)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$DeleteActionHandler@1039069f)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:17:28.007
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.copy: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CopyActionHandler@52b93dfa)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CopyToClipboardAction@3d56da4e)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:17:28.007
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.cut: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CutActionHandler@17abc576)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CutAction@b4ecfae)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:17:28.008
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.paste: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$PasteActionHandler@5e4bb963)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.PasteAction@53dfef2b)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:17:28.009
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addBookmark: {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@1691adef)} vs {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@7db2e2c1)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:17:28.010
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addTask: {ActionHandler(org.eclipse.jdt.internal.ui.actions.AddTaskAction@48161950)} vs {ActionHandler(org.eclipse.ui.actions.AddTaskAction@18e8716)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:17:28.012
-!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.open.editor: {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@716d720c)} vs {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@485aac01)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:17:28.013
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.move: {ActionHandler(org.eclipse.ui.actions.MoveResourceAction@7d944c46)} vs {ActionHandler(org.eclipse.ui.actions.MoveResourceAction@131bc813)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:17:28.014
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.rename: {ActionHandler(org.eclipse.ui.actions.RenameResourceAction@3c2254e0)} vs {ActionHandler(org.eclipse.ui.actions.RenameResourceAction@10fe9daf)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:17:28.014
-!MESSAGE Conflicting handlers for org.eclipse.ui.navigate.goToResource: {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.GotoResourceAction@29ecf669)} vs {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.GotoResourceAction@43d104ed)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:17:28.015
-!MESSAGE Conflicting handlers for org.eclipse.ui.file.properties: {ActionHandler(org.eclipse.ui.dialogs.PropertyDialogAction@60067362)} vs {ActionHandler(org.eclipse.ui.dialogs.PropertyDialogAction@391e7c2)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:17:28.016
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addBookmark: {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@3632317c)} vs {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@1691adef)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:17:28.016
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addTask: {ActionHandler(org.eclipse.ui.actions.AddTaskAction@701d0663)} vs {ActionHandler(org.eclipse.ui.actions.AddTaskAction@18e8716)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:17:28.017
-!MESSAGE Conflicting handlers for org.eclipse.ui.file.refresh: {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$2@320b1cac)} vs {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$2@778779de)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:17:28.017
-!MESSAGE Conflicting handlers for org.eclipse.ui.project.buildProject: {ActionHandler(org.eclipse.ui.actions.BuildAction@fba95ae)} vs {ActionHandler(org.eclipse.ui.actions.BuildAction@22b8da93)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:17:28.018
-!MESSAGE Conflicting handlers for org.eclipse.ui.project.openProject: {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@1add81b5)} vs {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@446e9fda)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:17:28.018
-!MESSAGE Conflicting handlers for org.eclipse.ui.project.closeProject: {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@350583c4)} vs {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@7d0dd40d)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:17:28.019
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@49a5271)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@2f9a7b13)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:17:28.020
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@6330428d)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@756169da)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.646
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.delete: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.DeleteAction@48613d82)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$DeleteActionHandler@1039069f)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.646
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.copy: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CopyActionHandler@52b93dfa)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CopyToClipboardAction@3d56da4e)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.647
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.cut: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CutAction@b4ecfae)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CutActionHandler@17abc576)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.647
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.paste: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.PasteAction@53dfef2b)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$PasteActionHandler@5e4bb963)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.649
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addBookmark: {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@1691adef)} vs {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@7db2e2c1)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.649
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addTask: {ActionHandler(org.eclipse.jdt.internal.ui.actions.AddTaskAction@48161950)} vs {ActionHandler(org.eclipse.ui.actions.AddTaskAction@18e8716)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.653
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@31abb139)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@2f9a7b13)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.653
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@756169da)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@2ae290c6)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.654
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.rename: {ActionHandler(org.eclipse.jdt.ui.actions.RenameAction@7143363e)} vs {ActionHandler(org.eclipse.ui.actions.RenameResourceAction@3c2254e0)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.655
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.move: {ActionHandler(org.eclipse.jdt.ui.actions.MoveAction@6519247)} vs {ActionHandler(org.eclipse.ui.actions.MoveResourceAction@131bc813)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.655
-!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.open.editor: {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@716d720c)} vs {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@485aac01)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.656
-!MESSAGE Conflicting handlers for org.eclipse.ui.navigate.goToResource: {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.GotoResourceAction@29ecf669)} vs {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.GotoResourceAction@43d104ed)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.656
-!MESSAGE Conflicting handlers for org.eclipse.ui.file.properties: {ActionHandler(org.eclipse.ui.dialogs.PropertyDialogAction@60067362)} vs {ActionHandler(org.eclipse.ui.dialogs.PropertyDialogAction@391e7c2)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.657
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addBookmark: {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@1691adef)} vs {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@3632317c)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.657
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addTask: {ActionHandler(org.eclipse.ui.actions.AddTaskAction@701d0663)} vs {ActionHandler(org.eclipse.ui.actions.AddTaskAction@18e8716)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.658
-!MESSAGE Conflicting handlers for org.eclipse.ui.file.refresh: {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$2@320b1cac)} vs {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$2@778779de)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.659
-!MESSAGE Conflicting handlers for org.eclipse.ui.project.buildProject: {ActionHandler(org.eclipse.ui.actions.BuildAction@fba95ae)} vs {ActionHandler(org.eclipse.ui.actions.BuildAction@22b8da93)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.659
-!MESSAGE Conflicting handlers for org.eclipse.ui.project.openProject: {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@446e9fda)} vs {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@1add81b5)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.660
-!MESSAGE Conflicting handlers for org.eclipse.ui.project.closeProject: {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@350583c4)} vs {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@7d0dd40d)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.660
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@49a5271)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@2f9a7b13)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.661
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@6330428d)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@756169da)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.760
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.delete: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$DeleteActionHandler@1039069f)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.DeleteAction@48613d82)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.761
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.copy: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CopyActionHandler@52b93dfa)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CopyToClipboardAction@3d56da4e)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.762
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.cut: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CutAction@b4ecfae)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CutActionHandler@17abc576)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.762
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.paste: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.PasteAction@53dfef2b)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$PasteActionHandler@5e4bb963)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.769
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addBookmark: {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@7db2e2c1)} vs {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@1691adef)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.770
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addTask: {ActionHandler(org.eclipse.jdt.internal.ui.actions.AddTaskAction@48161950)} vs {ActionHandler(org.eclipse.ui.actions.AddTaskAction@18e8716)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.776
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@31abb139)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@2f9a7b13)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.776
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@756169da)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@2ae290c6)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.777
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.rename: {ActionHandler(org.eclipse.ui.actions.RenameResourceAction@3c2254e0)} vs {ActionHandler(org.eclipse.jdt.ui.actions.RenameAction@7143363e)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.778
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.move: {ActionHandler(org.eclipse.jdt.ui.actions.MoveAction@6519247)} vs {ActionHandler(org.eclipse.ui.actions.MoveResourceAction@131bc813)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.779
-!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.open.editor: {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@716d720c)} vs {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@485aac01)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.779
-!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.open.editor: {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@485aac01)} vs {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@716d720c)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.780
-!MESSAGE Conflicting handlers for org.eclipse.ui.navigate.goToResource: {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.GotoResourceAction@43d104ed)} vs {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.GotoResourceAction@29ecf669)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.782
-!MESSAGE Conflicting handlers for org.eclipse.ui.file.properties: {ActionHandler(org.eclipse.ui.dialogs.PropertyDialogAction@60067362)} vs {ActionHandler(org.eclipse.ui.dialogs.PropertyDialogAction@391e7c2)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.783
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addBookmark: {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@3632317c)} vs {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@1691adef)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.784
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addTask: {ActionHandler(org.eclipse.ui.actions.AddTaskAction@701d0663)} vs {ActionHandler(org.eclipse.ui.actions.AddTaskAction@18e8716)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.785
-!MESSAGE Conflicting handlers for org.eclipse.ui.file.refresh: {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$2@320b1cac)} vs {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$2@778779de)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.786
-!MESSAGE Conflicting handlers for org.eclipse.ui.project.buildProject: {ActionHandler(org.eclipse.ui.actions.BuildAction@22b8da93)} vs {ActionHandler(org.eclipse.ui.actions.BuildAction@fba95ae)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.787
-!MESSAGE Conflicting handlers for org.eclipse.ui.project.openProject: {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@1add81b5)} vs {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@446e9fda)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.787
-!MESSAGE Conflicting handlers for org.eclipse.ui.project.closeProject: {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@350583c4)} vs {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@7d0dd40d)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.789
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@49a5271)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@2f9a7b13)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.789
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@756169da)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@6330428d)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.882
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@49a5271)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@2f9a7b13)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.883
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@49a5271)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@2f9a7b13)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.884
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@756169da)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@6330428d)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:18:58.885
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@756169da)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@6330428d)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.405
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.delete: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.DeleteAction@48613d82)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$DeleteActionHandler@1039069f)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.406
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.copy: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CopyToClipboardAction@3d56da4e)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CopyActionHandler@52b93dfa)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.407
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.cut: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CutAction@b4ecfae)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CutActionHandler@17abc576)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.408
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.paste: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$PasteActionHandler@5e4bb963)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.PasteAction@53dfef2b)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.410
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addBookmark: {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@7db2e2c1)} vs {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@1691adef)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.411
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addTask: {ActionHandler(org.eclipse.jdt.internal.ui.actions.AddTaskAction@48161950)} vs {ActionHandler(org.eclipse.ui.actions.AddTaskAction@18e8716)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.417
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@31abb139)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@2f9a7b13)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.418
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@756169da)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@2ae290c6)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.419
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.rename: {ActionHandler(org.eclipse.ui.actions.RenameResourceAction@3c2254e0)} vs {ActionHandler(org.eclipse.jdt.ui.actions.RenameAction@7143363e)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.420
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.move: {ActionHandler(org.eclipse.jdt.ui.actions.MoveAction@6519247)} vs {ActionHandler(org.eclipse.ui.actions.MoveResourceAction@131bc813)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.421
-!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.open.editor: {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@716d720c)} vs {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@485aac01)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.422
-!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.open.editor: {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@716d720c)} vs {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@485aac01)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.423
-!MESSAGE Conflicting handlers for org.eclipse.ui.navigate.goToResource: {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.GotoResourceAction@29ecf669)} vs {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.GotoResourceAction@43d104ed)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.424
-!MESSAGE Conflicting handlers for org.eclipse.ui.file.properties: {ActionHandler(org.eclipse.ui.dialogs.PropertyDialogAction@391e7c2)} vs {ActionHandler(org.eclipse.ui.dialogs.PropertyDialogAction@60067362)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.425
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addBookmark: {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@3632317c)} vs {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@1691adef)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.426
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addTask: {ActionHandler(org.eclipse.ui.actions.AddTaskAction@701d0663)} vs {ActionHandler(org.eclipse.ui.actions.AddTaskAction@18e8716)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.427
-!MESSAGE Conflicting handlers for org.eclipse.ui.file.refresh: {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$2@320b1cac)} vs {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$2@778779de)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.428
-!MESSAGE Conflicting handlers for org.eclipse.ui.project.buildProject: {ActionHandler(org.eclipse.ui.actions.BuildAction@fba95ae)} vs {ActionHandler(org.eclipse.ui.actions.BuildAction@22b8da93)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.429
-!MESSAGE Conflicting handlers for org.eclipse.ui.project.openProject: {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@1add81b5)} vs {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@446e9fda)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.430
-!MESSAGE Conflicting handlers for org.eclipse.ui.project.closeProject: {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@350583c4)} vs {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@7d0dd40d)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.432
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@49a5271)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@2f9a7b13)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.432
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@756169da)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@6330428d)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.473
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.delete: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.DeleteAction@48613d82)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$DeleteActionHandler@1039069f)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.474
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.copy: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CopyToClipboardAction@3d56da4e)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CopyActionHandler@52b93dfa)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.475
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.cut: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CutActionHandler@17abc576)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CutAction@b4ecfae)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.476
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.paste: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$PasteActionHandler@5e4bb963)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.PasteAction@53dfef2b)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.479
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addBookmark: {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@7db2e2c1)} vs {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@1691adef)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.481
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addTask: {ActionHandler(org.eclipse.jdt.internal.ui.actions.AddTaskAction@48161950)} vs {ActionHandler(org.eclipse.ui.actions.AddTaskAction@18e8716)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.486
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@31abb139)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@2f9a7b13)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.487
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@2ae290c6)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@756169da)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.488
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.rename: {ActionHandler(org.eclipse.ui.actions.RenameResourceAction@3c2254e0)} vs {ActionHandler(org.eclipse.jdt.ui.actions.RenameAction@7143363e)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.488
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.move: {ActionHandler(org.eclipse.jdt.ui.actions.MoveAction@6519247)} vs {ActionHandler(org.eclipse.ui.actions.MoveResourceAction@131bc813)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.489
-!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.open.editor: {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@716d720c)} vs {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@485aac01)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.490
-!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.open.editor: {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@716d720c)} vs {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@485aac01)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.491
-!MESSAGE Conflicting handlers for org.eclipse.ui.navigate.goToResource: {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.GotoResourceAction@43d104ed)} vs {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.GotoResourceAction@29ecf669)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.491
-!MESSAGE Conflicting handlers for org.eclipse.ui.file.properties: {ActionHandler(org.eclipse.ui.dialogs.PropertyDialogAction@60067362)} vs {ActionHandler(org.eclipse.ui.dialogs.PropertyDialogAction@391e7c2)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.492
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addBookmark: {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@3632317c)} vs {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@1691adef)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.494
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addTask: {ActionHandler(org.eclipse.ui.actions.AddTaskAction@701d0663)} vs {ActionHandler(org.eclipse.ui.actions.AddTaskAction@18e8716)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.496
-!MESSAGE Conflicting handlers for org.eclipse.ui.file.refresh: {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$2@320b1cac)} vs {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$2@778779de)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.499
-!MESSAGE Conflicting handlers for org.eclipse.ui.project.buildProject: {ActionHandler(org.eclipse.ui.actions.BuildAction@fba95ae)} vs {ActionHandler(org.eclipse.ui.actions.BuildAction@22b8da93)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.501
-!MESSAGE Conflicting handlers for org.eclipse.ui.project.openProject: {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@1add81b5)} vs {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@446e9fda)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.503
-!MESSAGE Conflicting handlers for org.eclipse.ui.project.closeProject: {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@350583c4)} vs {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@7d0dd40d)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.507
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@49a5271)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@2f9a7b13)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:19:00.509
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@756169da)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@6330428d)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:25:11.851
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.paste: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$PasteActionHandler@5e4bb963)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.PasteAction@53dfef2b)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:25:11.852
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.cut: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CutActionHandler@17abc576)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CutAction@b4ecfae)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 21:25:11.852
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.copy: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CopyToClipboardAction@3d56da4e)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CopyActionHandler@52b93dfa)}
-<<<<<<< HEAD
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:28.700
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.cut: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CutActionHandler@17abc576)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CutAction@b4ecfae)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:28.701
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.paste: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$PasteActionHandler@5e4bb963)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.PasteAction@53dfef2b)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:28.702
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addBookmark: {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@1691adef)} vs {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@7db2e2c1)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:28.703
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addTask: {ActionHandler(org.eclipse.jdt.internal.ui.actions.AddTaskAction@48161950)} vs {ActionHandler(org.eclipse.ui.actions.AddTaskAction@18e8716)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:28.706
-!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.open.editor: {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@716d720c)} vs {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@485aac01)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:28.707
-!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.open.editor: {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@716d720c)} vs {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@485aac01)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:28.707
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.move: {ActionHandler(org.eclipse.ui.actions.MoveResourceAction@7d944c46)} vs {ActionHandler(org.eclipse.ui.actions.MoveResourceAction@131bc813)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:28.708
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.rename: {ActionHandler(org.eclipse.ui.actions.RenameResourceAction@10fe9daf)} vs {ActionHandler(org.eclipse.ui.actions.RenameResourceAction@3c2254e0)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:28.709
-!MESSAGE Conflicting handlers for org.eclipse.ui.navigate.goToResource: {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.GotoResourceAction@43d104ed)} vs {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.GotoResourceAction@29ecf669)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:28.710
-!MESSAGE Conflicting handlers for org.eclipse.ui.file.properties: {ActionHandler(org.eclipse.ui.dialogs.PropertyDialogAction@60067362)} vs {ActionHandler(org.eclipse.ui.dialogs.PropertyDialogAction@391e7c2)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:28.710
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addBookmark: {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@3632317c)} vs {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@1691adef)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:28.711
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addTask: {ActionHandler(org.eclipse.ui.actions.AddTaskAction@701d0663)} vs {ActionHandler(org.eclipse.ui.actions.AddTaskAction@18e8716)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:28.712
-!MESSAGE Conflicting handlers for org.eclipse.ui.file.refresh: {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$2@778779de)} vs {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$2@320b1cac)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:28.713
-!MESSAGE Conflicting handlers for org.eclipse.ui.project.buildProject: {ActionHandler(org.eclipse.ui.actions.BuildAction@22b8da93)} vs {ActionHandler(org.eclipse.ui.actions.BuildAction@fba95ae)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:28.714
-!MESSAGE Conflicting handlers for org.eclipse.ui.project.openProject: {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@1add81b5)} vs {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@446e9fda)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:28.714
-!MESSAGE Conflicting handlers for org.eclipse.ui.project.closeProject: {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@350583c4)} vs {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@7d0dd40d)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:28.715
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@49a5271)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@2f9a7b13)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:28.716
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@6330428d)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@756169da)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:47.976
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.delete: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.DeleteAction@48613d82)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$DeleteActionHandler@1039069f)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:47.977
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.copy: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CopyActionHandler@52b93dfa)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CopyToClipboardAction@3d56da4e)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:47.978
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.cut: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CutAction@b4ecfae)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CutActionHandler@17abc576)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:47.979
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.paste: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.PasteAction@53dfef2b)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$PasteActionHandler@5e4bb963)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:47.981
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addBookmark: {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@7db2e2c1)} vs {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@1691adef)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:47.982
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addTask: {ActionHandler(org.eclipse.jdt.internal.ui.actions.AddTaskAction@48161950)} vs {ActionHandler(org.eclipse.ui.actions.AddTaskAction@18e8716)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:47.986
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@31abb139)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@2f9a7b13)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:47.987
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@2ae290c6)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@756169da)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:47.988
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.rename: {ActionHandler(org.eclipse.jdt.ui.actions.RenameAction@7143363e)} vs {ActionHandler(org.eclipse.ui.actions.RenameResourceAction@3c2254e0)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:47.989
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.move: {ActionHandler(org.eclipse.jdt.ui.actions.MoveAction@6519247)} vs {ActionHandler(org.eclipse.ui.actions.MoveResourceAction@131bc813)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:47.990
-!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.open.editor: {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@716d720c)} vs {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@485aac01)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:47.990
-!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.open.editor: {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@716d720c)} vs {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@485aac01)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:47.991
-!MESSAGE Conflicting handlers for org.eclipse.ui.navigate.goToResource: {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.GotoResourceAction@43d104ed)} vs {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.GotoResourceAction@29ecf669)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:47.992
-!MESSAGE Conflicting handlers for org.eclipse.ui.file.properties: {ActionHandler(org.eclipse.ui.dialogs.PropertyDialogAction@391e7c2)} vs {ActionHandler(org.eclipse.ui.dialogs.PropertyDialogAction@60067362)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:47.993
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addBookmark: {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@3632317c)} vs {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@1691adef)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:47.994
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addTask: {ActionHandler(org.eclipse.ui.actions.AddTaskAction@701d0663)} vs {ActionHandler(org.eclipse.ui.actions.AddTaskAction@18e8716)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:47.995
-!MESSAGE Conflicting handlers for org.eclipse.ui.file.refresh: {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$2@320b1cac)} vs {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$2@778779de)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:47.996
-!MESSAGE Conflicting handlers for org.eclipse.ui.project.buildProject: {ActionHandler(org.eclipse.ui.actions.BuildAction@22b8da93)} vs {ActionHandler(org.eclipse.ui.actions.BuildAction@fba95ae)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:47.997
-!MESSAGE Conflicting handlers for org.eclipse.ui.project.openProject: {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@1add81b5)} vs {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@446e9fda)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:47.997
-!MESSAGE Conflicting handlers for org.eclipse.ui.project.closeProject: {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@350583c4)} vs {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@7d0dd40d)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:47.999
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@49a5271)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@2f9a7b13)}
-
-!ENTRY org.eclipse.ui 4 4 2013-03-27 20:53:48.000
-!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@6330428d)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@756169da)}
-!SESSION 2013-03-27 22:46:53.372 -----------------------------------------------
+!SESSION 2013-03-27 23:27:38.911 -----------------------------------------------
 eclipse.buildId=v21.1.0-569685
 java.version=1.7.0_11
 java.vendor=Oracle Corporation
@@ -509,13 +6,19 @@ BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
 Framework arguments:  -product com.android.ide.eclipse.adt.package.product
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.android.ide.eclipse.adt.package.product
 
-!ENTRY org.eclipse.core.resources 2 10035 2013-03-27 22:46:59.200
-!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!ENTRY com.android.ide.eclipse.ddms 4 0 2013-03-27 23:28:13.825
+!MESSAGE DDMS files not found: C:\Users\Kris\Downloads\adt-bundle-windows-x86_64-20130219\adt-bundle-windows-x86_64-20130219\sdkplatform-tools\adb.exe 
 
-!ENTRY com.android.ide.eclipse.ddms 4 0 2013-03-27 22:47:09.443
-!MESSAGE DDMS files not found: C:\android-sdk-windows\platform-tools\adb.exe C:\android-sdk-windows\tools\hprof-conv.exe C:\android-sdk-windows\tools\traceview.bat 
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-03-27 23:29:11.484
+!MESSAGE Failed to load properties file for project 'CaptureActivity'
 
-!ENTRY org.eclipse.egit.ui 2 0 2013-03-27 22:47:11.059
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-03-27 23:29:11.503
+!MESSAGE Failed to load properties file for project 'CaptureActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-03-27 23:29:11.573
+!MESSAGE Failed to load properties file for project 'CaptureActivity'
+
+!ENTRY org.eclipse.egit.ui 2 0 2013-03-27 23:29:12.634
 !MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
 Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
 The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
@@ -523,494 +26,266 @@ this system level configuration. The Git installation location can be configured
 Team > Git > Configuration preference page's 'System Settings' tab.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
 
-!ENTRY org.eclipse.egit.ui 2 0 2013-03-27 22:47:11.061
+!ENTRY org.eclipse.egit.ui 2 0 2013-03-27 23:29:12.635
 !MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
 user global configuration and to define the default location to store repositories: 'C:\Users\Kris'. If this is
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-=======
->>>>>>> a64017bf262b70152ef964f96f07f1bc6f64558d
-!SESSION 2013-03-27 23:17:19.873 -----------------------------------------------
-eclipse.buildId=v21.1.0-569685
-java.version=1.7.0_11
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
-Framework arguments:  -product com.android.ide.eclipse.adt.package.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.android.ide.eclipse.adt.package.product
 
-!ENTRY org.eclipse.core.resources 2 10035 2013-03-27 23:17:25.413
-!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
-
-!ENTRY org.eclipse.osgi 4 0 2013-03-27 23:17:25.755
-!MESSAGE An error occurred while automatically activating bundle org.eclipse.core.resources (81).
-!STACK 0
-org.osgi.framework.BundleException: Exception in org.eclipse.core.resources.ResourcesPlugin.start() of bundle org.eclipse.core.resources.
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:734)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:683)
-	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:381)
-	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:300)
-	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
-	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
-	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
-	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
-	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:35)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:461)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
-	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:125)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
-Caused by: org.eclipse.core.internal.dtree.ObjectNotFoundException: Tree element '/google-play-services_lib/bin/res' not found.
-	at org.eclipse.core.internal.dtree.AbstractDataTree.handleNotFound(AbstractDataTree.java:257)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.getData(DeltaDataTree.java:585)
-	at org.eclipse.core.internal.dtree.DataDeltaNode.asBackwardDelta(DataDeltaNode.java:50)
-	at org.eclipse.core.internal.dtree.NoDataDeltaNode.asBackwardDelta(NoDataDeltaNode.java:59)
-	at org.eclipse.core.internal.dtree.NoDataDeltaNode.asBackwardDelta(NoDataDeltaNode.java:59)
-	at org.eclipse.core.internal.dtree.DataDeltaNode.asBackwardDelta(DataDeltaNode.java:47)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.asBackwardDelta(DeltaDataTree.java:88)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:816)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:792)
-	at org.eclipse.core.internal.watson.ElementTree.immutable(ElementTree.java:518)
-	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:710)
-	at org.eclipse.core.internal.resources.SaveManager.startup(SaveManager.java:1528)
-	at org.eclipse.core.internal.resources.Workspace.startup(Workspace.java:2502)
-	at org.eclipse.core.internal.resources.Workspace.open(Workspace.java:2251)
-	at org.eclipse.core.resources.ResourcesPlugin.start(ResourcesPlugin.java:439)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:711)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:702)
-	... 29 more
-Root exception:
-org.eclipse.core.internal.dtree.ObjectNotFoundException: Tree element '/google-play-services_lib/bin/res' not found.
-	at org.eclipse.core.internal.dtree.AbstractDataTree.handleNotFound(AbstractDataTree.java:257)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.getData(DeltaDataTree.java:585)
-	at org.eclipse.core.internal.dtree.DataDeltaNode.asBackwardDelta(DataDeltaNode.java:50)
-	at org.eclipse.core.internal.dtree.NoDataDeltaNode.asBackwardDelta(NoDataDeltaNode.java:59)
-	at org.eclipse.core.internal.dtree.NoDataDeltaNode.asBackwardDelta(NoDataDeltaNode.java:59)
-	at org.eclipse.core.internal.dtree.DataDeltaNode.asBackwardDelta(DataDeltaNode.java:47)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.asBackwardDelta(DeltaDataTree.java:88)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:816)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:792)
-	at org.eclipse.core.internal.watson.ElementTree.immutable(ElementTree.java:518)
-	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:710)
-	at org.eclipse.core.internal.resources.SaveManager.startup(SaveManager.java:1528)
-	at org.eclipse.core.internal.resources.Workspace.startup(Workspace.java:2502)
-	at org.eclipse.core.internal.resources.Workspace.open(Workspace.java:2251)
-	at org.eclipse.core.resources.ResourcesPlugin.start(ResourcesPlugin.java:439)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:711)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:702)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:683)
-	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:381)
-	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:300)
-	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
-	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
-	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
-	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
-	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:35)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:461)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
-	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:125)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
-
-!ENTRY org.eclipse.osgi 4 0 2013-03-27 23:17:25.850
-!MESSAGE Application error
+!ENTRY org.eclipse.core.resources 4 4 2013-03-27 23:29:13.027
+!MESSAGE Exception occurred while saving project preferences: /CaptureActivity/.settings/org.eclipse.jdt.core.prefs.
 !STACK 1
-java.lang.NoClassDefFoundError: org/eclipse/core/resources/IContainer
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:125)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
-Caused by: org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter$TerminatingClassNotFoundException: An error occurred while automatically activating bundle org.eclipse.core.resources (81).
-	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:122)
-	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
-	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
-	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:35)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:461)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
-	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	... 14 more
-Caused by: org.osgi.framework.BundleException: Exception in org.eclipse.core.resources.ResourcesPlugin.start() of bundle org.eclipse.core.resources.
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:734)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:683)
-	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:381)
-	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:300)
-	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
-	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
-	... 23 more
-Caused by: org.eclipse.core.internal.dtree.ObjectNotFoundException: Tree element '/google-play-services_lib/bin/res' not found.
-	at org.eclipse.core.internal.dtree.AbstractDataTree.handleNotFound(AbstractDataTree.java:257)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.getData(DeltaDataTree.java:585)
-	at org.eclipse.core.internal.dtree.DataDeltaNode.asBackwardDelta(DataDeltaNode.java:50)
-	at org.eclipse.core.internal.dtree.NoDataDeltaNode.asBackwardDelta(NoDataDeltaNode.java:59)
-	at org.eclipse.core.internal.dtree.NoDataDeltaNode.asBackwardDelta(NoDataDeltaNode.java:59)
-	at org.eclipse.core.internal.dtree.DataDeltaNode.asBackwardDelta(DataDeltaNode.java:47)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.asBackwardDelta(DeltaDataTree.java:88)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:816)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:792)
-	at org.eclipse.core.internal.watson.ElementTree.immutable(ElementTree.java:518)
-	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:710)
-	at org.eclipse.core.internal.resources.SaveManager.startup(SaveManager.java:1528)
-	at org.eclipse.core.internal.resources.Workspace.startup(Workspace.java:2502)
-	at org.eclipse.core.internal.resources.Workspace.open(Workspace.java:2251)
-	at org.eclipse.core.resources.ResourcesPlugin.start(ResourcesPlugin.java:439)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:711)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:702)
-	... 29 more
-!SESSION 2013-03-27 23:20:14.488 -----------------------------------------------
-eclipse.buildId=v21.1.0-569685
-java.version=1.7.0_11
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
-Framework arguments:  -product com.android.ide.eclipse.adt.package.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.android.ide.eclipse.adt.package.product
+org.eclipse.core.internal.resources.ResourceException: A resource already exists on disk 'C:\Users\Kris\Desktop\workspace\CaptureActivity\.settings'.
+	at org.eclipse.core.internal.resources.Folder.assertCreateRequirements(Folder.java:47)
+	at org.eclipse.core.internal.resources.Folder.create(Folder.java:95)
+	at org.eclipse.core.internal.resources.ProjectPreferences$1.run(ProjectPreferences.java:566)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.ProjectPreferences.save(ProjectPreferences.java:590)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalFlush(EclipsePreferences.java:465)
+	at org.eclipse.core.internal.resources.ProjectPreferences.flush(ProjectPreferences.java:350)
+	at org.eclipse.jdt.internal.core.JavaProject.setOption(JavaProject.java:2951)
+	at com.android.ide.eclipse.adt.internal.project.ProjectHelper.checkAndFixCompilerCompliance(ProjectHelper.java:441)
+	at com.android.ide.eclipse.adt.internal.project.ProjectHelper.fixProjectClasspathEntries(ProjectHelper.java:350)
+	at com.android.ide.eclipse.adt.internal.project.ProjectHelper.fixProject(ProjectHelper.java:268)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.createEclipseProject(NewProjectCreator.java:790)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.createProjectAsync(NewProjectCreator.java:626)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.access$0(NewProjectCreator.java:559)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator$2.execute(NewProjectCreator.java:371)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation$1.run(WorkspaceModifyOperation.java:106)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+!SUBENTRY 1 org.eclipse.core.resources 4 272 2013-03-27 23:29:13.030
+!MESSAGE A resource already exists on disk 'C:\Users\Kris\Desktop\workspace\CaptureActivity\.settings'.
 
-!ENTRY org.eclipse.core.resources 2 10035 2013-03-27 23:20:20.679
-!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
-
-!ENTRY org.eclipse.osgi 4 0 2013-03-27 23:20:20.890
-!MESSAGE An error occurred while automatically activating bundle org.eclipse.core.resources (81).
-!STACK 0
-org.osgi.framework.BundleException: Exception in org.eclipse.core.resources.ResourcesPlugin.start() of bundle org.eclipse.core.resources.
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:734)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:683)
-	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:381)
-	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:300)
-	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
-	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
-	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
-	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
-	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:35)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:461)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
-	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:125)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
-Caused by: org.eclipse.core.internal.dtree.ObjectNotFoundException: Tree element '/google-play-services_lib/bin/res' not found.
-	at org.eclipse.core.internal.dtree.AbstractDataTree.handleNotFound(AbstractDataTree.java:257)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.getData(DeltaDataTree.java:585)
-	at org.eclipse.core.internal.dtree.DataDeltaNode.asBackwardDelta(DataDeltaNode.java:50)
-	at org.eclipse.core.internal.dtree.NoDataDeltaNode.asBackwardDelta(NoDataDeltaNode.java:59)
-	at org.eclipse.core.internal.dtree.NoDataDeltaNode.asBackwardDelta(NoDataDeltaNode.java:59)
-	at org.eclipse.core.internal.dtree.DataDeltaNode.asBackwardDelta(DataDeltaNode.java:47)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.asBackwardDelta(DeltaDataTree.java:88)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:816)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:792)
-	at org.eclipse.core.internal.watson.ElementTree.immutable(ElementTree.java:518)
-	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:710)
-	at org.eclipse.core.internal.resources.SaveManager.startup(SaveManager.java:1528)
-	at org.eclipse.core.internal.resources.Workspace.startup(Workspace.java:2502)
-	at org.eclipse.core.internal.resources.Workspace.open(Workspace.java:2251)
-	at org.eclipse.core.resources.ResourcesPlugin.start(ResourcesPlugin.java:439)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:711)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:702)
-	... 29 more
-Root exception:
-org.eclipse.core.internal.dtree.ObjectNotFoundException: Tree element '/google-play-services_lib/bin/res' not found.
-	at org.eclipse.core.internal.dtree.AbstractDataTree.handleNotFound(AbstractDataTree.java:257)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.getData(DeltaDataTree.java:585)
-	at org.eclipse.core.internal.dtree.DataDeltaNode.asBackwardDelta(DataDeltaNode.java:50)
-	at org.eclipse.core.internal.dtree.NoDataDeltaNode.asBackwardDelta(NoDataDeltaNode.java:59)
-	at org.eclipse.core.internal.dtree.NoDataDeltaNode.asBackwardDelta(NoDataDeltaNode.java:59)
-	at org.eclipse.core.internal.dtree.DataDeltaNode.asBackwardDelta(DataDeltaNode.java:47)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.asBackwardDelta(DeltaDataTree.java:88)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:816)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:792)
-	at org.eclipse.core.internal.watson.ElementTree.immutable(ElementTree.java:518)
-	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:710)
-	at org.eclipse.core.internal.resources.SaveManager.startup(SaveManager.java:1528)
-	at org.eclipse.core.internal.resources.Workspace.startup(Workspace.java:2502)
-	at org.eclipse.core.internal.resources.Workspace.open(Workspace.java:2251)
-	at org.eclipse.core.resources.ResourcesPlugin.start(ResourcesPlugin.java:439)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:711)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:702)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:683)
-	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:381)
-	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:300)
-	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
-	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
-	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
-	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
-	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:35)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:461)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
-	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:125)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
-
-!ENTRY org.eclipse.osgi 4 0 2013-03-27 23:20:20.961
-!MESSAGE Application error
+!ENTRY org.eclipse.core.resources 4 4 2013-03-27 23:29:13.034
+!MESSAGE Exception occurred while saving project preferences: /CaptureActivity/.settings/org.eclipse.jdt.core.prefs.
 !STACK 1
-java.lang.NoClassDefFoundError: org/eclipse/core/resources/IContainer
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:125)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
-Caused by: org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter$TerminatingClassNotFoundException: An error occurred while automatically activating bundle org.eclipse.core.resources (81).
-	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:122)
-	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
-	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
-	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:35)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:461)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
-	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	... 14 more
-Caused by: org.osgi.framework.BundleException: Exception in org.eclipse.core.resources.ResourcesPlugin.start() of bundle org.eclipse.core.resources.
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:734)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:683)
-	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:381)
-	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:300)
-	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
-	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
-	... 23 more
-Caused by: org.eclipse.core.internal.dtree.ObjectNotFoundException: Tree element '/google-play-services_lib/bin/res' not found.
-	at org.eclipse.core.internal.dtree.AbstractDataTree.handleNotFound(AbstractDataTree.java:257)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.getData(DeltaDataTree.java:585)
-	at org.eclipse.core.internal.dtree.DataDeltaNode.asBackwardDelta(DataDeltaNode.java:50)
-	at org.eclipse.core.internal.dtree.NoDataDeltaNode.asBackwardDelta(NoDataDeltaNode.java:59)
-	at org.eclipse.core.internal.dtree.NoDataDeltaNode.asBackwardDelta(NoDataDeltaNode.java:59)
-	at org.eclipse.core.internal.dtree.DataDeltaNode.asBackwardDelta(DataDeltaNode.java:47)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.asBackwardDelta(DeltaDataTree.java:88)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:816)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:815)
-	at org.eclipse.core.internal.dtree.DeltaDataTree.reroot(DeltaDataTree.java:792)
-	at org.eclipse.core.internal.watson.ElementTree.immutable(ElementTree.java:518)
-	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:710)
-	at org.eclipse.core.internal.resources.SaveManager.startup(SaveManager.java:1528)
-	at org.eclipse.core.internal.resources.Workspace.startup(Workspace.java:2502)
-	at org.eclipse.core.internal.resources.Workspace.open(Workspace.java:2251)
-	at org.eclipse.core.resources.ResourcesPlugin.start(ResourcesPlugin.java:439)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:711)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:702)
-	... 29 more
+org.eclipse.core.internal.resources.ResourceException: A resource already exists on disk 'C:\Users\Kris\Desktop\workspace\CaptureActivity\.settings'.
+	at org.eclipse.core.internal.resources.Folder.assertCreateRequirements(Folder.java:47)
+	at org.eclipse.core.internal.resources.Folder.create(Folder.java:95)
+	at org.eclipse.core.internal.resources.ProjectPreferences$1.run(ProjectPreferences.java:566)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.ProjectPreferences.save(ProjectPreferences.java:590)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalFlush(EclipsePreferences.java:465)
+	at org.eclipse.core.internal.resources.ProjectPreferences.flush(ProjectPreferences.java:350)
+	at org.eclipse.jdt.internal.core.JavaProject.setOption(JavaProject.java:2951)
+	at com.android.ide.eclipse.adt.internal.project.ProjectHelper.checkAndFixCompilerCompliance(ProjectHelper.java:443)
+	at com.android.ide.eclipse.adt.internal.project.ProjectHelper.fixProjectClasspathEntries(ProjectHelper.java:350)
+	at com.android.ide.eclipse.adt.internal.project.ProjectHelper.fixProject(ProjectHelper.java:268)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.createEclipseProject(NewProjectCreator.java:790)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.createProjectAsync(NewProjectCreator.java:626)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.access$0(NewProjectCreator.java:559)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator$2.execute(NewProjectCreator.java:371)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation$1.run(WorkspaceModifyOperation.java:106)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+!SUBENTRY 1 org.eclipse.core.resources 4 272 2013-03-27 23:29:13.035
+!MESSAGE A resource already exists on disk 'C:\Users\Kris\Desktop\workspace\CaptureActivity\.settings'.
+
+!ENTRY org.eclipse.core.resources 4 4 2013-03-27 23:29:13.039
+!MESSAGE Exception occurred while saving project preferences: /CaptureActivity/.settings/org.eclipse.jdt.core.prefs.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource already exists on disk 'C:\Users\Kris\Desktop\workspace\CaptureActivity\.settings'.
+	at org.eclipse.core.internal.resources.Folder.assertCreateRequirements(Folder.java:47)
+	at org.eclipse.core.internal.resources.Folder.create(Folder.java:95)
+	at org.eclipse.core.internal.resources.ProjectPreferences$1.run(ProjectPreferences.java:566)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.ProjectPreferences.save(ProjectPreferences.java:590)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalFlush(EclipsePreferences.java:465)
+	at org.eclipse.core.internal.resources.ProjectPreferences.flush(ProjectPreferences.java:350)
+	at org.eclipse.jdt.internal.core.JavaProject.setOption(JavaProject.java:2951)
+	at com.android.ide.eclipse.adt.internal.project.ProjectHelper.checkAndFixCompilerCompliance(ProjectHelper.java:445)
+	at com.android.ide.eclipse.adt.internal.project.ProjectHelper.fixProjectClasspathEntries(ProjectHelper.java:350)
+	at com.android.ide.eclipse.adt.internal.project.ProjectHelper.fixProject(ProjectHelper.java:268)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.createEclipseProject(NewProjectCreator.java:790)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.createProjectAsync(NewProjectCreator.java:626)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.access$0(NewProjectCreator.java:559)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator$2.execute(NewProjectCreator.java:371)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation$1.run(WorkspaceModifyOperation.java:106)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+!SUBENTRY 1 org.eclipse.core.resources 4 272 2013-03-27 23:29:13.040
+!MESSAGE A resource already exists on disk 'C:\Users\Kris\Desktop\workspace\CaptureActivity\.settings'.
+
+!ENTRY org.eclipse.core.resources 4 4 2013-03-27 23:29:14.617
+!MESSAGE Exception occurred while saving project preferences: /google-play-services_lib/.settings/org.eclipse.jdt.core.prefs.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource already exists on disk 'C:\Users\Kris\Desktop\workspace\google-play-services_lib\.settings'.
+	at org.eclipse.core.internal.resources.Folder.assertCreateRequirements(Folder.java:47)
+	at org.eclipse.core.internal.resources.Folder.create(Folder.java:95)
+	at org.eclipse.core.internal.resources.ProjectPreferences$1.run(ProjectPreferences.java:566)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.ProjectPreferences.save(ProjectPreferences.java:590)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalFlush(EclipsePreferences.java:465)
+	at org.eclipse.core.internal.resources.ProjectPreferences.flush(ProjectPreferences.java:350)
+	at org.eclipse.jdt.internal.core.JavaProject.setOption(JavaProject.java:2951)
+	at com.android.ide.eclipse.adt.internal.project.ProjectHelper.checkAndFixCompilerCompliance(ProjectHelper.java:441)
+	at com.android.ide.eclipse.adt.internal.project.ProjectHelper.fixProjectClasspathEntries(ProjectHelper.java:350)
+	at com.android.ide.eclipse.adt.internal.project.ProjectHelper.fixProject(ProjectHelper.java:268)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.createEclipseProject(NewProjectCreator.java:790)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.createProjectAsync(NewProjectCreator.java:626)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.access$0(NewProjectCreator.java:559)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator$2.execute(NewProjectCreator.java:371)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation$1.run(WorkspaceModifyOperation.java:106)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+!SUBENTRY 1 org.eclipse.core.resources 4 272 2013-03-27 23:29:14.618
+!MESSAGE A resource already exists on disk 'C:\Users\Kris\Desktop\workspace\google-play-services_lib\.settings'.
+
+!ENTRY org.eclipse.core.resources 4 4 2013-03-27 23:29:14.620
+!MESSAGE Exception occurred while saving project preferences: /google-play-services_lib/.settings/org.eclipse.jdt.core.prefs.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource already exists on disk 'C:\Users\Kris\Desktop\workspace\google-play-services_lib\.settings'.
+	at org.eclipse.core.internal.resources.Folder.assertCreateRequirements(Folder.java:47)
+	at org.eclipse.core.internal.resources.Folder.create(Folder.java:95)
+	at org.eclipse.core.internal.resources.ProjectPreferences$1.run(ProjectPreferences.java:566)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.ProjectPreferences.save(ProjectPreferences.java:590)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalFlush(EclipsePreferences.java:465)
+	at org.eclipse.core.internal.resources.ProjectPreferences.flush(ProjectPreferences.java:350)
+	at org.eclipse.jdt.internal.core.JavaProject.setOption(JavaProject.java:2951)
+	at com.android.ide.eclipse.adt.internal.project.ProjectHelper.checkAndFixCompilerCompliance(ProjectHelper.java:443)
+	at com.android.ide.eclipse.adt.internal.project.ProjectHelper.fixProjectClasspathEntries(ProjectHelper.java:350)
+	at com.android.ide.eclipse.adt.internal.project.ProjectHelper.fixProject(ProjectHelper.java:268)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.createEclipseProject(NewProjectCreator.java:790)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.createProjectAsync(NewProjectCreator.java:626)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.access$0(NewProjectCreator.java:559)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator$2.execute(NewProjectCreator.java:371)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation$1.run(WorkspaceModifyOperation.java:106)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+!SUBENTRY 1 org.eclipse.core.resources 4 272 2013-03-27 23:29:14.621
+!MESSAGE A resource already exists on disk 'C:\Users\Kris\Desktop\workspace\google-play-services_lib\.settings'.
+
+!ENTRY org.eclipse.core.resources 4 4 2013-03-27 23:29:14.623
+!MESSAGE Exception occurred while saving project preferences: /google-play-services_lib/.settings/org.eclipse.jdt.core.prefs.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource already exists on disk 'C:\Users\Kris\Desktop\workspace\google-play-services_lib\.settings'.
+	at org.eclipse.core.internal.resources.Folder.assertCreateRequirements(Folder.java:47)
+	at org.eclipse.core.internal.resources.Folder.create(Folder.java:95)
+	at org.eclipse.core.internal.resources.ProjectPreferences$1.run(ProjectPreferences.java:566)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.ProjectPreferences.save(ProjectPreferences.java:590)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalFlush(EclipsePreferences.java:465)
+	at org.eclipse.core.internal.resources.ProjectPreferences.flush(ProjectPreferences.java:350)
+	at org.eclipse.jdt.internal.core.JavaProject.setOption(JavaProject.java:2951)
+	at com.android.ide.eclipse.adt.internal.project.ProjectHelper.checkAndFixCompilerCompliance(ProjectHelper.java:445)
+	at com.android.ide.eclipse.adt.internal.project.ProjectHelper.fixProjectClasspathEntries(ProjectHelper.java:350)
+	at com.android.ide.eclipse.adt.internal.project.ProjectHelper.fixProject(ProjectHelper.java:268)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.createEclipseProject(NewProjectCreator.java:790)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.createProjectAsync(NewProjectCreator.java:626)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.access$0(NewProjectCreator.java:559)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator$2.execute(NewProjectCreator.java:371)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation$1.run(WorkspaceModifyOperation.java:106)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+!SUBENTRY 1 org.eclipse.core.resources 4 272 2013-03-27 23:29:14.624
+!MESSAGE A resource already exists on disk 'C:\Users\Kris\Desktop\workspace\google-play-services_lib\.settings'.
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-03-27 23:29:15.915
+!MESSAGE New Project Wizard failed
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.createProjectAsync(NewProjectCreator.java:642)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.access$0(NewProjectCreator.java:559)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator$2.execute(NewProjectCreator.java:371)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation$1.run(WorkspaceModifyOperation.java:106)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Caused by: Java Model Exception: Core Exception [code 274] Could not set the project description for 'NCMS' because the project description file (.project) is out of sync with the file system.
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:784)
+	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3093)
+	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3055)
+	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3108)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.setupSourceFolders(NewProjectCreator.java:1353)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.createEclipseProject(NewProjectCreator.java:722)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.createProjectAsync(NewProjectCreator.java:626)
+	... 6 more
+Caused by: org.eclipse.core.internal.resources.ResourceException: Could not set the project description for 'NCMS' because the project description file (.project) is out of sync with the file system.
+	at org.eclipse.core.internal.resources.Project.setDescription(Project.java:1342)
+	at org.eclipse.jdt.internal.core.ProjectReferenceChange$1.run(ProjectReferenceChange.java:107)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.jdt.internal.core.ProjectReferenceChange.updateProjectReferencesIfNecessary(ProjectReferenceChange.java:110)
+	at org.eclipse.jdt.internal.core.ChangeClasspathOperation.classpathChanged(ChangeClasspathOperation.java:59)
+	at org.eclipse.jdt.internal.core.SetContainerOperation.executeOperation(SetContainerOperation.java:110)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:728)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:793)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:1879)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:2811)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:2689)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:2612)
+	at org.eclipse.jdt.internal.core.ClasspathEntry.validateClasspath(ClasspathEntry.java:1598)
+	at org.eclipse.jdt.internal.core.SetClasspathOperation.verify(SetClasspathOperation.java:118)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:782)
+	... 12 more
+Root exception:
+Java Model Exception: Core Exception [code 274] Could not set the project description for 'NCMS' because the project description file (.project) is out of sync with the file system.
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:784)
+	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3093)
+	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3055)
+	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3108)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.setupSourceFolders(NewProjectCreator.java:1353)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.createEclipseProject(NewProjectCreator.java:722)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.createProjectAsync(NewProjectCreator.java:626)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.access$0(NewProjectCreator.java:559)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator$2.execute(NewProjectCreator.java:371)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation$1.run(WorkspaceModifyOperation.java:106)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Caused by: org.eclipse.core.internal.resources.ResourceException: Could not set the project description for 'NCMS' because the project description file (.project) is out of sync with the file system.
+	at org.eclipse.core.internal.resources.Project.setDescription(Project.java:1342)
+	at org.eclipse.jdt.internal.core.ProjectReferenceChange$1.run(ProjectReferenceChange.java:107)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.jdt.internal.core.ProjectReferenceChange.updateProjectReferencesIfNecessary(ProjectReferenceChange.java:110)
+	at org.eclipse.jdt.internal.core.ChangeClasspathOperation.classpathChanged(ChangeClasspathOperation.java:59)
+	at org.eclipse.jdt.internal.core.SetContainerOperation.executeOperation(SetContainerOperation.java:110)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:728)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:793)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:1879)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:2811)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:2689)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:2612)
+	at org.eclipse.jdt.internal.core.ClasspathEntry.validateClasspath(ClasspathEntry.java:1598)
+	at org.eclipse.jdt.internal.core.SetClasspathOperation.verify(SetClasspathOperation.java:118)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:782)
+	... 12 more
+Caused by: org.eclipse.core.internal.resources.ResourceException: Could not set the project description for 'NCMS' because the project description file (.project) is out of sync with the file system.
+	at org.eclipse.core.internal.resources.Project.setDescription(Project.java:1342)
+	at org.eclipse.jdt.internal.core.ProjectReferenceChange$1.run(ProjectReferenceChange.java:107)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.jdt.internal.core.ProjectReferenceChange.updateProjectReferencesIfNecessary(ProjectReferenceChange.java:110)
+	at org.eclipse.jdt.internal.core.ChangeClasspathOperation.classpathChanged(ChangeClasspathOperation.java:59)
+	at org.eclipse.jdt.internal.core.SetContainerOperation.executeOperation(SetContainerOperation.java:110)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:728)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:793)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:1879)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:2811)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:2689)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:2612)
+	at org.eclipse.jdt.internal.core.ClasspathEntry.validateClasspath(ClasspathEntry.java:1598)
+	at org.eclipse.jdt.internal.core.SetClasspathOperation.verify(SetClasspathOperation.java:118)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:782)
+	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3093)
+	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3055)
+	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3108)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.setupSourceFolders(NewProjectCreator.java:1353)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.createEclipseProject(NewProjectCreator.java:722)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.createProjectAsync(NewProjectCreator.java:626)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.access$0(NewProjectCreator.java:559)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator$2.execute(NewProjectCreator.java:371)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation$1.run(WorkspaceModifyOperation.java:106)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
