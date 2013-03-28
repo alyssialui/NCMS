@@ -7,6 +7,8 @@ package pcapp;
 import classes.Newspaper;
 import java.awt.CardLayout;
 import java.awt.Toolkit;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 
 /**
  *
@@ -225,6 +227,11 @@ public class MainFrame extends javax.swing.JFrame {
         addlname.setText("Last Name");
 
         addUserSubmitButton.setText("OK");
+        addUserSubmitButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addUserSubmitButtonActionPerformed(evt);
+            }
+        });
 
         addUserCancelButton.setText("Cancel");
         addUserCancelButton.addActionListener(new java.awt.event.ActionListener() {
@@ -291,6 +298,12 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(addUserCancelButton))
                 .addContainerGap())
         );
+
+        addUsernameField.getAccessibleContext().setAccessibleName("uname");
+        addPasswordField.getAccessibleContext().setAccessibleName("pword");
+        addConfirmPasswordField.getAccessibleContext().setAccessibleName("cpword");
+        addfnameField.getAccessibleContext().setAccessibleName("fname");
+        addlnameField.getAccessibleContext().setAccessibleName("lname");
 
         homeIdlePanel.add(addUserPanel, "addUserCard");
 
@@ -514,7 +527,7 @@ public class MainFrame extends javax.swing.JFrame {
                         .addComponent(generateInvoicesButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(logoutButton))
                 .addGap(37, 37, 37)
-                .addComponent(homeIdlePanel, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE))
+                .addComponent(homeIdlePanel, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
             .addGroup(homePanelLayout.createSequentialGroup()
                 .addGap(109, 109, 109)
                 .addComponent(welcomeLabel)
@@ -646,11 +659,11 @@ public class MainFrame extends javax.swing.JFrame {
 
    }//GEN-LAST:event_logoutButtonActionPerformed
 
-<<<<<<< HEAD
+
     private void addfnameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addfnameFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_addfnameFieldActionPerformed
-=======
+
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
@@ -682,7 +695,31 @@ public class MainFrame extends javax.swing.JFrame {
             saveNewspaperLabel.setText("Newspaper added to NCMS system.");
         }
     }//GEN-LAST:event_addNewspaperOkButtonActionPerformed
->>>>>>> b437558edc84e41f87e3a46ab0c650db3c35ae6c
+
+    private void addUserSubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addUserSubmitButtonActionPerformed
+        // TODO add your handling code here:
+        
+                String fName, lName, uName, password, cpassword;
+                String fileName = "Users.txt";
+        
+        fName = addfnameField.getText();
+        lName = addlnameField.getText();
+        uName = addUsernameField.getText();
+        password = addPasswordField.getText();
+        cpassword = addConfirmPasswordField.getText();
+        
+    try {
+        
+        PrintWriter outFile = new PrintWriter (new FileWriter (fileName));
+
+           outFile.print(fName+"\t\t\t "+lName+"\t\t\t "+uName+"\n");
+           outFile.close();
+    }
+    catch (Exception e) {
+        System.out.println("File could not be opened");
+      }
+        
+    }//GEN-LAST:event_addUserSubmitButtonActionPerformed
 
     /**
      * @param args the command line arguments

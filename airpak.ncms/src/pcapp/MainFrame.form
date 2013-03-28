@@ -431,6 +431,9 @@
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="addUsernameField">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="uname"/>
+                      </AccessibilityProperties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="addPasswordLabel">
                       <Properties>
@@ -443,8 +446,14 @@
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JPasswordField" name="addPasswordField">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="pword"/>
+                      </AccessibilityProperties>
                     </Component>
                     <Component class="javax.swing.JPasswordField" name="addConfirmPasswordField">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="cpword"/>
+                      </AccessibilityProperties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="addfname">
                       <Properties>
@@ -452,6 +461,9 @@
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="addfnameField">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="fname"/>
+                      </AccessibilityProperties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addfnameFieldActionPerformed"/>
                       </Events>
@@ -462,11 +474,17 @@
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="addlnameField">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="lname"/>
+                      </AccessibilityProperties>
                     </Component>
                     <Component class="javax.swing.JButton" name="addUserSubmitButton">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="OK"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addUserSubmitButtonActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="addUserCancelButton">
                       <Properties>
