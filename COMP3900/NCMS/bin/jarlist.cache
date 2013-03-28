@@ -1,7 +1,5 @@
 # cache for current jar dependecy. DO NOT EDIT.
 # format is <lastModified> <length> <SHA-1> <path>
 # Encoding is UTF-8
-1362079614000 240800 1b7c87ee83bb02ae97a7b3a3a76909dc2cfe7250 C:\Users\Randy\Documents\School\Third Year\CS39Q - Research Project\Project\NCMS\COMP3900\cordovaExample\libs\cordova-2.5.0.jar
-1362079614000 240800 1b7c87ee83bb02ae97a7b3a3a76909dc2cfe7250 C:\Users\Randy\Documents\School\Third Year\CS39Q - Research Project\Project\NCMS\COMP3900\NCMS\libs\cordova-2.5.0.jar
-1364433709595 454151 1579725f22b12bd715a640a6f14442693cafc775 C:\Users\Randy\Documents\School\Third Year\CS39Q - Research Project\Project\NCMS\COMP3900\NCMS\libs\core.jar
-1364432655351 454151 1579725f22b12bd715a640a6f14442693cafc775 C:\Users\Randy\Documents\School\Third Year\CS39Q - Research Project\Project\NCMS\COMP3900\CaptureActivity\libs\core.jar
+1364444189504 454151 1579725f22b12bd715a640a6f14442693cafc775 C:\NCMS\COMP3900\CaptureActivity\libs\core.jar
+1364444191195 454151 1579725f22b12bd715a640a6f14442693cafc775 C:\NCMS\COMP3900\NCMS\libs\core.jar

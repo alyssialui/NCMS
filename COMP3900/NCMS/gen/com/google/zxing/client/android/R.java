@@ -202,18 +202,18 @@ public final class R {
 	public static final class layout {
 		public static final int bookmark_picker_list_item = 0x7f030005;
 		public static final int encode = 0x7f030007;
-		public static final int share = 0x7f03000e;
+		public static final int share = 0x7f03000d;
 		public static final int help = 0x7f030008;
-		public static final int search_book_contents_list_item = 0x7f03000d;
+		public static final int search_book_contents_list_item = 0x7f03000c;
 		public static final int history_list_item = 0x7f030009;
-		public static final int search_book_contents_header = 0x7f03000c;
+		public static final int search_book_contents_header = 0x7f03000b;
 		public static final int capture = 0x7f030006;
-		public static final int search_book_contents = 0x7f03000b;
+		public static final int search_book_contents = 0x7f03000a;
 	}
 	public static final class drawable {
-		public static final int launcher_icon = 0x7f020002;
-		public static final int shopper_icon = 0x7f020004;
-		public static final int share_via_barcode = 0x7f020003;
+		public static final int launcher_icon = 0x7f020001;
+		public static final int shopper_icon = 0x7f020003;
+		public static final int share_via_barcode = 0x7f020002;
 	}
 	public static final class xml {
 		public static final int preferences = 0x7f040001;
