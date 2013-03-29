@@ -16,24 +16,24 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-<<<<<<< HEAD
+
 		setContentView(R.layout.activity_main_phone);
 		
 		exv = (ExpandableListView)findViewById(R.id.expandableListView1);
 		exv.setAdapter(new MyAdapter(this));
 		
-//		exv.setOnGroupClickListener(new OnGroupClickListener(){
-//
-//			@Override
-//			public boolean onGroupClick(ExpandableListView arg0, View arg1,
-//					int groupPosition, long arg3) {
-//				// TODO Auto-generated method stub
-//				String itemClicked = MyAdapter.parentList[groupPosition];
-//				Toast.makeText(MainActivity.this, itemClicked + " is clicked", Toast.LENGTH_SHORT).show();
-//				return false;
-//			}
-//			
-//		});
+		exv.setOnGroupClickListener(new OnGroupClickListener(){
+
+			@Override
+			public boolean onGroupClick(ExpandableListView arg0, View arg1,
+					int groupPosition, long arg3) {
+				// TODO Auto-generated method stub
+				String itemClicked = MyAdapter.parentList[groupPosition];
+				Toast.makeText(MainActivity.this, itemClicked + " is clicked", Toast.LENGTH_SHORT).show();
+				return false;
+			}
+			
+		});
 		
 		exv.setOnChildClickListener(new OnChildClickListener(){
 
@@ -51,10 +51,9 @@ public class MainActivity extends Activity {
 			}
 	
 		});
-=======
 		Intent openMenu = new Intent("com.ncms.ncms.MAIN");
 		startActivity(openMenu);
->>>>>>> dc38efea91b441e565f19da6804c3d83375e99da
+
 	}
 
 	@Override

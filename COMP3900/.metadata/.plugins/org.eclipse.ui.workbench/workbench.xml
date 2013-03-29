@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="29" version="2.0">
+<workbench progressCount="16" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="683" x="683" y="0">
 <fastViewData fastViewLocation="1024"/>
@@ -41,6 +41,7 @@
 <part id="3"/>
 <part id="4"/>
 <part id="5"/>
+<part id="6"/>
 </presentation>
 </folder>
 </info>
@@ -56,16 +57,20 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/NCMS/src/com/ncms/ncms/MainActivity_tab.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="338" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GoogleMapActivity.java" partName="GoogleMapActivity.java" path="C:/NCMS/COMP3900/NCMS/src/com/ncms/ncms/GoogleMapActivity.java" title="GoogleMapActivity.java" tooltip="NCMS/src/com/ncms/ncms/GoogleMapActivity.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GoogleMapActivity.java" partName="GoogleMapActivity.java" path="C:/NCMS/COMP3900/NCMS/src/com/ncms/ncms/GoogleMapActivity.java" title="GoogleMapActivity.java" tooltip="NCMS/src/com/ncms/ncms/GoogleMapActivity.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/NCMS/src/com/ncms/ncms/GoogleMapActivity.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="993" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="607" selectionTopPixel="102"/>
 </editor>
 <editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_main_phone.xml" partName="activity_main_phone.xml" path="C:/NCMS/COMP3900/NCMS/res/layout/activity_main_phone.xml" title="activity_main_phone.xml" tooltip="NCMS/res/layout/activity_main_phone.xml" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/NCMS/res/layout/activity_main_phone.xml"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainActivity.java" partName="MainActivity.java" path="C:/NCMS/COMP3900/NCMS/src/com/ncms/ncms/MainActivity.java" title="MainActivity.java" tooltip="NCMS/src/com/ncms/ncms/MainActivity.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/NCMS/src/com/ncms/ncms/MainActivity.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1604" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="809" selectionTopPixel="90"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Menu.java" partName="Menu.java" path="C:/NCMS/COMP3900/NCMS/src/com/ncms/ncms/Menu.java" title="Menu.java" tooltip="NCMS/src/com/ncms/ncms/Menu.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/NCMS/src/com/ncms/ncms/Menu.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="813" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -83,7 +88,8 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings (32 items)"/>
+<category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -288,8 +294,8 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.17121771" ratioLeft="232" ratioRight="1123" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.7496136" ratioLeft="485" ratioRight="162" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<info folder="true" part="bottom" ratio="0.71060604" ratioLeft="469" ratioRight="191" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="com.android.ide.eclipse.ddms.views.LogCatView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
 <page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
@@ -338,6 +344,9 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/NCMS/src/com/ncms/ncms/GoogleMapActivity.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/NCMS/src/com/ncms/ncms/ScannerActivity.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/NCMS/src/com/ncms/ncms/CameraActivity.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" path="/NCMS/AndroidManifest.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/NCMS/src/com/ncms/ncms/MainActivity.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/NCMS/src/com/ncms/ncms/Menu.java"/>
 </editors>
 <item historyLabel="activity_scanner.xml" index="0"/>
 <item historyLabel="NCMS Manifest" index="1"/>
@@ -432,8 +441,34 @@
 <item historyLabel="ScannerActivity.java" index="11">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item active="true" historyLabel="GoogleMapActivity.java" index="10">
+<item historyLabel="GoogleMapActivity.java" index="10">
 <position info="not_deleted" x="1563" y="0"/>
+</item>
+<item historyLabel="NCMS Manifest" index="13"/>
+<item historyLabel="MainActivity.java" index="14">
+<position info="not_deleted" x="1198" y="0"/>
+</item>
+<item historyLabel="NCMS Manifest" index="13"/>
+<item historyLabel="GoogleMapActivity.java" index="10">
+<position info="not_deleted" x="607" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="14">
+<position info="not_deleted" x="809" y="0"/>
+</item>
+<item historyLabel="Menu.java" index="15">
+<position info="not_deleted" x="590" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="14">
+<position info="not_deleted" x="809" y="0"/>
+</item>
+<item historyLabel="Menu.java" index="15">
+<position info="not_deleted" x="590" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="14">
+<position info="not_deleted" x="809" y="0"/>
+</item>
+<item active="true" historyLabel="Menu.java" index="15">
+<position info="not_deleted" x="590" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -453,6 +488,9 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Menu.java" tooltip="NCMS/src/com/ncms/ncms/Menu.java">
+<persistable path="/NCMS/src/com/ncms/ncms/Menu.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CameraActivity.java" tooltip="NCMS/src/com/ncms/ncms/CameraActivity.java">
 <persistable path="/NCMS/src/com/ncms/ncms/CameraActivity.java"/>
 </file>
