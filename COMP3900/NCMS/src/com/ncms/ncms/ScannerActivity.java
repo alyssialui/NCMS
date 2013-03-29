@@ -1,7 +1,7 @@
 package com.ncms.ncms;
 
-import android.os.Bundle;
-import android.app.Activity;
+//import android.os.Bundle;
+//import android.app.Activity;
 import android.view.Menu;
 import com.google.zxing.client.android.*;
 
@@ -19,5 +19,13 @@ public class ScannerActivity extends CaptureActivity {
 		getMenuInflater().inflate(R.menu.scanner, menu);
 		return true;
 	}
+
+	@Override
+	protected void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
+		finish();
+	}
+	
 
 }

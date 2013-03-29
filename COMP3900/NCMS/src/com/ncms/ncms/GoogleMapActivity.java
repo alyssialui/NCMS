@@ -1,7 +1,6 @@
 package com.ncms.ncms;
 
-import java.util.List;
-
+//import java.util.List;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.model.LatLng;
@@ -38,10 +37,10 @@ public class GoogleMapActivity extends Activity {
 //		overlayList.add(t);
 	}
 	
-	private LatLng getMyPos(){
-		LatLng myPos = new LatLng(map.getMyLocation().getLatitude(), map.getMyLocation().getLongitude());
-		return myPos;
-	}
+//	private LatLng getMyPos(){
+//		LatLng myPos = new LatLng(map.getMyLocation().getLatitude(), map.getMyLocation().getLongitude());
+//		return myPos;
+//	}
 
 //	@Override
 //	public boolean onCreateOptionsMenu(Menu menu) {
