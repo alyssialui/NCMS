@@ -1,18 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="android.widget.SimpleExpandableListAdapter"/>
-<fullyQualifiedTypeName name="android.graphics.drawable.Drawable"/>
-<fullyQualifiedTypeName name="java.io.IOException"/>
-<fullyQualifiedTypeName name="android.app.AlertDialog"/>
-<fullyQualifiedTypeName name="android.app.AlertDialog.Builder"/>
-<fullyQualifiedTypeName name="android.content.DialogInterface.OnClickListener"/>
-<fullyQualifiedTypeName name="com.ncms.ncms.R.id"/>
-<fullyQualifiedTypeName name="com.google.android.maps.MapView"/>
-<fullyQualifiedTypeName name="com.google.android.maps.Overlay"/>
-<fullyQualifiedTypeName name="android.view.MotionEvent"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="com.google.android.maps.MyLocationOverlay"/>
-<fullyQualifiedTypeName name="android.widget.ArrayAdapter"/>
-<fullyQualifiedTypeName name="android.R"/>
-<fullyQualifiedTypeName name="android.content.Intent"/>
-</qualifiedTypeNameHistroy>
+<qualifiedTypeNameHistroy/>

@@ -13,7 +13,7 @@ public class MyAdapter extends BaseExpandableListAdapter {
 	static String[] parentList = {"Delivery 1", "Delivery 2", "Delivery 3", "Delivery 4"}; //put list of deliveries here
 	static String[][] childList ={
 			{
-				"Mona", "Barbican", "Cherry Gardens" //call list of stops on delivery here
+				"Ormsby, Matthew\n7 Hibiscus Drive\nBarbican\nPiD:10001-11000" //call list of stops on delivery here
 			},
 			{
 				"Hope Pastures", "Constant Spring", "Half Way Tree"

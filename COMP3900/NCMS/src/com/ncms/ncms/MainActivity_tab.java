@@ -6,13 +6,13 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.ExpandableListView.OnChildClickListener;
-import android.widget.TabHost;
+import android.widget.ExpandableListView.OnGroupClickListener;
+import android.widget.ExpandableListView.OnGroupExpandListener;
 import android.widget.Toast;
 
 public class MainActivity_tab extends Activity {
 
 	ExpandableListView exv;
-	TabHost tbh;
 	int numDeliveries;
 	int numStops; //areas to deliver papers in delivery
 	int numAgents; //agents within area to delivery papers to
@@ -25,7 +25,20 @@ public class MainActivity_tab extends Activity {
 		exv = (ExpandableListView)findViewById(R.id.expandableListView1);
 		exv.setAdapter(new MyAdapter(this));
 		
-		//tbh = getTabHost();
+		exv.setOnGroupClickListener(new OnGroupClickListener(){
+
+			@Override
+			public boolean onGroupClick(ExpandableListView arg0, View arg1,
+					int groupPosition, long arg3) {
+				// TODO Auto-generated method stub
+				//change mapview
+				//show route from current location to destination
+				String itemClicked = MyAdapter.parentList[groupPosition];
+				Toast.makeText(MainActivity_tab.this, itemClicked + " is clicked", Toast.LENGTH_SHORT).show();
+				return false;
+			}
+			
+		});
 		
 		exv.setOnChildClickListener(new OnChildClickListener(){
 
@@ -37,7 +50,9 @@ public class MainActivity_tab extends Activity {
 				//change tabs
 				//when specific tab selected - zoom in on area and show agents
 				String itemClicked = MyAdapter.childList[groupPosition][childPosition];
-				Toast.makeText(MainActivity_tab.this, itemClicked + " is clicked", Toast.LENGTH_SHORT).show();
+				if(itemClicked.equals("Delivery 1")){
+					
+				}
 				return false;
 			}
 	
