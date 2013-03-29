@@ -75,7 +75,7 @@
 
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyAH32DjtsI0Yo9h9A-nFZ_FaaAxiGbTq28" />
+            android:value="AIzaSyCSp35txdtYjxtRPlbUly_l9cF0OOj5YRE" />
 
         <activity
             android:name="com.ncms.ncms.ScannerActivity"
