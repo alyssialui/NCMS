@@ -1,0 +1,7 @@
+package com.ncms.ncms;
+
+import android.app.ListActivity;
+
+public class Menu extends ListActivity {
+
+}

@@ -1,0 +1,119 @@
+[
+  {
+    "symbolicName": "core",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "1579725f22b12bd715a640a6f14442693cafc775",
+    "jarFileModificationDate": "2013-03-27T20:21:49.595-05:00",
+    "location": "C:\\Users\\Randy\\Documents\\School\\Third Year\\CS39Q - Research Project\\Project\\NCMS\\COMP3900\\NCMS\\libs\\core.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "android-support-v4",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "307c1cc532eabbf1d135b43e5c983c9da700449d",
+    "jarFileModificationDate": "2013-03-27T01:43:19.354-05:00",
+    "location": "C:\\Users\\Randy\\Documents\\School\\Third Year\\CS39Q - Research Project\\Project\\NCMS\\COMP3900\\NCMS\\libs\\android-support-v4.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "android",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "322db3959c3383f4be9daa75ffa427d1485879ad",
+    "jarFileModificationDate": "2013-03-21T23:07:39.492-05:00",
+    "location": "C:\\android-sdk-windows\\platforms\\android-17\\android.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "cordovaexample",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "3ffe45cde68e05a1009e2f8c1037a8af34b77585",
+    "jarFileModificationDate": "2013-03-28T12:25:40.606-05:00",
+    "location": "C:\\Users\\Randy\\Documents\\School\\Third Year\\CS39Q - Research Project\\Project\\NCMS\\COMP3900\\cordovaExample\\bin\\cordovaexample.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "cordova-2.5.0",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "1b7c87ee83bb02ae97a7b3a3a76909dc2cfe7250",
+    "jarFileModificationDate": "2013-02-28T14:26:54-05:00",
+    "location": "C:\\Users\\Randy\\Documents\\School\\Third Year\\CS39Q - Research Project\\Project\\NCMS\\COMP3900\\cordovaExample\\libs\\cordova-2.5.0.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "captureactivity",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "cb370691a477daf7cb82b66bff6093e0dd4cccf4",
+    "jarFileModificationDate": "2013-03-28T12:25:40.128-05:00",
+    "location": "C:\\Users\\Randy\\Documents\\School\\Third Year\\CS39Q - Research Project\\Project\\NCMS\\COMP3900\\CaptureActivity\\bin\\captureactivity.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "core",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "1579725f22b12bd715a640a6f14442693cafc775",
+    "jarFileModificationDate": "2013-03-27T20:04:15.351-05:00",
+    "location": "C:\\Users\\Randy\\Documents\\School\\Third Year\\CS39Q - Research Project\\Project\\NCMS\\COMP3900\\CaptureActivity\\libs\\core.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "google-play-services_lib",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "6ad4635b9e4bc1094dc2a92ed6bb8e2fdf92241d",
+    "jarFileModificationDate": "2013-03-28T12:25:41.223-05:00",
+    "location": "C:\\Users\\Randy\\Documents\\School\\Third Year\\CS39Q - Research Project\\Project\\NCMS\\COMP3900\\google-play-services_lib\\bin\\google-play-services_lib.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "google-play-services",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "2b1fa7915f859dfc49f506db64fdf1374e2a5497",
+    "jarFileModificationDate": "2013-03-21T23:14:26.548-05:00",
+    "location": "C:\\Users\\Randy\\Documents\\School\\Third Year\\CS39Q - Research Project\\Project\\NCMS\\COMP3900\\google-play-services_lib\\libs\\google-play-services.jar",
+    "javaRuntime": false
+  }
+]
