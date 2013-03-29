@@ -2,6 +2,7 @@ package com.ncms.ncms;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ExpandableListView;
@@ -15,6 +16,7 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+<<<<<<< HEAD
 		setContentView(R.layout.activity_main_phone);
 		
 		exv = (ExpandableListView)findViewById(R.id.expandableListView1);
@@ -49,6 +51,10 @@ public class MainActivity extends Activity {
 			}
 	
 		});
+=======
+		Intent openMenu = new Intent("com.ncms.ncms.MAIN");
+		startActivity(openMenu);
+>>>>>>> dc38efea91b441e565f19da6804c3d83375e99da
 	}
 
 	@Override

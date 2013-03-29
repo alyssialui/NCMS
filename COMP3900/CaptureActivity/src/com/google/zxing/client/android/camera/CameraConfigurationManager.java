@@ -80,7 +80,7 @@ final class CameraConfigurationManager {
 
   void setDesiredCameraParameters(Camera camera, boolean safeMode) {
     Camera.Parameters parameters = camera.getParameters();
-
+ //   camera.setDisplayOrientation(90);
     if (parameters == null) {
       Log.w(TAG, "Device error: no camera parameters are available. Proceeding without configuration.");
       return;

@@ -169,7 +169,7 @@ containing a value of this type.
         public static final int shopper_icon=0x7f020003;
     }
     public static final class id {
-        public static final int LinearLayout1=0x7f060018;
+        public static final int MapLayout=0x7f060018;
         public static final int action_forgot_password=0x7f060042;
         public static final int action_settings=0x7f06003f;
         public static final int back_button=0x7f06002c;

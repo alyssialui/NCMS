@@ -32,7 +32,7 @@ int drawable ic_launcher 0x7f020000
 int drawable launcher_icon 0x7f020001
 int drawable share_via_barcode 0x7f020002
 int drawable shopper_icon 0x7f020003
-int id LinearLayout1 0x7f060018
+int id MapLayout 0x7f060018
 int id action_forgot_password 0x7f060042
 int id action_settings 0x7f06003f
 int id back_button 0x7f06002c
