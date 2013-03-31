@@ -1,9 +1,7 @@
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=dc38efea91b441e565f19da6804c3d83375e99da
 com.android.ide.eclipse.adt.fixLegacyEditors=1
 com.android.ide.eclipse.adt.sdk=C\:\\android-sdk-windows
-com.android.ide.eclipse.adt.xmlEditor=true
-<<<<<<< HEAD
 design.palette.flyout.width=150
-=======
-design.palette.flyout.width=198
->>>>>>> dc38efea91b441e565f19da6804c3d83375e99da
 eclipse.preferences.version=1

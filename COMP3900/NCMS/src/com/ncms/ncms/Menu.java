@@ -9,16 +9,16 @@ import android.widget.ListView;
 
 public class Menu extends ListActivity {
 
-	String classes[] = {"ScannerActivity","GoogleMapActivity","MainActivity_tab","LoginActivity","ListMapCombo"};
+	String classes[] = {"ScannerActivity","GoogleMapActivity","MainActivity","LoginActivity","MainActivity_tab"};
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
 		// TODO Auto-generated method stub
 		super.onListItemClick(l, v, position, id);
 		String userChoice = classes[position];
 		try{
-		Class menuOption = Class.forName("com.ncms.ncms." + userChoice);
-		Intent chosenLayout = new Intent(Menu.this,menuOption);
-		startActivity(chosenLayout);
+			Class menuOption = Class.forName("com.ncms.ncms." + userChoice);
+			Intent chosenLayout = new Intent(Menu.this,menuOption);
+			startActivity(chosenLayout);
 		}catch(ClassNotFoundException e){
 			e.printStackTrace();
 		}

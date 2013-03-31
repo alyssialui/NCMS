@@ -2,6 +2,7 @@ package com.ncms.ncms;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ExpandableListView;
@@ -34,6 +35,17 @@ public class MainActivity_tab extends Activity {
 				//show route from current location to destination
 				String itemClicked = MyAdapter.parentList[groupPosition];
 				Toast.makeText(MainActivity_tab.this, itemClicked + " is clicked", Toast.LENGTH_SHORT).show();
+				if(itemClicked.equals("Delivery 1")){
+//					try{
+//						Class menuOption = Class.forName("com.ncms.ncms.GoogleMapActivity");
+//						double[] coords = {53.55,98.22}; 
+//						String child = MyAdapter.childList[groupPosition][0];
+//						Intent chosenLayout = new Intent(MainActivity_tab.this,menuOption).putExtra("co-ordinates", coords).putExtra("delivery info", child);
+//						startActivity(chosenLayout);
+//					}catch(ClassNotFoundException e){
+//						e.printStackTrace();
+//					}
+				}
 				return false;
 			}
 			
@@ -45,12 +57,16 @@ public class MainActivity_tab extends Activity {
 			public boolean onChildClick(ExpandableListView parent, View v,
 					int groupPosition, int childPosition, long id) {
 				// TODO Auto-generated method stub
-				//change mapView
-				//change tabs
-				//when specific tab selected - zoom in on area and show agents
-				String itemClicked = MyAdapter.childList[groupPosition][childPosition];
+				//go to delivery page
+				String itemClicked = MyAdapter.parentList[groupPosition];
 				if(itemClicked.equals("Delivery 1")){
-					
+					try{
+						Class menuOption = Class.forName("com.ncms.ncms.LoginActivity_Tab");
+						Intent chosenLayout = new Intent(MainActivity_tab.this,menuOption).putExtra("delivery info", MyAdapter.childList[groupPosition][childPosition]);
+						startActivity(chosenLayout);
+					}catch(ClassNotFoundException e){
+						e.printStackTrace();
+					}
 				}
 				return false;
 			}

@@ -28,6 +28,7 @@ public class MainActivity extends Activity {
 			public boolean onGroupClick(ExpandableListView arg0, View arg1,
 					int groupPosition, long arg3) {
 				// TODO Auto-generated method stub
+				//show marker on map
 				String itemClicked = MyAdapter.parentList[groupPosition];
 				Toast.makeText(MainActivity.this, itemClicked + " is clicked", Toast.LENGTH_SHORT).show();
 				return false;
@@ -41,18 +42,23 @@ public class MainActivity extends Activity {
 			public boolean onChildClick(ExpandableListView parent, View v,
 					int groupPosition, int childPosition, long id) {
 				// TODO Auto-generated method stub
-				//when specific tab selected - zoom in on area and show agents
 				//go to delivery page
-				String itemClicked = MyAdapter.childList[groupPosition][childPosition];
+				String itemClicked = MyAdapter.parentList[groupPosition];
 				if(itemClicked.equals("Delivery 1")){
-					//go to delivery
+					try{
+						Class menuOption = Class.forName("com.ncms.ncms.LoginActivity");
+						Intent chosenLayout = new Intent(MainActivity.this,menuOption).putExtra("delivery info", MyAdapter.childList[groupPosition][childPosition]);
+						startActivity(chosenLayout);
+					}catch(ClassNotFoundException e){
+						e.printStackTrace();
+					}
 				}
 				return false;
 			}
 	
 		});
-		Intent openMenu = new Intent("com.ncms.ncms.MAIN");
-		startActivity(openMenu);
+//		Intent openMenu = new Intent("com.ncms.ncms.MAIN");
+//		startActivity(openMenu);
 
 	}
 

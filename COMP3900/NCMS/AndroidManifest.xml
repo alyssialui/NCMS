@@ -19,6 +19,7 @@
     <permission
         android:name="com.ncms.ncms.permission.MAPS_RECEIVE"
         android:protectionLevel="signature" />
+
     <uses-permission android:name="com.ncms.ncms.permission.MAPS_RECEIVE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -53,17 +54,18 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.ncms.ncms.Menu"
-            android:label="@string/app_name">
+            android:label="@string/app_name" >
             <intent-filter>
-             	<action android:name="android.intent.action.MAIN" />
-             	<category android:name="android.intent.category.LAUNCHER" />
-             </intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name="com.ncms.ncms.GoogleMapActivity"
-            android:label="@string/app_name" 
-            android:theme="@android:style/Theme.Black.NoTitleBar"
-            android:screenOrientation="landscape">
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
         </activity>
         <activity
             android:name="com.ncms.ncms.MainActivity_tab"
@@ -81,16 +83,23 @@
             android:name="com.ncms.ncms.MainActivity"
             android:label="@string/app_name" >
         </activity>
-
         <activity
             android:name="com.ncms.ncms.ScannerActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/app_name"
             android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"
-            android:theme="@android:style/Theme.Black.NoTitleBar">
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
         </activity>
+
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyAH32DjtsI0Yo9h9A-nFZ_FaaAxiGbTq28" />
+
+        <activity
+            android:name="com.ncms.ncms.LoginActivity_Tab"
+            android:label="@string/title_activity_login_activity__tab"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+        </activity>
     </application>
+
 </manifest>

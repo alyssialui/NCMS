@@ -11,7 +11,9 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 
 public class GoogleMapActivity extends Activity {
 
@@ -20,7 +22,7 @@ public class GoogleMapActivity extends Activity {
 
 	//MyLocationOverlay compass;
 	GoogleMapOptions option = new GoogleMapOptions();
-	Marker hamburg, kiel;
+	Marker hamburg, kiel,location;
 	static final LatLng HAMBURG = new LatLng(53.558, 9.927);
 	static final LatLng KIEL = new LatLng(53.551, 9.993);
 	
@@ -28,6 +30,9 @@ public class GoogleMapActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_map);
+		
+		double[] d = getIntent().getDoubleArrayExtra("co-ordinates");
+		LatLng LOCATION = new LatLng(d[0],d[1]);
 		
 		
 		if(map==null){
@@ -40,20 +45,28 @@ public class GoogleMapActivity extends Activity {
 			option.zoomControlsEnabled(true);
 		}
 		if (map!=null){
-		      hamburg = map.addMarker(new MarkerOptions().position(HAMBURG)
-		          .title("Hamburg"));
-		      kiel = map.addMarker(new MarkerOptions()
-		          .position(KIEL)
-		          .title("Kiel")
-		          .snippet("Kiel is cool")
-		          .icon(BitmapDescriptorFactory
-		              .fromResource(R.drawable.ic_launcher)));
+		      location = map.addMarker(new MarkerOptions().position(LOCATION)
+		          .title("Delivery"));
+//		      kiel = map.addMarker(new MarkerOptions()
+//		          .position(KIEL)
+//		          .title("Kiel")
+//		          .snippet("Kiel is cool")
+//		          .icon(BitmapDescriptorFactory
+//		              .fromResource(R.drawable.ic_launcher)));
 		    }
 		map.setOnMarkerClickListener(new OnMarkerClickListener(){
 			@Override
 			public boolean onMarkerClick(Marker arg0) {
 				// TODO Auto-generated method stub
 				//go to details page
+				try{
+					    String s = getIntent().getStringExtra("delivery info");
+						Class menuOption = Class.forName("com.ncms.ncms.LoginActivity_Tab");
+						Intent chosenLayout = new Intent(GoogleMapActivity.this,menuOption).putExtra("delivery info", s);
+						startActivity(chosenLayout);
+					}catch(ClassNotFoundException e){
+						e.printStackTrace();
+					}
 				return false;
 			}	
 		});
