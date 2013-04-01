@@ -47,6 +47,7 @@ public class LoginActivity extends Activity {
 	private View mLoginFormView;
 	private View mLoginStatusView;
 	private TextView mLoginStatusMessageView;
+	private TextView deliveryInfo;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +55,10 @@ public class LoginActivity extends Activity {
 
 		setContentView(R.layout.activity_login_phone);
 
+		String s = getIntent().getStringExtra("delivery info");
+		deliveryInfo = (TextView)findViewById(R.id.delivery_info);
+		deliveryInfo.setText(s);
+		
 		// Set up the login form.
 		mEmail = getIntent().getStringExtra(EXTRA_EMAIL);
 		mEmailView = (EditText) findViewById(R.id.email);
