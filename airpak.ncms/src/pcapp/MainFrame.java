@@ -84,10 +84,47 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         manifestPanel = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        manageResourcetab = new javax.swing.JTabbedPane();
+        manageAgentPanel = new javax.swing.JPanel();
+        addAgentButton = new javax.swing.JButton();
+        editAgentButton = new javax.swing.JButton();
+        removeAgentButton = new javax.swing.JButton();
+        agentPanel = new javax.swing.JPanel();
+        addAgentPanel = new javax.swing.JPanel();
+        editAgentPanel = new javax.swing.JPanel();
+        removeAgentPanel = new javax.swing.JPanel();
+        manageRoutesPanel = new javax.swing.JPanel();
+        addRouteButton = new javax.swing.JButton();
+        editRouteButton = new javax.swing.JButton();
+        removeRouteButton = new javax.swing.JButton();
+        routePanel = new javax.swing.JPanel();
+        addRoutePanel = new javax.swing.JPanel();
+        editRoutePanel = new javax.swing.JPanel();
+        removeRoutePanel = new javax.swing.JPanel();
+        managePublicationsPanel = new javax.swing.JPanel();
+        addPublicationsButton = new javax.swing.JButton();
+        editPublicationsButton = new javax.swing.JButton();
+        removePublicationsButton = new javax.swing.JButton();
+        routePanel1 = new javax.swing.JPanel();
+        addPublicationPanel = new javax.swing.JPanel();
+        editPublicationPanel = new javax.swing.JPanel();
+        removePublicationPanel = new javax.swing.JPanel();
+        trackDeliveriestab = new javax.swing.JTabbedPane();
+        trackByRoutePanel = new javax.swing.JPanel();
+        trackByVechilePanel = new javax.swing.JPanel();
+        viewRouteStatisticstab = new javax.swing.JTabbedPane();
+        routeAPanel = new javax.swing.JPanel();
+        routeBPanel = new javax.swing.JPanel();
+        routeCPanel = new javax.swing.JPanel();
+        compareRoutesPanel = new javax.swing.JPanel();
+        viewAgentStatisticstab = new javax.swing.JTabbedPane();
+        tablePanel = new javax.swing.JPanel();
+        graphPanel = new javax.swing.JPanel();
+        comparePanel = new javax.swing.JPanel();
+        manageResourcesButton = new javax.swing.JButton();
+        trackDeliveriesButton = new javax.swing.JButton();
+        viewRouteStatisticsButton = new javax.swing.JButton();
+        viewAgentStatisticsButton = new javax.swing.JButton();
         userManagementPanel = new javax.swing.JPanel();
         addUserButton = new javax.swing.JButton();
         generateManifestButton = new javax.swing.JButton();
@@ -163,16 +200,16 @@ public class MainFrame extends javax.swing.JFrame {
         selectionPanelLayout.setHorizontalGroup(
             selectionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(selectionPanelLayout.createSequentialGroup()
-                .addGap(0, 10, Short.MAX_VALUE)
+                .addGap(0, 80, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 10, Short.MAX_VALUE))
+                .addGap(0, 81, Short.MAX_VALUE))
         );
         selectionPanelLayout.setVerticalGroup(
             selectionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(selectionPanelLayout.createSequentialGroup()
-                .addGap(0, 21, Short.MAX_VALUE)
+                .addGap(0, 11, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 22, Short.MAX_VALUE))
+                .addGap(0, 11, Short.MAX_VALUE))
         );
 
         homeIdlePanel.add(selectionPanel, "selectionCard");
@@ -233,7 +270,7 @@ public class MainFrame extends javax.swing.JFrame {
                             .addComponent(addlnameField)))
                     .addGroup(addUserPanelLayout.createSequentialGroup()
                         .addComponent(addUserCancelButton)
-                        .addGap(0, 31, Short.MAX_VALUE)))
+                        .addGap(0, 172, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         addUserPanelLayout.setVerticalGroup(
@@ -247,7 +284,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(addUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(addlname)
                     .addComponent(addlnameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(addUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(addUsernameLabel)
                     .addComponent(addUsernameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -316,7 +353,7 @@ public class MainFrame extends javax.swing.JFrame {
                         .addComponent(selectUserOkButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(selectUserCancelButton)))
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(187, Short.MAX_VALUE))
         );
         selectUserPanelLayout.setVerticalGroup(
             selectUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -379,7 +416,7 @@ public class MainFrame extends javax.swing.JFrame {
                                     .addComponent(addPublisherNameField)))
                             .addGroup(addNewspaperPanelLayout.createSequentialGroup()
                                 .addComponent(addNewspaperCancelButton)
-                                .addGap(0, 28, Short.MAX_VALUE)))))
+                                .addGap(0, 169, Short.MAX_VALUE)))))
                 .addContainerGap())
         );
         addNewspaperPanelLayout.setVerticalGroup(
@@ -393,7 +430,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(addNewspaperPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(addPublisherNameLabel)
                     .addComponent(addPublisherNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
                 .addComponent(saveNewspaperLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(73, 73, 73)
                 .addGroup(addNewspaperPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -410,21 +447,21 @@ public class MainFrame extends javax.swing.JFrame {
         trackNewspaperPanel.setLayout(trackNewspaperPanelLayout);
         trackNewspaperPanelLayout.setHorizontalGroup(
             trackNewspaperPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
+            .addGap(0, 353, Short.MAX_VALUE)
             .addGroup(trackNewspaperPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(trackNewspaperPanelLayout.createSequentialGroup()
-                    .addGap(0, 7, Short.MAX_VALUE)
+                    .addGap(0, 78, Short.MAX_VALUE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 8, Short.MAX_VALUE)))
+                    .addGap(0, 78, Short.MAX_VALUE)))
         );
         trackNewspaperPanelLayout.setVerticalGroup(
             trackNewspaperPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 251, Short.MAX_VALUE)
+            .addGap(0, 236, Short.MAX_VALUE)
             .addGroup(trackNewspaperPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(trackNewspaperPanelLayout.createSequentialGroup()
-                    .addGap(0, 7, Short.MAX_VALUE)
+                    .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 8, Short.MAX_VALUE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jTabbedPane1.addTab("tab4", trackNewspaperPanel);
@@ -435,21 +472,21 @@ public class MainFrame extends javax.swing.JFrame {
         generateInvoicesPanel.setLayout(generateInvoicesPanelLayout);
         generateInvoicesPanelLayout.setHorizontalGroup(
             generateInvoicesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
+            .addGap(0, 353, Short.MAX_VALUE)
             .addGroup(generateInvoicesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(generateInvoicesPanelLayout.createSequentialGroup()
-                    .addGap(0, 7, Short.MAX_VALUE)
+                    .addGap(0, 78, Short.MAX_VALUE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 8, Short.MAX_VALUE)))
+                    .addGap(0, 78, Short.MAX_VALUE)))
         );
         generateInvoicesPanelLayout.setVerticalGroup(
             generateInvoicesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 251, Short.MAX_VALUE)
+            .addGap(0, 236, Short.MAX_VALUE)
             .addGroup(generateInvoicesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(generateInvoicesPanelLayout.createSequentialGroup()
-                    .addGap(0, 7, Short.MAX_VALUE)
+                    .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 8, Short.MAX_VALUE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jTabbedPane1.addTab("tab5", generateInvoicesPanel);
@@ -460,44 +497,421 @@ public class MainFrame extends javax.swing.JFrame {
         manifestPanel.setLayout(manifestPanelLayout);
         manifestPanelLayout.setHorizontalGroup(
             manifestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
+            .addGap(0, 353, Short.MAX_VALUE)
             .addGroup(manifestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(manifestPanelLayout.createSequentialGroup()
-                    .addGap(0, 7, Short.MAX_VALUE)
+                    .addGap(0, 78, Short.MAX_VALUE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 8, Short.MAX_VALUE)))
+                    .addGap(0, 78, Short.MAX_VALUE)))
         );
         manifestPanelLayout.setVerticalGroup(
             manifestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 251, Short.MAX_VALUE)
+            .addGap(0, 236, Short.MAX_VALUE)
             .addGroup(manifestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(manifestPanelLayout.createSequentialGroup()
-                    .addGap(0, 7, Short.MAX_VALUE)
+                    .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 8, Short.MAX_VALUE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jTabbedPane1.addTab("tab6", manifestPanel);
 
         homeIdlePanel.add(jTabbedPane1, "card9");
 
-        jButton1.setText("Manage Resources");
-
-        jButton2.setText("track Deliveries");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        addAgentButton.setText("Add Agent");
+        addAgentButton.setPreferredSize(new java.awt.Dimension(103, 23));
+        addAgentButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                addAgentButtonActionPerformed(evt);
             }
         });
 
-        jButton3.setText("View Route Statistics");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        editAgentButton.setText("Edit Agent");
+        editAgentButton.setPreferredSize(new java.awt.Dimension(103, 23));
+
+        removeAgentButton.setText("Remove Agent");
+
+        agentPanel.setPreferredSize(new java.awt.Dimension(338, 195));
+        agentPanel.setLayout(new java.awt.CardLayout());
+
+        javax.swing.GroupLayout addAgentPanelLayout = new javax.swing.GroupLayout(addAgentPanel);
+        addAgentPanel.setLayout(addAgentPanelLayout);
+        addAgentPanelLayout.setHorizontalGroup(
+            addAgentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 338, Short.MAX_VALUE)
+        );
+        addAgentPanelLayout.setVerticalGroup(
+            addAgentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 190, Short.MAX_VALUE)
+        );
+
+        agentPanel.add(addAgentPanel, "addAgentCard");
+
+        javax.swing.GroupLayout editAgentPanelLayout = new javax.swing.GroupLayout(editAgentPanel);
+        editAgentPanel.setLayout(editAgentPanelLayout);
+        editAgentPanelLayout.setHorizontalGroup(
+            editAgentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 338, Short.MAX_VALUE)
+        );
+        editAgentPanelLayout.setVerticalGroup(
+            editAgentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 190, Short.MAX_VALUE)
+        );
+
+        agentPanel.add(editAgentPanel, "editAgentCard");
+
+        javax.swing.GroupLayout removeAgentPanelLayout = new javax.swing.GroupLayout(removeAgentPanel);
+        removeAgentPanel.setLayout(removeAgentPanelLayout);
+        removeAgentPanelLayout.setHorizontalGroup(
+            removeAgentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 338, Short.MAX_VALUE)
+        );
+        removeAgentPanelLayout.setVerticalGroup(
+            removeAgentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 190, Short.MAX_VALUE)
+        );
+
+        agentPanel.add(removeAgentPanel, "removeAgentCard");
+
+        javax.swing.GroupLayout manageAgentPanelLayout = new javax.swing.GroupLayout(manageAgentPanel);
+        manageAgentPanel.setLayout(manageAgentPanelLayout);
+        manageAgentPanelLayout.setHorizontalGroup(
+            manageAgentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(manageAgentPanelLayout.createSequentialGroup()
+                .addGroup(manageAgentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(manageAgentPanelLayout.createSequentialGroup()
+                        .addComponent(addAgentButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(editAgentButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(removeAgentButton))
+                    .addComponent(agentPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 15, Short.MAX_VALUE))
+        );
+        manageAgentPanelLayout.setVerticalGroup(
+            manageAgentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(manageAgentPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(manageAgentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addAgentButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(editAgentButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(removeAgentButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(agentPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE))
+        );
+
+        manageResourcetab.addTab("Manage Agent", manageAgentPanel);
+
+        addRouteButton.setText("Add Route");
+        addRouteButton.setPreferredSize(new java.awt.Dimension(103, 23));
+        addRouteButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                addRouteButtonActionPerformed(evt);
             }
         });
 
-        jButton4.setText("View Vendor Statistics");
+        editRouteButton.setText("Edit Route");
+        editRouteButton.setPreferredSize(new java.awt.Dimension(103, 23));
+
+        removeRouteButton.setText("Remove Route");
+
+        routePanel.setPreferredSize(new java.awt.Dimension(338, 195));
+        routePanel.setLayout(new java.awt.CardLayout());
+
+        javax.swing.GroupLayout addRoutePanelLayout = new javax.swing.GroupLayout(addRoutePanel);
+        addRoutePanel.setLayout(addRoutePanelLayout);
+        addRoutePanelLayout.setHorizontalGroup(
+            addRoutePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 338, Short.MAX_VALUE)
+        );
+        addRoutePanelLayout.setVerticalGroup(
+            addRoutePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 190, Short.MAX_VALUE)
+        );
+
+        routePanel.add(addRoutePanel, "addRouteCard");
+
+        javax.swing.GroupLayout editRoutePanelLayout = new javax.swing.GroupLayout(editRoutePanel);
+        editRoutePanel.setLayout(editRoutePanelLayout);
+        editRoutePanelLayout.setHorizontalGroup(
+            editRoutePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 338, Short.MAX_VALUE)
+        );
+        editRoutePanelLayout.setVerticalGroup(
+            editRoutePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 190, Short.MAX_VALUE)
+        );
+
+        routePanel.add(editRoutePanel, "editRouteCard");
+
+        javax.swing.GroupLayout removeRoutePanelLayout = new javax.swing.GroupLayout(removeRoutePanel);
+        removeRoutePanel.setLayout(removeRoutePanelLayout);
+        removeRoutePanelLayout.setHorizontalGroup(
+            removeRoutePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 338, Short.MAX_VALUE)
+        );
+        removeRoutePanelLayout.setVerticalGroup(
+            removeRoutePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 190, Short.MAX_VALUE)
+        );
+
+        routePanel.add(removeRoutePanel, "removeRouteCard");
+
+        javax.swing.GroupLayout manageRoutesPanelLayout = new javax.swing.GroupLayout(manageRoutesPanel);
+        manageRoutesPanel.setLayout(manageRoutesPanelLayout);
+        manageRoutesPanelLayout.setHorizontalGroup(
+            manageRoutesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(manageRoutesPanelLayout.createSequentialGroup()
+                .addGroup(manageRoutesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(manageRoutesPanelLayout.createSequentialGroup()
+                        .addComponent(addRouteButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(editRouteButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(removeRouteButton))
+                    .addComponent(routePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 15, Short.MAX_VALUE))
+        );
+        manageRoutesPanelLayout.setVerticalGroup(
+            manageRoutesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(manageRoutesPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(manageRoutesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addRouteButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(editRouteButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(removeRouteButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(routePanel, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE))
+        );
+
+        manageResourcetab.addTab("Manage Routes", manageRoutesPanel);
+
+        addPublicationsButton.setText("Add Publication");
+        addPublicationsButton.setPreferredSize(new java.awt.Dimension(125, 23));
+        addPublicationsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addPublicationsButtonActionPerformed(evt);
+            }
+        });
+
+        editPublicationsButton.setText("Edit Publication");
+        editPublicationsButton.setPreferredSize(new java.awt.Dimension(125, 23));
+
+        removePublicationsButton.setText("Remove Publication");
+
+        routePanel1.setPreferredSize(new java.awt.Dimension(338, 195));
+        routePanel1.setLayout(new java.awt.CardLayout());
+
+        javax.swing.GroupLayout addPublicationPanelLayout = new javax.swing.GroupLayout(addPublicationPanel);
+        addPublicationPanel.setLayout(addPublicationPanelLayout);
+        addPublicationPanelLayout.setHorizontalGroup(
+            addPublicationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 338, Short.MAX_VALUE)
+        );
+        addPublicationPanelLayout.setVerticalGroup(
+            addPublicationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 190, Short.MAX_VALUE)
+        );
+
+        routePanel1.add(addPublicationPanel, "addPublicationCard");
+
+        javax.swing.GroupLayout editPublicationPanelLayout = new javax.swing.GroupLayout(editPublicationPanel);
+        editPublicationPanel.setLayout(editPublicationPanelLayout);
+        editPublicationPanelLayout.setHorizontalGroup(
+            editPublicationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 338, Short.MAX_VALUE)
+        );
+        editPublicationPanelLayout.setVerticalGroup(
+            editPublicationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 190, Short.MAX_VALUE)
+        );
+
+        routePanel1.add(editPublicationPanel, "editPublicationCard");
+
+        javax.swing.GroupLayout removePublicationPanelLayout = new javax.swing.GroupLayout(removePublicationPanel);
+        removePublicationPanel.setLayout(removePublicationPanelLayout);
+        removePublicationPanelLayout.setHorizontalGroup(
+            removePublicationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 338, Short.MAX_VALUE)
+        );
+        removePublicationPanelLayout.setVerticalGroup(
+            removePublicationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 190, Short.MAX_VALUE)
+        );
+
+        routePanel1.add(removePublicationPanel, "removePublicationCard");
+
+        javax.swing.GroupLayout managePublicationsPanelLayout = new javax.swing.GroupLayout(managePublicationsPanel);
+        managePublicationsPanel.setLayout(managePublicationsPanelLayout);
+        managePublicationsPanelLayout.setHorizontalGroup(
+            managePublicationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(managePublicationsPanelLayout.createSequentialGroup()
+                .addGroup(managePublicationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(managePublicationsPanelLayout.createSequentialGroup()
+                        .addComponent(addPublicationsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(editPublicationsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(removePublicationsButton))
+                    .addComponent(routePanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 2, Short.MAX_VALUE))
+        );
+        managePublicationsPanelLayout.setVerticalGroup(
+            managePublicationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(managePublicationsPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(managePublicationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addPublicationsButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(editPublicationsButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(removePublicationsButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(routePanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE))
+        );
+
+        manageResourcetab.addTab("Manage Publications", managePublicationsPanel);
+
+        homeIdlePanel.add(manageResourcetab, "manageResourceCard");
+
+        javax.swing.GroupLayout trackByRoutePanelLayout = new javax.swing.GroupLayout(trackByRoutePanel);
+        trackByRoutePanel.setLayout(trackByRoutePanelLayout);
+        trackByRoutePanelLayout.setHorizontalGroup(
+            trackByRoutePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 353, Short.MAX_VALUE)
+        );
+        trackByRoutePanelLayout.setVerticalGroup(
+            trackByRoutePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 230, Short.MAX_VALUE)
+        );
+
+        trackDeliveriestab.addTab("track By Route", trackByRoutePanel);
+
+        javax.swing.GroupLayout trackByVechilePanelLayout = new javax.swing.GroupLayout(trackByVechilePanel);
+        trackByVechilePanel.setLayout(trackByVechilePanelLayout);
+        trackByVechilePanelLayout.setHorizontalGroup(
+            trackByVechilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 353, Short.MAX_VALUE)
+        );
+        trackByVechilePanelLayout.setVerticalGroup(
+            trackByVechilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 230, Short.MAX_VALUE)
+        );
+
+        trackDeliveriestab.addTab("track By Vehicle", trackByVechilePanel);
+
+        homeIdlePanel.add(trackDeliveriestab, "trackDeliveriesCard");
+
+        javax.swing.GroupLayout routeAPanelLayout = new javax.swing.GroupLayout(routeAPanel);
+        routeAPanel.setLayout(routeAPanelLayout);
+        routeAPanelLayout.setHorizontalGroup(
+            routeAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 353, Short.MAX_VALUE)
+        );
+        routeAPanelLayout.setVerticalGroup(
+            routeAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 230, Short.MAX_VALUE)
+        );
+
+        viewRouteStatisticstab.addTab("Route A", routeAPanel);
+
+        javax.swing.GroupLayout routeBPanelLayout = new javax.swing.GroupLayout(routeBPanel);
+        routeBPanel.setLayout(routeBPanelLayout);
+        routeBPanelLayout.setHorizontalGroup(
+            routeBPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 353, Short.MAX_VALUE)
+        );
+        routeBPanelLayout.setVerticalGroup(
+            routeBPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 230, Short.MAX_VALUE)
+        );
+
+        viewRouteStatisticstab.addTab("Route B", routeBPanel);
+
+        javax.swing.GroupLayout routeCPanelLayout = new javax.swing.GroupLayout(routeCPanel);
+        routeCPanel.setLayout(routeCPanelLayout);
+        routeCPanelLayout.setHorizontalGroup(
+            routeCPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 353, Short.MAX_VALUE)
+        );
+        routeCPanelLayout.setVerticalGroup(
+            routeCPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 230, Short.MAX_VALUE)
+        );
+
+        viewRouteStatisticstab.addTab("Route C", routeCPanel);
+
+        javax.swing.GroupLayout compareRoutesPanelLayout = new javax.swing.GroupLayout(compareRoutesPanel);
+        compareRoutesPanel.setLayout(compareRoutesPanelLayout);
+        compareRoutesPanelLayout.setHorizontalGroup(
+            compareRoutesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 353, Short.MAX_VALUE)
+        );
+        compareRoutesPanelLayout.setVerticalGroup(
+            compareRoutesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 230, Short.MAX_VALUE)
+        );
+
+        viewRouteStatisticstab.addTab("Compare Routes", compareRoutesPanel);
+
+        homeIdlePanel.add(viewRouteStatisticstab, "viewRouteStatisticsCard");
+
+        javax.swing.GroupLayout tablePanelLayout = new javax.swing.GroupLayout(tablePanel);
+        tablePanel.setLayout(tablePanelLayout);
+        tablePanelLayout.setHorizontalGroup(
+            tablePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 353, Short.MAX_VALUE)
+        );
+        tablePanelLayout.setVerticalGroup(
+            tablePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 230, Short.MAX_VALUE)
+        );
+
+        viewAgentStatisticstab.addTab("table", tablePanel);
+
+        javax.swing.GroupLayout graphPanelLayout = new javax.swing.GroupLayout(graphPanel);
+        graphPanel.setLayout(graphPanelLayout);
+        graphPanelLayout.setHorizontalGroup(
+            graphPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 353, Short.MAX_VALUE)
+        );
+        graphPanelLayout.setVerticalGroup(
+            graphPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 230, Short.MAX_VALUE)
+        );
+
+        viewAgentStatisticstab.addTab("Graph", graphPanel);
+
+        javax.swing.GroupLayout comparePanelLayout = new javax.swing.GroupLayout(comparePanel);
+        comparePanel.setLayout(comparePanelLayout);
+        comparePanelLayout.setHorizontalGroup(
+            comparePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 353, Short.MAX_VALUE)
+        );
+        comparePanelLayout.setVerticalGroup(
+            comparePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 230, Short.MAX_VALUE)
+        );
+
+        viewAgentStatisticstab.addTab("Compare", comparePanel);
+
+        homeIdlePanel.add(viewAgentStatisticstab, "viewAgentStatisticsCard");
+
+        manageResourcesButton.setText("Manage Resources");
+
+        trackDeliveriesButton.setText("track Deliveries");
+        trackDeliveriesButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                trackDeliveriesButtonActionPerformed(evt);
+            }
+        });
+
+        viewRouteStatisticsButton.setText("View Route Statistics");
+        viewRouteStatisticsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewRouteStatisticsButtonActionPerformed(evt);
+            }
+        });
+
+        viewAgentStatisticsButton.setText("View Agent Statistics");
 
         javax.swing.GroupLayout homePanelLayout = new javax.swing.GroupLayout(homePanel);
         homePanel.setLayout(homePanelLayout);
@@ -508,17 +922,17 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(viewAgentStatisticsButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(manageResourcesButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(viewRouteStatisticsButton, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE))
                         .addComponent(logoutButton))
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(trackDeliveriesButton, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37)
                 .addComponent(homeIdlePanel, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
             .addGroup(homePanelLayout.createSequentialGroup()
                 .addGap(109, 109, 109)
                 .addComponent(welcomeLabel)
-                .addGap(0, 151, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         homePanelLayout.setVerticalGroup(
             homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -529,14 +943,14 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(homePanelLayout.createSequentialGroup()
                         .addGap(13, 13, 13)
-                        .addComponent(jButton2)
+                        .addComponent(trackDeliveriesButton)
                         .addGap(38, 38, 38)
-                        .addComponent(jButton3)
+                        .addComponent(viewRouteStatisticsButton)
                         .addGap(38, 38, 38)
-                        .addComponent(jButton4)
+                        .addComponent(viewAgentStatisticsButton)
                         .addGap(38, 38, 38)
-                        .addComponent(jButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                        .addComponent(manageResourcesButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                         .addComponent(logoutButton))
                     .addComponent(homeIdlePanel, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
         );
@@ -582,7 +996,7 @@ public class MainFrame extends javax.swing.JFrame {
         userManagementPanel.setLayout(userManagementPanelLayout);
         userManagementPanelLayout.setHorizontalGroup(
             userManagementPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 385, Short.MAX_VALUE)
+            .addGap(0, 542, Short.MAX_VALUE)
             .addGroup(userManagementPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(userManagementPanelLayout.createSequentialGroup()
                     .addGap(132, 132, 132)
@@ -592,7 +1006,7 @@ public class MainFrame extends javax.swing.JFrame {
                         .addComponent(addNewspaperButton, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(addUserButton, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(generateInvoicesButton))
-                    .addContainerGap(132, Short.MAX_VALUE)))
+                    .addContainerGap(289, Short.MAX_VALUE)))
         );
         userManagementPanelLayout.setVerticalGroup(
             userManagementPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -643,7 +1057,7 @@ public class MainFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(backgroundPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 385, Short.MAX_VALUE)
+            .addComponent(backgroundPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 542, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -778,13 +1192,25 @@ public class MainFrame extends javax.swing.JFrame {
         
     }//GEN-LAST:event_addUserSubmitButtonActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void viewRouteStatisticsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewRouteStatisticsButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_viewRouteStatisticsButtonActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void trackDeliveriesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_trackDeliveriesButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_trackDeliveriesButtonActionPerformed
+
+    private void addAgentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addAgentButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addAgentButtonActionPerformed
+
+    private void addRouteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addRouteButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addRouteButtonActionPerformed
+
+    private void addPublicationsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPublicationsButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addPublicationsButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -830,6 +1256,8 @@ public class MainFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem aboutAirpakMenuItem;
     private javax.swing.JMenuItem aboutNCMSMenuItem;
+    private javax.swing.JButton addAgentButton;
+    private javax.swing.JPanel addAgentPanel;
     private javax.swing.JPasswordField addConfirmPasswordField;
     private javax.swing.JLabel addConfirmPasswordLabel;
     private javax.swing.JButton addNewspaperButton;
@@ -840,8 +1268,12 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel addNewspaperPanel;
     private javax.swing.JPasswordField addPasswordField;
     private javax.swing.JLabel addPasswordLabel;
+    private javax.swing.JPanel addPublicationPanel;
+    private javax.swing.JButton addPublicationsButton;
     private javax.swing.JTextField addPublisherNameField;
     private javax.swing.JLabel addPublisherNameLabel;
+    private javax.swing.JButton addRouteButton;
+    private javax.swing.JPanel addRoutePanel;
     private javax.swing.JButton addUserButton;
     private javax.swing.JButton addUserCancelButton;
     private javax.swing.JPanel addUserPanel;
@@ -852,19 +1284,25 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JTextField addfnameField;
     private javax.swing.JLabel addlname;
     private javax.swing.JTextField addlnameField;
+    private javax.swing.JPanel agentPanel;
     private javax.swing.JPanel backgroundPanel;
+    private javax.swing.JPanel comparePanel;
+    private javax.swing.JPanel compareRoutesPanel;
+    private javax.swing.JButton editAgentButton;
+    private javax.swing.JPanel editAgentPanel;
+    private javax.swing.JPanel editPublicationPanel;
+    private javax.swing.JButton editPublicationsButton;
+    private javax.swing.JButton editRouteButton;
+    private javax.swing.JPanel editRoutePanel;
     private javax.swing.JMenuItem exitMenuItem;
     private javax.swing.JMenu fileMenu;
     private javax.swing.JButton generateInvoicesButton;
     private javax.swing.JPanel generateInvoicesPanel;
     private javax.swing.JButton generateManifestButton;
+    private javax.swing.JPanel graphPanel;
     private javax.swing.JMenu helpMenu;
     private javax.swing.JPanel homeIdlePanel;
     private javax.swing.JPanel homePanel;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -880,7 +1318,23 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JTextField loginUsernameField;
     private javax.swing.JLabel loginUsernameLabel;
     private javax.swing.JButton logoutButton;
+    private javax.swing.JPanel manageAgentPanel;
+    private javax.swing.JPanel managePublicationsPanel;
+    private javax.swing.JButton manageResourcesButton;
+    private javax.swing.JTabbedPane manageResourcetab;
+    private javax.swing.JPanel manageRoutesPanel;
     private javax.swing.JPanel manifestPanel;
+    private javax.swing.JButton removeAgentButton;
+    private javax.swing.JPanel removeAgentPanel;
+    private javax.swing.JPanel removePublicationPanel;
+    private javax.swing.JButton removePublicationsButton;
+    private javax.swing.JButton removeRouteButton;
+    private javax.swing.JPanel removeRoutePanel;
+    private javax.swing.JPanel routeAPanel;
+    private javax.swing.JPanel routeBPanel;
+    private javax.swing.JPanel routeCPanel;
+    private javax.swing.JPanel routePanel;
+    private javax.swing.JPanel routePanel1;
     private javax.swing.JLabel saveNewspaperLabel;
     private javax.swing.JButton selectUserCancelButton;
     private javax.swing.JLabel selectUserLabel1;
@@ -888,9 +1342,18 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton selectUserOkButton;
     private javax.swing.JPanel selectUserPanel;
     private javax.swing.JPanel selectionPanel;
+    private javax.swing.JPanel tablePanel;
+    private javax.swing.JPanel trackByRoutePanel;
+    private javax.swing.JPanel trackByVechilePanel;
+    private javax.swing.JButton trackDeliveriesButton;
+    private javax.swing.JTabbedPane trackDeliveriestab;
     private javax.swing.JButton trackNewspaperButton;
     private javax.swing.JPanel trackNewspaperPanel;
     private javax.swing.JPanel userManagementPanel;
+    private javax.swing.JButton viewAgentStatisticsButton;
+    private javax.swing.JTabbedPane viewAgentStatisticstab;
+    private javax.swing.JButton viewRouteStatisticsButton;
+    private javax.swing.JTabbedPane viewRouteStatisticstab;
     private javax.swing.JLabel welcomeLabel;
     private javax.swing.JLabel welcomeToNCMSLabel;
     // End of variables declaration//GEN-END:variables
