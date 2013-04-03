@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="27" version="2.0">
+<workbench progressCount="20" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="683" x="683" y="0">
 <fastViewData fastViewLocation="1024"/>
@@ -18,7 +18,7 @@
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="107" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="61" y="22"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.debug.ui.launch.toolbar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
@@ -61,17 +61,17 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/NCMS/src/com/ncms/ncms/LoginActivity_Tab.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="145" selectionOffset="1738" selectionTopPixel="495"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LoginActivity.java" partName="LoginActivity.java" path="C:/NCMS/COMP3900/NCMS/src/com/ncms/ncms/LoginActivity.java" title="LoginActivity.java" tooltip="NCMS/src/com/ncms/ncms/LoginActivity.java" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LoginActivity.java" partName="LoginActivity.java" path="C:/NCMS/COMP3900/NCMS/src/com/ncms/ncms/LoginActivity.java" title="LoginActivity.java" tooltip="NCMS/src/com/ncms/ncms/LoginActivity.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/NCMS/src/com/ncms/ncms/LoginActivity.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1885" selectionTopPixel="478"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GoogleMapActivity.java" partName="GoogleMapActivity.java" path="C:/NCMS/COMP3900/NCMS/src/com/ncms/ncms/GoogleMapActivity.java" title="GoogleMapActivity.java" tooltip="NCMS/src/com/ncms/ncms/GoogleMapActivity.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/NCMS/src/com/ncms/ncms/GoogleMapActivity.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2207" selectionTopPixel="478"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2538" selectionTopPixel="223"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainActivity_tab.java" partName="MainActivity_tab.java" path="C:/NCMS/COMP3900/NCMS/src/com/ncms/ncms/MainActivity_tab.java" title="MainActivity_tab.java" tooltip="NCMS/src/com/ncms/ncms/MainActivity_tab.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainActivity_tab.java" partName="MainActivity_tab.java" path="C:/NCMS/COMP3900/NCMS/src/com/ncms/ncms/MainActivity_tab.java" title="MainActivity_tab.java" tooltip="NCMS/src/com/ncms/ncms/MainActivity_tab.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/NCMS/src/com/ncms/ncms/MainActivity_tab.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1789" selectionTopPixel="675"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1789" selectionTopPixel="268"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MyAdapter.java" partName="MyAdapter.java" path="C:/NCMS/COMP3900/NCMS/src/com/ncms/ncms/MyAdapter.java" title="MyAdapter.java" tooltip="NCMS/src/com/ncms/ncms/MyAdapter.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/NCMS/src/com/ncms/ncms/MyAdapter.java"/>
@@ -97,9 +97,7 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings (3 items)"/>
-<category IMemento.internal.id="Errors"/>
-<category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Warnings (8 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -349,40 +347,10 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/NCMS/src/com/ncms/ncms/MyAdapter.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/NCMS/res/layout/activity_login_phone.xml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/NCMS/src/com/ncms/ncms/MainActivity.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/NCMS/src/com/ncms/ncms/GoogleMapActivity.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/NCMS/src/com/ncms/ncms/LoginActivity.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/NCMS/src/com/ncms/ncms/GoogleMapActivity.java"/>
 </editors>
-<item historyLabel="MainActivity_tab.java" index="4">
-<position info="not_deleted" x="1502" y="0"/>
-</item>
-<item historyLabel="MainActivity_tab.java" index="4">
-<position info="not_deleted" x="1665" y="0"/>
-</item>
-<item historyLabel="GoogleMapActivity.java" index="3">
-<position info="not_deleted" x="1316" y="0"/>
-</item>
-<item historyLabel="MainActivity_tab.java" index="4">
-<position info="not_deleted" x="1665" y="0"/>
-</item>
-<item historyLabel="LoginActivity.java" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="LoginActivity_Tab.java" index="1">
-<position info="not_deleted" x="1738" y="145"/>
-</item>
-<item historyLabel="MainActivity_tab.java" index="4">
-<position info="not_deleted" x="1665" y="0"/>
-</item>
-<item historyLabel="GoogleMapActivity.java" index="3">
-<position/>
-</item>
-<item historyLabel="MainActivity_tab.java" index="4">
-<position info="not_deleted" x="1500" y="0"/>
-</item>
-<item historyLabel="GoogleMapActivity.java" index="3">
-<position info="not_deleted" x="1221" y="0"/>
-</item>
-<item historyLabel="MainActivity_tab.java" index="4">
-<position info="not_deleted" x="1500" y="0"/>
-</item>
 <item historyLabel="GoogleMapActivity.java" index="3">
 <position info="not_deleted" x="1264" y="0"/>
 </item>
@@ -491,8 +459,41 @@
 <item historyLabel="MainActivity.java" index="7">
 <position info="not_deleted" x="1765" y="0"/>
 </item>
-<item active="true" historyLabel="MainActivity_tab.java" index="4">
+<item historyLabel="MainActivity_tab.java" index="4">
 <position info="not_deleted" x="2408" y="77"/>
+</item>
+<item historyLabel="GoogleMapActivity.java" index="8">
+<position info="not_deleted" x="2205" y="0"/>
+</item>
+<item historyLabel="GoogleMapActivity.java" index="8">
+<position info="not_deleted" x="1478" y="0"/>
+</item>
+<item historyLabel="GoogleMapActivity.java" index="8">
+<position info="not_deleted" x="2538" y="0"/>
+</item>
+<item historyLabel="MainActivity_tab.java" index="4">
+<position info="not_deleted" x="1789" y="0"/>
+</item>
+<item historyLabel="LoginActivity.java" index="9">
+<position info="not_deleted" x="1885" y="0"/>
+</item>
+<item historyLabel="GoogleMapActivity.java" index="10">
+<position info="not_deleted" x="2538" y="0"/>
+</item>
+<item historyLabel="MainActivity_tab.java" index="4">
+<position info="not_deleted" x="1789" y="0"/>
+</item>
+<item historyLabel="GoogleMapActivity.java" index="10">
+<position info="not_deleted" x="2538" y="0"/>
+</item>
+<item historyLabel="MainActivity_tab.java" index="4">
+<position info="not_deleted" x="1789" y="0"/>
+</item>
+<item historyLabel="GoogleMapActivity.java" index="10">
+<position info="not_deleted" x="2538" y="0"/>
+</item>
+<item active="true" historyLabel="LoginActivity.java" index="9">
+<position info="not_deleted" x="1885" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
