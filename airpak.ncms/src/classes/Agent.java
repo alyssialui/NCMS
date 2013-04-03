@@ -39,6 +39,22 @@ public class Agent {
         newspaperArr = new Newspaper[numPaper];
     }
     
+    public Newspaper[] getNewspaperArr() {
+        return newspaperArr;
+    }
+
+    public void setNewspaperArr(Newspaper[] newspaperArr) {
+        this.newspaperArr = newspaperArr;
+    }
+
+    public String getCname() {
+        return cname;
+    }
+
+    public void setCname(String cname) {
+        this.cname = cname;
+    }
+    
     public void addNewspaperToArray(Newspaper[] papers){
         newspaperArr = papers;
     }

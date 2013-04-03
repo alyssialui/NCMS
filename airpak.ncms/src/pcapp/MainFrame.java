@@ -5,10 +5,25 @@
 package pcapp;
 
 import classes.Newspaper;
+import classes.RSA;
 import java.awt.CardLayout;
 import java.awt.Toolkit;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
+import java.io.DataInputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.io.PrintWriter;
+import java.math.BigInteger;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import net.glxn.qrgen.QRCode;
+import net.glxn.qrgen.image.ImageType;
 
 /**
  *
@@ -51,25 +66,6 @@ public class MainFrame extends javax.swing.JFrame {
         selectionPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        addUserPanel = new javax.swing.JPanel();
-        addUsernameLabel = new javax.swing.JLabel();
-        addUsernameField = new javax.swing.JTextField();
-        addPasswordLabel = new javax.swing.JLabel();
-        addConfirmPasswordLabel = new javax.swing.JLabel();
-        addPasswordField = new javax.swing.JPasswordField();
-        addConfirmPasswordField = new javax.swing.JPasswordField();
-        addfname = new javax.swing.JLabel();
-        addfnameField = new javax.swing.JTextField();
-        addlname = new javax.swing.JLabel();
-        addlnameField = new javax.swing.JTextField();
-        addUserSubmitButton = new javax.swing.JButton();
-        addUserCancelButton = new javax.swing.JButton();
-        selectUserPanel = new javax.swing.JPanel();
-        selectUserLabel1 = new javax.swing.JLabel();
-        selectUserLabel2 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox();
-        selectUserOkButton = new javax.swing.JButton();
-        selectUserCancelButton = new javax.swing.JButton();
         addNewspaperPanel = new javax.swing.JPanel();
         addNewspaperNameLabel = new javax.swing.JLabel();
         addNewspaperNameField = new javax.swing.JTextField();
@@ -109,6 +105,31 @@ public class MainFrame extends javax.swing.JFrame {
         addPublicationPanel = new javax.swing.JPanel();
         editPublicationPanel = new javax.swing.JPanel();
         removePublicationPanel = new javax.swing.JPanel();
+        selectUserPanel = new javax.swing.JPanel();
+        selectUserLabel1 = new javax.swing.JLabel();
+        selectUserLabel2 = new javax.swing.JLabel();
+        selectUserComboBox = new javax.swing.JComboBox();
+        selectUserOkButton = new javax.swing.JButton();
+        selectUserCancelButton = new javax.swing.JButton();
+        addVendorAgentPanel = new javax.swing.JPanel();
+        addUsernameLabel = new javax.swing.JLabel();
+        addUsernameField = new javax.swing.JTextField();
+        addPasswordLabel = new javax.swing.JLabel();
+        addConfirmPasswordLabel = new javax.swing.JLabel();
+        addPasswordField = new javax.swing.JPasswordField();
+        addConfirmPasswordField = new javax.swing.JPasswordField();
+        addAgentFname = new javax.swing.JLabel();
+        addAgentFnameField = new javax.swing.JTextField();
+        addAgentLname = new javax.swing.JLabel();
+        addAgentLnameField = new javax.swing.JTextField();
+        addUserSubmitButton = new javax.swing.JButton();
+        addUserCancelButton = new javax.swing.JButton();
+        addAgentTrn = new javax.swing.JLabel();
+        addAgentTrnField = new javax.swing.JTextField();
+        addAgentPhone = new javax.swing.JLabel();
+        addAgentPhoneField = new javax.swing.JTextField();
+        addAgentDOB = new javax.swing.JLabel();
+        addAgentDOBField = new javax.swing.JTextField();
         trackDeliveriestab = new javax.swing.JTabbedPane();
         trackByRoutePanel = new javax.swing.JPanel();
         trackByVechilePanel = new javax.swing.JPanel();
@@ -125,6 +146,7 @@ public class MainFrame extends javax.swing.JFrame {
         trackDeliveriesButton = new javax.swing.JButton();
         viewRouteStatisticsButton = new javax.swing.JButton();
         viewAgentStatisticsButton = new javax.swing.JButton();
+        errorLabel = new javax.swing.JLabel();
         userManagementPanel = new javax.swing.JPanel();
         addUserButton = new javax.swing.JButton();
         generateManifestButton = new javax.swing.JButton();
@@ -213,165 +235,6 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         homeIdlePanel.add(selectionPanel, "selectionCard");
-
-        addUsernameLabel.setText("Username");
-
-        addPasswordLabel.setText("Password");
-
-        addConfirmPasswordLabel.setText("Confirm Password");
-
-        addfname.setText("First Name");
-
-        addfnameField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addfnameFieldActionPerformed(evt);
-            }
-        });
-
-        addlname.setText("Last Name");
-
-        addUserSubmitButton.setText("OK");
-        addUserSubmitButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addUserSubmitButtonActionPerformed(evt);
-            }
-        });
-
-        addUserCancelButton.setText("Cancel");
-        addUserCancelButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addUserCancelButtonActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout addUserPanelLayout = new javax.swing.GroupLayout(addUserPanel);
-        addUserPanel.setLayout(addUserPanelLayout);
-        addUserPanelLayout.setHorizontalGroup(
-            addUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(addUserPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(addUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(addUserSubmitButton)
-                    .addGroup(addUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(addUsernameLabel)
-                        .addComponent(addPasswordLabel)
-                        .addComponent(addConfirmPasswordLabel)
-                        .addComponent(addfname)
-                        .addComponent(addlname)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(addUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(addUserPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(addUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(addfnameField)
-                            .addComponent(addUsernameField)
-                            .addComponent(addPasswordField)
-                            .addComponent(addConfirmPasswordField, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE)
-                            .addComponent(addlnameField)))
-                    .addGroup(addUserPanelLayout.createSequentialGroup()
-                        .addComponent(addUserCancelButton)
-                        .addGap(0, 172, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        addUserPanelLayout.setVerticalGroup(
-            addUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(addUserPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(addUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(addfname)
-                    .addComponent(addfnameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(addUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(addlname)
-                    .addComponent(addlnameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(addUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(addUsernameLabel)
-                    .addComponent(addUsernameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(addUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(addPasswordLabel)
-                    .addComponent(addPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(addUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(addConfirmPasswordLabel)
-                    .addComponent(addConfirmPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(70, 70, 70)
-                .addGroup(addUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(addUserSubmitButton)
-                    .addComponent(addUserCancelButton))
-                .addContainerGap())
-        );
-
-        addUsernameField.getAccessibleContext().setAccessibleName("uname");
-        addPasswordField.getAccessibleContext().setAccessibleName("pword");
-        addConfirmPasswordField.getAccessibleContext().setAccessibleName("cpword");
-        addfnameField.getAccessibleContext().setAccessibleName("fname");
-        addlnameField.getAccessibleContext().setAccessibleName("lname");
-
-        jTabbedPane1.addTab("tab1", addUserPanel);
-
-        selectUserLabel1.setText("Please select what type of");
-
-        selectUserLabel2.setText("user to add to the system.");
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "AirPak Administrator", "Facilities Operator", "Truck Driver", "Street Vendor", "Company Vendor" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
-            }
-        });
-
-        selectUserOkButton.setText("OK");
-        selectUserOkButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                selectUserOkButtonActionPerformed(evt);
-            }
-        });
-
-        selectUserCancelButton.setText("Cancel");
-        selectUserCancelButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                selectUserCancelButtonActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout selectUserPanelLayout = new javax.swing.GroupLayout(selectUserPanel);
-        selectUserPanel.setLayout(selectUserPanelLayout);
-        selectUserPanelLayout.setHorizontalGroup(
-            selectUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(selectUserPanelLayout.createSequentialGroup()
-                .addGroup(selectUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(selectUserPanelLayout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addGroup(selectUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(selectUserLabel2)
-                            .addComponent(selectUserLabel1)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(selectUserPanelLayout.createSequentialGroup()
-                        .addGap(34, 34, 34)
-                        .addComponent(selectUserOkButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(selectUserCancelButton)))
-                .addContainerGap(187, Short.MAX_VALUE))
-        );
-        selectUserPanelLayout.setVerticalGroup(
-            selectUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(selectUserPanelLayout.createSequentialGroup()
-                .addGap(106, 106, 106)
-                .addComponent(selectUserLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(selectUserLabel2)
-                .addGap(18, 18, 18)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(selectUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(selectUserOkButton)
-                    .addComponent(selectUserCancelButton))
-                .addGap(66, 66, 66))
-        );
-
-        jTabbedPane1.addTab("tab2", selectUserPanel);
 
         addNewspaperNameLabel.setText("Newspaper");
 
@@ -772,6 +635,199 @@ public class MainFrame extends javax.swing.JFrame {
 
         homeIdlePanel.add(manageResourcetab, "manageResourceCard");
 
+        selectUserLabel1.setText("Please select what type of");
+
+        selectUserLabel2.setText("user to add to the system.");
+
+        selectUserComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "AirPak Administrator", "Facilities Operator", "Truck Driver", "Street Vendor", "Company Vendor" }));
+        selectUserComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                selectUserComboBoxActionPerformed(evt);
+            }
+        });
+
+        selectUserOkButton.setText("OK");
+        selectUserOkButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                selectUserOkButtonActionPerformed(evt);
+            }
+        });
+
+        selectUserCancelButton.setText("Cancel");
+        selectUserCancelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                selectUserCancelButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout selectUserPanelLayout = new javax.swing.GroupLayout(selectUserPanel);
+        selectUserPanel.setLayout(selectUserPanelLayout);
+        selectUserPanelLayout.setHorizontalGroup(
+            selectUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(selectUserPanelLayout.createSequentialGroup()
+                .addGap(84, 84, 84)
+                .addGroup(selectUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(selectUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(selectUserLabel2)
+                        .addComponent(selectUserLabel1)
+                        .addComponent(selectUserComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(selectUserPanelLayout.createSequentialGroup()
+                        .addComponent(selectUserOkButton)
+                        .addGap(18, 18, 18)
+                        .addComponent(selectUserCancelButton)))
+                .addContainerGap(144, Short.MAX_VALUE))
+        );
+        selectUserPanelLayout.setVerticalGroup(
+            selectUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(selectUserPanelLayout.createSequentialGroup()
+                .addGap(73, 73, 73)
+                .addComponent(selectUserLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(selectUserLabel2)
+                .addGap(13, 13, 13)
+                .addComponent(selectUserComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(selectUserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(selectUserCancelButton)
+                    .addComponent(selectUserOkButton))
+                .addContainerGap(84, Short.MAX_VALUE))
+        );
+
+        homeIdlePanel.add(selectUserPanel, "selectUserCard");
+
+        addUsernameLabel.setText("Username");
+
+        addPasswordLabel.setText("Password");
+
+        addConfirmPasswordLabel.setText("Confirm Password");
+
+        addAgentFname.setText("First Name");
+
+        addAgentFnameField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addAgentFnameFieldActionPerformed(evt);
+            }
+        });
+
+        addAgentLname.setText("Last Name");
+
+        addUserSubmitButton.setText("OK");
+        addUserSubmitButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addUserSubmitButtonActionPerformed(evt);
+            }
+        });
+
+        addUserCancelButton.setText("Cancel");
+        addUserCancelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addUserCancelButtonActionPerformed(evt);
+            }
+        });
+
+        addAgentTrn.setText("TRN");
+
+        addAgentPhone.setText("Telephone Number");
+
+        addAgentDOB.setText("Date of Birth");
+
+        javax.swing.GroupLayout addVendorAgentPanelLayout = new javax.swing.GroupLayout(addVendorAgentPanel);
+        addVendorAgentPanel.setLayout(addVendorAgentPanelLayout);
+        addVendorAgentPanelLayout.setHorizontalGroup(
+            addVendorAgentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(addVendorAgentPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(addVendorAgentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(addVendorAgentPanelLayout.createSequentialGroup()
+                        .addGroup(addVendorAgentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(addUserSubmitButton)
+                            .addGroup(addVendorAgentPanelLayout.createSequentialGroup()
+                                .addGroup(addVendorAgentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(addAgentFname)
+                                    .addComponent(addAgentLname))
+                                .addGap(35, 35, 35)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(addVendorAgentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(addVendorAgentPanelLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addGroup(addVendorAgentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(addAgentFnameField, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE)
+                                    .addComponent(addAgentLnameField)))
+                            .addGroup(addVendorAgentPanelLayout.createSequentialGroup()
+                                .addComponent(addUserCancelButton)
+                                .addGap(0, 177, Short.MAX_VALUE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addVendorAgentPanelLayout.createSequentialGroup()
+                        .addGroup(addVendorAgentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(addUsernameLabel)
+                            .addComponent(addPasswordLabel)
+                            .addComponent(addConfirmPasswordLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(addVendorAgentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(addConfirmPasswordField)
+                            .addComponent(addPasswordField)
+                            .addComponent(addUsernameField, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE)))
+                    .addGroup(addVendorAgentPanelLayout.createSequentialGroup()
+                        .addGroup(addVendorAgentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(addAgentTrn)
+                            .addComponent(addAgentPhone)
+                            .addComponent(addAgentDOB))
+                        .addGap(157, 157, 157)
+                        .addGroup(addVendorAgentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(addAgentDOBField)
+                            .addComponent(addAgentPhoneField)
+                            .addComponent(addAgentTrnField, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE))))
+                .addContainerGap())
+        );
+        addVendorAgentPanelLayout.setVerticalGroup(
+            addVendorAgentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(addVendorAgentPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(addVendorAgentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addAgentFname)
+                    .addComponent(addAgentFnameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(addVendorAgentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addAgentLname)
+                    .addComponent(addAgentLnameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(addVendorAgentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addAgentTrn)
+                    .addComponent(addAgentTrnField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(addVendorAgentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addAgentPhone)
+                    .addComponent(addAgentPhoneField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(addVendorAgentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addAgentDOB)
+                    .addComponent(addAgentDOBField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(addVendorAgentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addUsernameLabel)
+                    .addComponent(addUsernameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(addVendorAgentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addPasswordLabel)
+                    .addComponent(addPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(addVendorAgentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addConfirmPasswordLabel)
+                    .addComponent(addConfirmPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(addVendorAgentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addUserSubmitButton)
+                    .addComponent(addUserCancelButton))
+                .addContainerGap())
+        );
+
+        addUsernameField.getAccessibleContext().setAccessibleName("uname");
+        addPasswordField.getAccessibleContext().setAccessibleName("pword");
+        addConfirmPasswordField.getAccessibleContext().setAccessibleName("cpword");
+        addAgentFnameField.getAccessibleContext().setAccessibleName("fname");
+        addAgentLnameField.getAccessibleContext().setAccessibleName("lname");
+
+        homeIdlePanel.add(addVendorAgentPanel, "addVendorAgentCard");
+
         javax.swing.GroupLayout trackByRoutePanelLayout = new javax.swing.GroupLayout(trackByRoutePanel);
         trackByRoutePanel.setLayout(trackByRoutePanelLayout);
         trackByRoutePanelLayout.setHorizontalGroup(
@@ -865,7 +921,7 @@ public class MainFrame extends javax.swing.JFrame {
             .addGap(0, 230, Short.MAX_VALUE)
         );
 
-        viewAgentStatisticstab.addTab("table", tablePanel);
+        viewAgentStatisticstab.addTab("Table", tablePanel);
 
         javax.swing.GroupLayout graphPanelLayout = new javax.swing.GroupLayout(graphPanel);
         graphPanel.setLayout(graphPanelLayout);
@@ -896,8 +952,13 @@ public class MainFrame extends javax.swing.JFrame {
         homeIdlePanel.add(viewAgentStatisticstab, "viewAgentStatisticsCard");
 
         manageResourcesButton.setText("Manage Resources");
+        manageResourcesButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                manageResourcesButtonActionPerformed(evt);
+            }
+        });
 
-        trackDeliveriesButton.setText("track Deliveries");
+        trackDeliveriesButton.setText("Track Deliveries");
         trackDeliveriesButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 trackDeliveriesButtonActionPerformed(evt);
@@ -912,6 +973,11 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         viewAgentStatisticsButton.setText("View Agent Statistics");
+        viewAgentStatisticsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewAgentStatisticsButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout homePanelLayout = new javax.swing.GroupLayout(homePanel);
         homePanel.setLayout(homePanelLayout);
@@ -932,14 +998,18 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(homePanelLayout.createSequentialGroup()
                 .addGap(109, 109, 109)
                 .addComponent(welcomeLabel)
+                .addGap(66, 66, 66)
+                .addComponent(errorLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         homePanelLayout.setVerticalGroup(
             homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(homePanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(welcomeLabel)
-                .addGap(18, 18, 18)
+                .addGroup(homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(welcomeLabel)
+                    .addComponent(errorLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(homePanelLayout.createSequentialGroup()
                         .addGap(13, 13, 13)
@@ -1131,18 +1201,21 @@ public class MainFrame extends javax.swing.JFrame {
    }//GEN-LAST:event_logoutButtonActionPerformed
 
 
-    private void addfnameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addfnameFieldActionPerformed
+    private void addAgentFnameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addAgentFnameFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_addfnameFieldActionPerformed
+    }//GEN-LAST:event_addAgentFnameFieldActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void selectUserComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectUserComboBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_selectUserComboBoxActionPerformed
 
     private void selectUserOkButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectUserOkButtonActionPerformed
         // TODO add your handling code here:
-        CardLayout c = (CardLayout)(homeIdlePanel.getLayout());
-        c.show(homeIdlePanel, "addUserCard");
+        if(selectUserComboBox.getSelectedItem().equals("Street Vendor"))
+        {
+            CardLayout c = (CardLayout)(homeIdlePanel.getLayout());
+            c.show(homeIdlePanel, "addVendorAgentCard");
+        }
     }//GEN-LAST:event_selectUserOkButtonActionPerformed
 
     private void selectUserCancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectUserCancelButtonActionPerformed
@@ -1170,38 +1243,114 @@ public class MainFrame extends javax.swing.JFrame {
     private void addUserSubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addUserSubmitButtonActionPerformed
         // TODO add your handling code here:
         
-                String fName, lName, uName, password, cpassword;
-                String fileName = "Users.txt";
+        String fName, lName, uName, password, cpassword, dob;
+        int trn, phone;
+        boolean invalidNum = false;
+        String fileName = "Users.txt";
         
-        fName = addfnameField.getText();
-        lName = addlnameField.getText();
+        fName = addAgentFnameField.getText();
+        lName = addAgentLnameField.getText();
+        try{
+            trn = Integer.parseInt(addAgentTrnField.getText());
+            phone = Integer.parseInt(addAgentPhoneField.getText());
+        }
+        catch (Exception e){
+            invalidNum = true;
+        }
+        dob = addAgentDOBField.getText();
         uName = addUsernameField.getText();
         password = addPasswordField.getText();
         cpassword = addConfirmPasswordField.getText();
         
-    try {
-        
-        PrintWriter outFile = new PrintWriter (new FileWriter (fileName));
+        if(fName.equals("") || lName.equals("") || dob.equals("") || uName.equals("")){
+            errorLabel.setText("Data must be entered in all fields.");
+        }
+        else{
+            if(invalidNum == true){
+                errorLabel.setText("Numbers only for the Telephone and TRN field.");
+            }
+            else{
+                if(!password.equals(cpassword)){
+                    errorLabel.setText("Passwords do not match.");
+                }
+                else{
+                    RSA rsa = new RSA();  
+                    DataInputStream in=new DataInputStream(System.in); 
+                    
+                    // encrypt  
+                    byte[] encrypted = rsa.encrypt(password.getBytes());
+                    
+                    BigInteger e = rsa.getE();
+                    BigInteger N = rsa.getN();
+                     
+                    System.out.println("e is " + e);
+                    System.out.println("n is " + N);
+                    
+                    ByteArrayOutputStream out = QRCode.from("" + e + ", " + N).to(ImageType.PNG).stream();
+                    
+                    try {
+                    FileOutputStream fout = new FileOutputStream(new File(
+                            "C:\\Users\\Matthew\\Downloads\\QR_Code.JPG"));
 
-           outFile.print(fName+"\t\t\t "+lName+"\t\t\t "+uName+"\n");
-           outFile.close();
-    }
-    catch (Exception e) {
-        System.out.println("File could not be opened");
-      }
-        
+                    fout.write(out.toByteArray());
+                    System.out.println("qr code generated.");
+                    fout.flush();
+                    fout.close();
+                    } catch (FileNotFoundException d) {
+                        // Do Logging
+                        System.out.println(" File Not Found Exception.");
+                    } catch (IOException d) {
+                        // Do Logging
+                        System.out.println("IO Exception: " + e);
+                    }
+                    
+                    String path = "C:\\Users\\Matthew\\Downloads\\QR_Code.JPG";
+                    try{
+                        File url = new File(path);
+                        BufferedImage image = ImageIO.read(url);
+                        JLabel label = new JLabel(new ImageIcon(image));
+                        JFrame f = new JFrame();
+                        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                        f.getContentPane().add(label);
+                        f.pack();
+                        f.setLocation(200,200);
+                        f.setVisible(true);
+                    } 
+                    catch(IOException f)
+                    {
+                        System.out.println("IO Exception: " + f);
+                    }
+
+                    errorLabel.setText("Added.");
+                }
+            }
+        }
+        try {
+            PrintWriter outFile = new PrintWriter (new FileWriter (fileName));
+            outFile.print(fName+"\t\t\t "+lName+"\t\t\t "+uName+"\n");
+            outFile.close();
+        }
+        catch (Exception e) {
+            System.out.println("File could not be opened");
+        }
     }//GEN-LAST:event_addUserSubmitButtonActionPerformed
 
     private void viewRouteStatisticsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewRouteStatisticsButtonActionPerformed
         // TODO add your handling code here:
+        CardLayout c = (CardLayout)(homeIdlePanel.getLayout());
+        c.show(homeIdlePanel, "viewRouteStatisticsCard");
     }//GEN-LAST:event_viewRouteStatisticsButtonActionPerformed
 
     private void trackDeliveriesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_trackDeliveriesButtonActionPerformed
         // TODO add your handling code here:
+        CardLayout c = (CardLayout)(homeIdlePanel.getLayout());
+        c.show(homeIdlePanel, "trackDeliveriesCard");
     }//GEN-LAST:event_trackDeliveriesButtonActionPerformed
 
     private void addAgentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addAgentButtonActionPerformed
         // TODO add your handling code here:
+        CardLayout c = (CardLayout)(homeIdlePanel.getLayout());
+        c.show(homeIdlePanel, "selectUserCard");
     }//GEN-LAST:event_addAgentButtonActionPerformed
 
     private void addRouteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addRouteButtonActionPerformed
@@ -1211,6 +1360,18 @@ public class MainFrame extends javax.swing.JFrame {
     private void addPublicationsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPublicationsButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_addPublicationsButtonActionPerformed
+
+    private void viewAgentStatisticsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewAgentStatisticsButtonActionPerformed
+        // TODO add your handling code here:
+        CardLayout c = (CardLayout)(homeIdlePanel.getLayout());
+        c.show(homeIdlePanel, "viewAgentStatisticsCard");
+    }//GEN-LAST:event_viewAgentStatisticsButtonActionPerformed
+
+    private void manageResourcesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageResourcesButtonActionPerformed
+        // TODO add your handling code here:
+        CardLayout c = (CardLayout)(homeIdlePanel.getLayout());
+        c.show(homeIdlePanel, "manageResourceCard");
+    }//GEN-LAST:event_manageResourcesButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1257,7 +1418,17 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JMenuItem aboutAirpakMenuItem;
     private javax.swing.JMenuItem aboutNCMSMenuItem;
     private javax.swing.JButton addAgentButton;
+    private javax.swing.JLabel addAgentDOB;
+    private javax.swing.JTextField addAgentDOBField;
+    private javax.swing.JLabel addAgentFname;
+    private javax.swing.JTextField addAgentFnameField;
+    private javax.swing.JLabel addAgentLname;
+    private javax.swing.JTextField addAgentLnameField;
     private javax.swing.JPanel addAgentPanel;
+    private javax.swing.JLabel addAgentPhone;
+    private javax.swing.JTextField addAgentPhoneField;
+    private javax.swing.JLabel addAgentTrn;
+    private javax.swing.JTextField addAgentTrnField;
     private javax.swing.JPasswordField addConfirmPasswordField;
     private javax.swing.JLabel addConfirmPasswordLabel;
     private javax.swing.JButton addNewspaperButton;
@@ -1276,14 +1447,10 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel addRoutePanel;
     private javax.swing.JButton addUserButton;
     private javax.swing.JButton addUserCancelButton;
-    private javax.swing.JPanel addUserPanel;
     private javax.swing.JButton addUserSubmitButton;
     private javax.swing.JTextField addUsernameField;
     private javax.swing.JLabel addUsernameLabel;
-    private javax.swing.JLabel addfname;
-    private javax.swing.JTextField addfnameField;
-    private javax.swing.JLabel addlname;
-    private javax.swing.JTextField addlnameField;
+    private javax.swing.JPanel addVendorAgentPanel;
     private javax.swing.JPanel agentPanel;
     private javax.swing.JPanel backgroundPanel;
     private javax.swing.JPanel comparePanel;
@@ -1294,6 +1461,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton editPublicationsButton;
     private javax.swing.JButton editRouteButton;
     private javax.swing.JPanel editRoutePanel;
+    private javax.swing.JLabel errorLabel;
     private javax.swing.JMenuItem exitMenuItem;
     private javax.swing.JMenu fileMenu;
     private javax.swing.JButton generateInvoicesButton;
@@ -1303,7 +1471,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JMenu helpMenu;
     private javax.swing.JPanel homeIdlePanel;
     private javax.swing.JPanel homePanel;
-    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -1337,6 +1504,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel routePanel1;
     private javax.swing.JLabel saveNewspaperLabel;
     private javax.swing.JButton selectUserCancelButton;
+    private javax.swing.JComboBox selectUserComboBox;
     private javax.swing.JLabel selectUserLabel1;
     private javax.swing.JLabel selectUserLabel2;
     private javax.swing.JButton selectUserOkButton;
