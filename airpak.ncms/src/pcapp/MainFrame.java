@@ -4,6 +4,7 @@
  */
 package pcapp;
 
+import classes.Agent;
 import classes.Newspaper;
 import classes.RSA;
 import java.awt.CardLayout;
@@ -18,6 +19,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.math.BigInteger;
+import java.util.Date;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -89,10 +91,10 @@ public class MainFrame extends javax.swing.JFrame {
         addAgentPanel = new javax.swing.JPanel();
         editAgentPanel = new javax.swing.JPanel();
         removeAgentPanel = new javax.swing.JPanel();
-        manageRoutesPanel = new javax.swing.JPanel();
-        addRouteButton = new javax.swing.JButton();
-        editRouteButton = new javax.swing.JButton();
-        removeRouteButton = new javax.swing.JButton();
+        manageManifestPanel = new javax.swing.JPanel();
+        addManifestButton = new javax.swing.JButton();
+        editManifestButton = new javax.swing.JButton();
+        removeManifestButton = new javax.swing.JButton();
         routePanel = new javax.swing.JPanel();
         addRoutePanel = new javax.swing.JPanel();
         editRoutePanel = new javax.swing.JPanel();
@@ -465,18 +467,18 @@ public class MainFrame extends javax.swing.JFrame {
 
         manageResourcetab.addTab("Manage Agent", manageAgentPanel);
 
-        addRouteButton.setText("Add Route");
-        addRouteButton.setPreferredSize(new java.awt.Dimension(103, 23));
-        addRouteButton.addActionListener(new java.awt.event.ActionListener() {
+        addManifestButton.setText("Add Manifest");
+        addManifestButton.setPreferredSize(new java.awt.Dimension(103, 23));
+        addManifestButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addRouteButtonActionPerformed(evt);
+                addManifestButtonActionPerformed(evt);
             }
         });
 
-        editRouteButton.setText("Edit Route");
-        editRouteButton.setPreferredSize(new java.awt.Dimension(103, 23));
+        editManifestButton.setText("Edit Manifest");
+        editManifestButton.setPreferredSize(new java.awt.Dimension(103, 23));
 
-        removeRouteButton.setText("Remove Route");
+        removeManifestButton.setText("Remove Manifest");
 
         routePanel.setPreferredSize(new java.awt.Dimension(338, 195));
         routePanel.setLayout(new java.awt.CardLayout());
@@ -520,34 +522,34 @@ public class MainFrame extends javax.swing.JFrame {
 
         routePanel.add(removeRoutePanel, "removeRouteCard");
 
-        javax.swing.GroupLayout manageRoutesPanelLayout = new javax.swing.GroupLayout(manageRoutesPanel);
-        manageRoutesPanel.setLayout(manageRoutesPanelLayout);
-        manageRoutesPanelLayout.setHorizontalGroup(
-            manageRoutesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(manageRoutesPanelLayout.createSequentialGroup()
-                .addGroup(manageRoutesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(manageRoutesPanelLayout.createSequentialGroup()
-                        .addComponent(addRouteButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        javax.swing.GroupLayout manageManifestPanelLayout = new javax.swing.GroupLayout(manageManifestPanel);
+        manageManifestPanel.setLayout(manageManifestPanelLayout);
+        manageManifestPanelLayout.setHorizontalGroup(
+            manageManifestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(manageManifestPanelLayout.createSequentialGroup()
+                .addGroup(manageManifestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(manageManifestPanelLayout.createSequentialGroup()
+                        .addComponent(addManifestButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(editRouteButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(editManifestButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(removeRouteButton))
+                        .addComponent(removeManifestButton))
                     .addComponent(routePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 15, Short.MAX_VALUE))
+                .addGap(0, 12, Short.MAX_VALUE))
         );
-        manageRoutesPanelLayout.setVerticalGroup(
-            manageRoutesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(manageRoutesPanelLayout.createSequentialGroup()
+        manageManifestPanelLayout.setVerticalGroup(
+            manageManifestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(manageManifestPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(manageRoutesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(addRouteButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(editRouteButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(removeRouteButton))
+                .addGroup(manageManifestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addManifestButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(editManifestButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(removeManifestButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(routePanel, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE))
         );
 
-        manageResourcetab.addTab("Manage Routes", manageRoutesPanel);
+        manageResourcetab.addTab("Manage Manifests", manageManifestPanel);
 
         addPublicationsButton.setText("Add Publication");
         addPublicationsButton.setPreferredSize(new java.awt.Dimension(125, 23));
@@ -1000,7 +1002,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(welcomeLabel)
                 .addGap(66, 66, 66)
                 .addComponent(errorLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 35, Short.MAX_VALUE))
         );
         homePanelLayout.setVerticalGroup(
             homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1244,7 +1246,7 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         String fName, lName, uName, password, cpassword, dob;
-        int trn, phone;
+        int trn=0, phone=0;
         boolean invalidNum = false;
         String fileName = "Users.txt";
         
@@ -1262,7 +1264,7 @@ public class MainFrame extends javax.swing.JFrame {
         password = addPasswordField.getText();
         cpassword = addConfirmPasswordField.getText();
         
-        if(fName.equals("") || lName.equals("") || dob.equals("") || uName.equals("")){
+        if(fName.equals("") || lName.equals("") || dob.equals("") || uName.equals("") || trn == 0 || phone == 0){
             errorLabel.setText("Data must be entered in all fields.");
         }
         else{
@@ -1310,6 +1312,7 @@ public class MainFrame extends javax.swing.JFrame {
                         BufferedImage image = ImageIO.read(url);
                         JLabel label = new JLabel(new ImageIcon(image));
                         JFrame f = new JFrame();
+                        
                         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                         f.getContentPane().add(label);
                         f.pack();
@@ -1320,7 +1323,8 @@ public class MainFrame extends javax.swing.JFrame {
                     {
                         System.out.println("IO Exception: " + f);
                     }
-
+                    
+                    Agent streetVendor = new Agent(trn, phone, fName, lName, password, dob);
                     errorLabel.setText("Added.");
                 }
             }
@@ -1353,9 +1357,9 @@ public class MainFrame extends javax.swing.JFrame {
         c.show(homeIdlePanel, "selectUserCard");
     }//GEN-LAST:event_addAgentButtonActionPerformed
 
-    private void addRouteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addRouteButtonActionPerformed
+    private void addManifestButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addManifestButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_addRouteButtonActionPerformed
+    }//GEN-LAST:event_addManifestButtonActionPerformed
 
     private void addPublicationsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPublicationsButtonActionPerformed
         // TODO add your handling code here:
@@ -1431,6 +1435,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JTextField addAgentTrnField;
     private javax.swing.JPasswordField addConfirmPasswordField;
     private javax.swing.JLabel addConfirmPasswordLabel;
+    private javax.swing.JButton addManifestButton;
     private javax.swing.JButton addNewspaperButton;
     private javax.swing.JButton addNewspaperCancelButton;
     private javax.swing.JTextField addNewspaperNameField;
@@ -1443,7 +1448,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton addPublicationsButton;
     private javax.swing.JTextField addPublisherNameField;
     private javax.swing.JLabel addPublisherNameLabel;
-    private javax.swing.JButton addRouteButton;
     private javax.swing.JPanel addRoutePanel;
     private javax.swing.JButton addUserButton;
     private javax.swing.JButton addUserCancelButton;
@@ -1457,9 +1461,9 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel compareRoutesPanel;
     private javax.swing.JButton editAgentButton;
     private javax.swing.JPanel editAgentPanel;
+    private javax.swing.JButton editManifestButton;
     private javax.swing.JPanel editPublicationPanel;
     private javax.swing.JButton editPublicationsButton;
-    private javax.swing.JButton editRouteButton;
     private javax.swing.JPanel editRoutePanel;
     private javax.swing.JLabel errorLabel;
     private javax.swing.JMenuItem exitMenuItem;
@@ -1486,16 +1490,16 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel loginUsernameLabel;
     private javax.swing.JButton logoutButton;
     private javax.swing.JPanel manageAgentPanel;
+    private javax.swing.JPanel manageManifestPanel;
     private javax.swing.JPanel managePublicationsPanel;
     private javax.swing.JButton manageResourcesButton;
     private javax.swing.JTabbedPane manageResourcetab;
-    private javax.swing.JPanel manageRoutesPanel;
     private javax.swing.JPanel manifestPanel;
     private javax.swing.JButton removeAgentButton;
     private javax.swing.JPanel removeAgentPanel;
+    private javax.swing.JButton removeManifestButton;
     private javax.swing.JPanel removePublicationPanel;
     private javax.swing.JButton removePublicationsButton;
-    private javax.swing.JButton removeRouteButton;
     private javax.swing.JPanel removeRoutePanel;
     private javax.swing.JPanel routeAPanel;
     private javax.swing.JPanel routeBPanel;

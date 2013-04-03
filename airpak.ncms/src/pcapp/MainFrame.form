@@ -212,7 +212,7 @@
                       <Component id="welcomeLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
                       <Component id="errorLabel" min="-2" pref="191" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="35" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -698,11 +698,11 @@
                         </Container>
                       </SubComponents>
                     </Container>
-                    <Container class="javax.swing.JPanel" name="manageRoutesPanel">
+                    <Container class="javax.swing.JPanel" name="manageManifestPanel">
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                          <JTabbedPaneConstraints tabName="Manage Routes">
-                            <Property name="tabTitle" type="java.lang.String" value="Manage Routes"/>
+                          <JTabbedPaneConstraints tabName="Manage Manifests">
+                            <Property name="tabTitle" type="java.lang.String" value="Manage Manifests"/>
                           </JTabbedPaneConstraints>
                         </Constraint>
                       </Constraints>
@@ -713,15 +713,15 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="addRouteButton" min="-2" max="-2" attributes="0"/>
+                                          <Component id="addManifestButton" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="editRouteButton" min="-2" max="-2" attributes="0"/>
+                                          <Component id="editManifestButton" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="removeRouteButton" min="-2" max="-2" attributes="0"/>
+                                          <Component id="removeManifestButton" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Component id="routePanel" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="0" pref="15" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="12" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -730,9 +730,9 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="addRouteButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="editRouteButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="removeRouteButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="addManifestButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="editManifestButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="removeManifestButton" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="routePanel" pref="190" max="32767" attributes="0"/>
@@ -741,28 +741,28 @@
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
-                        <Component class="javax.swing.JButton" name="addRouteButton">
+                        <Component class="javax.swing.JButton" name="addManifestButton">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Add Route"/>
+                            <Property name="text" type="java.lang.String" value="Add Manifest"/>
                             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                               <Dimension value="[103, 23]"/>
                             </Property>
                           </Properties>
                           <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addRouteButtonActionPerformed"/>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addManifestButtonActionPerformed"/>
                           </Events>
                         </Component>
-                        <Component class="javax.swing.JButton" name="editRouteButton">
+                        <Component class="javax.swing.JButton" name="editManifestButton">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Edit Route"/>
+                            <Property name="text" type="java.lang.String" value="Edit Manifest"/>
                             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                               <Dimension value="[103, 23]"/>
                             </Property>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JButton" name="removeRouteButton">
+                        <Component class="javax.swing.JButton" name="removeManifestButton">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Remove Route"/>
+                            <Property name="text" type="java.lang.String" value="Remove Manifest"/>
                           </Properties>
                         </Component>
                         <Container class="javax.swing.JPanel" name="routePanel">

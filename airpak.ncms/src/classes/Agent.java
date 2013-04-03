@@ -15,19 +15,19 @@ public class Agent {
     private int trn, phone;
     private Newspaper[] newspaperArr;
     private String fname, lname, cname, password;
-    private Date dob;
+    private String dob;
 
-    public Agent(int trn, int phone, String fname, String lname, String password, Date dob,int numPaper) {
+    public Agent(int trn, int phone, String fname, String lname, String password, String dob) {
         this.trn = trn;
         this.phone = phone;
         this.fname = fname;
         this.lname = lname;
         this.password = password;
         this.dob = dob;
-        newspaperArr = new Newspaper[numPaper];
+        //newspaperArr = new Newspaper[numPaper];
     }
     
-    public Agent(int trn, int phone, String cname, String fname, String lname, String password, Date dob, int numPaper)
+    public Agent(int trn, int phone, String cname, String fname, String lname, String password, String dob, int numPaper)
     {
         this.trn = trn;
         this.phone = phone;
@@ -91,11 +91,11 @@ public class Agent {
         this.lname = lname;
     }
 
-    public Date getDob() {
+    public String getDob() {
         return dob;
     }
 
-    public void setDob(Date dob) {
+    public void setDob(String dob) {
         this.dob = dob;
     }
     
