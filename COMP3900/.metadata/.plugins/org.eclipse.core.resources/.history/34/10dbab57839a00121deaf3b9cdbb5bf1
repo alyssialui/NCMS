@@ -63,8 +63,7 @@ public class GoogleMapActivity extends Activity {
 						Class menuOption = Class.forName("com.ncms.ncms.LoginActivity_Tab");
 						Intent chosenLayout = new Intent(GoogleMapActivity.this,menuOption).putExtra("delivery info", s);
 						startActivity(chosenLayout);
-					}
-				catch(ClassNotFoundException e){
+					}catch(ClassNotFoundException e){
 						e.printStackTrace();
 					}
 				return false;

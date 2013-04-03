@@ -30,7 +30,11 @@ public class GoogleMapActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_map);
-
+		
+		double[] d = getIntent().getDoubleArrayExtra("co-ordinates");
+		LatLng LOCATION = new LatLng(d[0],d[1]);
+		
+		
 		if(map==null){
 			map = ((MapFragment) getFragmentManager().findFragmentById(R.id.map))
 			        .getMap();
@@ -41,8 +45,6 @@ public class GoogleMapActivity extends Activity {
 			option.zoomControlsEnabled(true);
 		}
 		if (map!=null){
-			 double[] d = getIntent().getDoubleArrayExtra("co-ordinates");
-			 LatLng LOCATION = new LatLng(d[0],d[1]);
 		      location = map.addMarker(new MarkerOptions().position(LOCATION)
 		          .title("Delivery"));
 //		      kiel = map.addMarker(new MarkerOptions()
@@ -52,7 +54,6 @@ public class GoogleMapActivity extends Activity {
 //		          .icon(BitmapDescriptorFactory
 //		              .fromResource(R.drawable.ic_launcher)));
 		    }
-		
 		map.setOnMarkerClickListener(new OnMarkerClickListener(){
 			@Override
 			public boolean onMarkerClick(Marker arg0) {
@@ -63,8 +64,7 @@ public class GoogleMapActivity extends Activity {
 						Class menuOption = Class.forName("com.ncms.ncms.LoginActivity_Tab");
 						Intent chosenLayout = new Intent(GoogleMapActivity.this,menuOption).putExtra("delivery info", s);
 						startActivity(chosenLayout);
-					}
-				catch(ClassNotFoundException e){
+					}catch(ClassNotFoundException e){
 						e.printStackTrace();
 					}
 				return false;
