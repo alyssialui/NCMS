@@ -31,7 +31,7 @@ import com.google.zxing.client.android.common.executor.AsyncTaskExecManager;
 /**
  * Finishes an activity after a period of inactivity if the device is on battery power.
  */
-final class InactivityTimer {
+public class InactivityTimer {
 
   private static final String TAG = InactivityTimer.class.getSimpleName();
 
@@ -42,7 +42,7 @@ final class InactivityTimer {
   private final BroadcastReceiver powerStatusReceiver;
   private InactivityAsyncTask inactivityTask;
 
-  InactivityTimer(Activity activity) {
+  public InactivityTimer(Activity activity) {
     this.activity = activity;
     taskExec = new AsyncTaskExecManager().build();
     powerStatusReceiver = new PowerStatusReceiver();

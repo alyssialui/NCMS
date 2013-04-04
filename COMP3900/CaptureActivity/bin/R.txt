@@ -46,7 +46,7 @@ int id query_button 0x7f09001e
 int id query_text_view 0x7f09001d
 int id quit 0x7f090004
 int id restart_preview 0x7f090005
-int id result_button_view 0x7f090014
+int id result_button_view 0x7f090015
 int id result_list_view 0x7f09001f
 int id result_view 0x7f09000b
 int id return_scan_result 0x7f090006
@@ -55,9 +55,9 @@ int id share_bookmark_button 0x7f090023
 int id share_clipboard_button 0x7f090025
 int id share_contact_button 0x7f090024
 int id share_text_view 0x7f090026
-int id shopper_button 0x7f090015
+int id shopper_button 0x7f090016
 int id snippet_view 0x7f090021
-int id status_view 0x7f090016
+int id status_view 0x7f090014
 int id time_text_view 0x7f09000f
 int id type_text_view 0x7f09000e
 int id viewfinder_view 0x7f09000a

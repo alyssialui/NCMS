@@ -109,8 +109,8 @@ public class CaptureActivity extends Activity implements SurfaceHolder.Callback 
   private ViewfinderView viewfinderView;
   private TextView statusView;
   private View resultView;
-  private Result lastResult;
-  private boolean hasSurface;
+  public Result lastResult;
+  public boolean hasSurface;
   private boolean copyToClipboard;
   private IntentSource source;
   private String sourceUrl;
@@ -118,9 +118,9 @@ public class CaptureActivity extends Activity implements SurfaceHolder.Callback 
   private boolean returnRaw;
   private Collection<BarcodeFormat> decodeFormats;
   private String characterSet;
-  private HistoryManager historyManager;
+  public HistoryManager historyManager;
   private InactivityTimer inactivityTimer;
-  private BeepManager beepManager;
+  public BeepManager beepManager;
 
   ViewfinderView getViewfinderView() {
     return viewfinderView;
@@ -404,7 +404,6 @@ public class CaptureActivity extends Activity implements SurfaceHolder.Callback 
     inactivityTimer.onActivity();
     lastResult = rawResult;
     ResultHandler resultHandler = ResultHandlerFactory.makeResultHandler(this, rawResult);
-
     boolean fromLiveScan = barcode != null;
     if (fromLiveScan) {
       historyManager.addHistoryItem(rawResult, resultHandler);
@@ -446,7 +445,7 @@ public class CaptureActivity extends Activity implements SurfaceHolder.Callback 
    * @param barcode   A bitmap of the captured image.
    * @param rawResult The decoded results which contains the points to draw.
    */
-  private void drawResultPoints(Bitmap barcode, Result rawResult) {
+  public void drawResultPoints(Bitmap barcode, Result rawResult) {
     ResultPoint[] points = rawResult.getResultPoints();
     if (points != null && points.length > 0) {
       Canvas canvas = new Canvas(barcode);
@@ -538,19 +537,19 @@ public class CaptureActivity extends Activity implements SurfaceHolder.Callback 
                                                      this);
     }
 
-    int buttonCount = resultHandler.getButtonCount();
-    ViewGroup buttonView = (ViewGroup) findViewById(R.id.result_button_view);
-    buttonView.requestFocus();
-    for (int x = 0; x < ResultHandler.MAX_BUTTON_COUNT; x++) {
-      TextView button = (TextView) buttonView.getChildAt(x);
-      if (x < buttonCount) {
-        button.setVisibility(View.VISIBLE);
-        button.setText(resultHandler.getButtonText(x));
-        button.setOnClickListener(new ResultButtonListener(resultHandler, x));
-      } else {
-        button.setVisibility(View.GONE);
-      }
-    }
+//    int buttonCount = resultHandler.getButtonCount();
+//    ViewGroup buttonView = (ViewGroup) findViewById(R.id.result_button_view);
+//    buttonView.requestFocus();
+//    for (int x = 0; x < ResultHandler.MAX_BUTTON_COUNT; x++) {
+//      TextView button = (TextView) buttonView.getChildAt(x);
+//      if (x < buttonCount) {
+//        button.setVisibility(View.VISIBLE);
+//        button.setText(resultHandler.getButtonText(x));
+//        button.setOnClickListener(new ResultButtonListener(resultHandler, x));
+//      } else {
+//        button.setVisibility(View.GONE);
+//      }
+//    }
 
     if (copyToClipboard && !resultHandler.areContentsSecure()) {
       ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);

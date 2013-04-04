@@ -9,17 +9,19 @@ import android.widget.ListView;
 
 public class Menu extends ListActivity {
 
-	String classes[] = {"ScannerActivity","GoogleMapActivity","MainActivity","LoginActivity","MainActivity_tab"};
+	String classes[] = { "ScannerActivity", "GoogleMapActivity",
+			"MainActivity_tab", "MainActivity" };
+
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
 		// TODO Auto-generated method stub
 		super.onListItemClick(l, v, position, id);
 		String userChoice = classes[position];
-		try{
+		try {
 			Class menuOption = Class.forName("com.ncms.ncms." + userChoice);
-			Intent chosenLayout = new Intent(Menu.this,menuOption);
+			Intent chosenLayout = new Intent(Menu.this, menuOption);
 			startActivity(chosenLayout);
-		}catch(ClassNotFoundException e){
+		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
 	}
@@ -28,6 +30,7 @@ public class Menu extends ListActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setListAdapter(new ArrayAdapter<String>(Menu.this, android.R.layout.simple_list_item_1, classes));
+		setListAdapter(new ArrayAdapter<String>(Menu.this,
+				android.R.layout.simple_list_item_1, classes));
 	}
 }

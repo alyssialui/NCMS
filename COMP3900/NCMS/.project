@@ -3,9 +3,6 @@
 	<name>NCMS</name>
 	<comment></comment>
 	<projects>
-		<project>CaptureActivity</project>
-		<project>cordovaExample</project>
-		<project>google-play-services_lib</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
