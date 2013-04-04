@@ -38,8 +38,8 @@ public class LoginActivity extends Activity {
 	private UserLoginTask mAuthTask = null;
 
 	// Values for email and password at the time of the login attempt.
-	private String mEmail;
-	private String mPassword;
+	private String empID;
+	private String empPass;
 	// UI references.
 	private EditText mEmailView;
 	private EditText mPasswordView;
@@ -82,29 +82,29 @@ public class LoginActivity extends Activity {
 		mPasswordView.setError(null);
 
 		// Store values at the time of the login attempt.
-		mEmail = mEmailView.getText().toString();
-		mPassword = mPasswordView.getText().toString();
+		empID = mEmailView.getText().toString();
+		empPass = mPasswordView.getText().toString();
 
 		boolean cancel = false;
 		View focusView = null;
 
 		// Check for a valid password.
-		if (TextUtils.isEmpty(mPassword)) {
+		if (TextUtils.isEmpty(empPass)) {
 			mPasswordView.setError(getString(R.string.error_field_required));
 			focusView = mPasswordView;
 			cancel = true;
-		} else if (mPassword.length() < 4) {
+		} else if (empPass.length() < 4) {
 			mPasswordView.setError(getString(R.string.error_invalid_password));
 			focusView = mPasswordView;
 			cancel = true;
 		}
 
 		// Check for a valid email address.
-		if (TextUtils.isEmpty(mEmail)) {
+		if (TextUtils.isEmpty(empID)) {
 			mEmailView.setError(getString(R.string.error_field_required));
 			focusView = mEmailView;
 			cancel = true;
-		} else if (!mEmail.contains("@")) {
+		} else if (!empID.contains("@")) {
 			mEmailView.setError(getString(R.string.error_invalid_email));
 			focusView = mEmailView;
 			cancel = true;
@@ -183,9 +183,9 @@ public class LoginActivity extends Activity {
 
 			for (String credential : DUMMY_CREDENTIALS) {
 				String[] pieces = credential.split(":");
-				if (pieces[0].equals(mEmail)) {
+				if (pieces[0].equals(empID)) {
 					// Account exists, return true if the password matches.
-					return pieces[1].equals(mPassword);
+					return pieces[1].equals(empPass);
 				}
 			}
 
@@ -220,8 +220,8 @@ public class LoginActivity extends Activity {
 	}
 
 	private void setupLoginForm() {
-		mEmail = getIntent().getStringExtra(EXTRA_EMAIL);
-		mEmailView = (EditText) findViewById(R.id.email);
+		empID = getIntent().getStringExtra(EXTRA_EMAIL);
+		mEmailView = (EditText) findViewById(R.id.empID);
 		mEmailView.setVisibility(View.GONE);
 		mEmailView.setText(getEmpId());
 

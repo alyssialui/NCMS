@@ -49,7 +49,7 @@ int id decode_failed 0x7f060006
 int id decode_succeeded 0x7f060007
 int id delivery_info 0x7f06000f
 int id done_button 0x7f06002b
-int id email 0x7f060010
+int id empID 0x7f060010
 int id format_text_view 0x7f06001e
 int id help_contents 0x7f060029
 int id history_detail 0x7f06002d
