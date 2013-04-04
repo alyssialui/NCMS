@@ -116,8 +116,8 @@ public abstract class ResultHandler {
 
     // Make sure the Shopper button is hidden by default. Without this, scanning a product followed
     // by a QR Code would leave the button on screen among the QR Code actions.
-    View shopperButton = activity.findViewById(R.id.shopper_button);
-    shopperButton.setVisibility(View.GONE);
+    //View shopperButton = activity.findViewById(R.id.shopper_button);
+    //shopperButton.setVisibility(View.GONE);
   }
 
   public ParsedResult getResult() {

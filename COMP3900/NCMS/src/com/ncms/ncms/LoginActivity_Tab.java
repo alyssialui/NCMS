@@ -56,7 +56,7 @@ public class LoginActivity_Tab extends Activity {
 		setContentView(R.layout.activity_login_tab);
 
 		String s = getIntent().getStringExtra("delivery info");
-		deliveryInfo = (TextView)findViewById(R.id.delivery_info);
+		deliveryInfo = (TextView) findViewById(R.id.delivery_info);
 		deliveryInfo.setText(s);
 		// Set up the login form.
 		mEmail = getIntent().getStringExtra(EXTRA_EMAIL);

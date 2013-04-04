@@ -10,21 +10,12 @@ import android.widget.TextView;
 public class MyAdapter extends BaseExpandableListAdapter {
 
 	private Context context;
-	static String[] parentList = {"Delivery 1", "Delivery 2", "Delivery 3", "Delivery 4"}; //put list of deliveries here
-	static String[][] childList ={
-			{
-				"Ormsby, Matthew\n7 Hibiscus Drive\nBarbican\nPiD:10001-11000" //call list of stops on delivery here
-			},
-			{
-				"Hope Pastures", "Constant Spring", "Half Way Tree"
-			},
-			{
-				"Grants Pen", "Portmore", "Downtown"
-			},
-			{
-				"Mountain View", "Liguanea", "Ferry"
-			}
-	};
+	static String[] parentList = { "Delivery 1", "Delivery 2", "Delivery 3","Delivery 4" }; // put list of deliveries here
+	static String[][] childList = {{ "Ormsby, Matthew\n7 Hibiscus Drive\nBarbican\nPiD:10001-11000"}, // call list of stops on delivery here
+									{ "Hope Pastures", "Constant Spring", "Half Way Tree" },
+									{ "Grants Pen", "Portmore", "Downtown" },
+									{ "Mountain View", "Liguanea", "Ferry" }};
+
 	public MyAdapter(Context context) {
 		// TODO Auto-generated constructor stub
 		this.context = context;
@@ -46,7 +37,7 @@ public class MyAdapter extends BaseExpandableListAdapter {
 	public View getChildView(int groupPosition, int childPosition,
 			boolean isLastChild, View convertView, ViewGroup parent) {
 		// TODO Auto-generated method stub
-		
+
 		TextView tv = new TextView(context);
 		tv.setText(childList[groupPosition][childPosition]);
 		tv.setPadding(30, 0, 0, 0);

@@ -73,7 +73,7 @@ public final class R {
         public static int query_text_view=0x7f09001d;
         public static int quit=0x7f090004;
         public static int restart_preview=0x7f090005;
-        public static int result_button_view=0x7f090014;
+        public static int result_button_view=0x7f090015;
         public static int result_list_view=0x7f09001f;
         public static int result_view=0x7f09000b;
         public static int return_scan_result=0x7f090006;
@@ -82,9 +82,9 @@ public final class R {
         public static int share_clipboard_button=0x7f090025;
         public static int share_contact_button=0x7f090024;
         public static int share_text_view=0x7f090026;
-        public static int shopper_button=0x7f090015;
+        public static int shopper_button=0x7f090016;
         public static int snippet_view=0x7f090021;
-        public static int status_view=0x7f090016;
+        public static int status_view=0x7f090014;
         public static int time_text_view=0x7f09000f;
         public static int type_text_view=0x7f09000e;
         public static int viewfinder_view=0x7f09000a;

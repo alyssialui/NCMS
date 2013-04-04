@@ -9,5 +9,6 @@
     <string name="title_activity_google_map">GoogleMapActivity</string>
     <string name="title_activity_map">MapActivity</string>
     <string name="title_activity_scanner">ScannerActivity</string>
+    <string name="confirm_delivery">Confirm Delivery</string>
 
 </resources>

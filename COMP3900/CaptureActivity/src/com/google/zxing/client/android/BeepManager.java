@@ -31,7 +31,7 @@ import java.io.IOException;
 /**
  * Manages beeps and vibrations for {@link CaptureActivity}.
  */
-final class BeepManager {
+public class BeepManager {
 
   private static final String TAG = BeepManager.class.getSimpleName();
 
@@ -43,7 +43,7 @@ final class BeepManager {
   private boolean playBeep;
   private boolean vibrate;
 
-  BeepManager(Activity activity) {
+ public BeepManager(Activity activity) {
     this.activity = activity;
     this.mediaPlayer = null;
     updatePrefs();
