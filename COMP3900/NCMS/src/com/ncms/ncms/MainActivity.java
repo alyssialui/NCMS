@@ -84,9 +84,6 @@ public class MainActivity extends Activity {
 			}
 
 		});
-
-		numDeliveries = exv.getCount();
-		// tbh = (TabHost)findViewById(R.id.tab1);
 	}
 
 	@Override
