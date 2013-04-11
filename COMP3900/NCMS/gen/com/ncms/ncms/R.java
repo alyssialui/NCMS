@@ -186,7 +186,7 @@ containing a value of this type.
         public static final int decode_succeeded=0x7f060007;
         public static final int delivery_info=0x7f06000f;
         public static final int done_button=0x7f06002b;
-        public static final int email=0x7f060010;
+        public static final int empID=0x7f060010;
         public static final int format_text_view=0x7f06001e;
         public static final int help_contents=0x7f060029;
         public static final int history_detail=0x7f06002d;

@@ -24,6 +24,9 @@ import android.widget.Toast;
 public class MainActivity_tab extends Activity {
 
 	ExpandableListView exv;
+	int numDeliveries;
+	int numStops; // areas to deliver papers in delivery
+	int numAgents; // agents within area to delivery papers to
 	GoogleMap map;
 	GoogleMapOptions option = new GoogleMapOptions();
 	static LatLng origin = new LatLng(18.002856, -76.795659);
@@ -108,6 +111,8 @@ public class MainActivity_tab extends Activity {
 			}
 
 		});
+
+		numDeliveries = exv.getCount();
 	}
 
 	@Override
