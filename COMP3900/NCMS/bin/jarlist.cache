@@ -1,10 +1,5 @@
 # cache for current jar dependecy. DO NOT EDIT.
 # format is <lastModified> <length> <SHA-1> <path>
 # Encoding is UTF-8
-<<<<<<< HEAD
 1364432656000 454151 1579725f22b12bd715a640a6f14442693cafc775 C:\NCMS\COMP3900\CaptureActivity\libs\core.jar
 1364433710000 454151 1579725f22b12bd715a640a6f14442693cafc775 C:\NCMS\COMP3900\NCMS\libs\core.jar
-=======
-1364433709595 454151 1579725f22b12bd715a640a6f14442693cafc775 C:\Users\Randy\Documents\School\Third Year\CS39Q - Research Project\Project\NCMS\COMP3900\NCMS\libs\core.jar
-1364432655351 454151 1579725f22b12bd715a640a6f14442693cafc775 C:\Users\Randy\Documents\School\Third Year\CS39Q - Research Project\Project\NCMS\COMP3900\CaptureActivity\libs\core.jar
->>>>>>> b81ec4aae236a60adfef9e65b28d981306b153c0
