@@ -11,17 +11,34 @@ import java.util.Date;
  * @author Matt
  */
 public class AirPakAdministrator {
-    private String firstName, lastName, address;
-    private Date dob;
-    private int trn;
-    
-    public AirPakAdministrator(String fname, String lname, String add, int trn, Date dob){
+    private String id, firstName, lastName, address, dob, trn, password;
+
+    public AirPakAdministrator(String id, String fname, String lname, String add, String trn, String pass){
         firstName = fname;
         lastName = lname;
         this.trn = trn;
         address = add;
-        this.dob = dob;
-        
+        password = pass;
+    }
+    
+    public AirPakAdministrator(String id, String password){
+        this.id = id;
+        this.password = password;
+    }
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+    
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
     
     public String getFirstName() {
@@ -40,11 +57,11 @@ public class AirPakAdministrator {
         this.lastName = lastName;
     }
 
-    public int getTrn() {
+    public String getTrn() {
         return trn;
     }
 
-    public void setTrn(int trn) {
+    public void setTrn(String trn) {
         this.trn = trn;
     }
     
@@ -56,11 +73,11 @@ public class AirPakAdministrator {
         this.address = address;
     }
 
-    public Date getDob() {
+    public String getDob() {
         return dob;
     }
 
-    public void setDob(Date dob) {
+    public void setDob(String dob) {
         this.dob = dob;
     }
 }

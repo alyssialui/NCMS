@@ -11,18 +11,30 @@ import java.util.Date;
  * @author Kris
  */
 public class TruckDriver {
-    private String firstName, lastName, address, license_num;
-    private Date dob;
-    private int trn;
-    
-    public TruckDriver(String fname, String lname, String add, String licno, int trn, Date dob){
+    private String id, password, firstName, lastName, address, license_num, dob, trn;
+
+    public TruckDriver(String id, String fname, String lname, String add){
+        this.id = id;
         firstName = fname;
         lastName = lname;
-        this.trn = trn;
         address = add;
-        this.dob = dob;
-        license_num = licno;
         
+    }
+    
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
     
     public String getFirstName() {
@@ -41,11 +53,11 @@ public class TruckDriver {
         this.lastName = lastName;
     }
 
-    public int getTrn() {
+    public String getTrn() {
         return trn;
     }
 
-    public void setTrn(int trn) {
+    public void setTrn(String trn) {
         this.trn = trn;
     }
     
@@ -57,11 +69,11 @@ public class TruckDriver {
         this.address = address;
     }
 
-    public Date getDob() {
+    public String getDob() {
         return dob;
     }
 
-    public void setDob(Date dob) {
+    public void setDob(String dob) {
         this.dob = dob;
     }
     
