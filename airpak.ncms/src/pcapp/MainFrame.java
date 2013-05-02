@@ -5,8 +5,10 @@
 package pcapp;
 
 import classes.Agent;
+import classes.AirPakAdministrator;
 import classes.Newspaper;
 import classes.RSA;
+import classes.TruckDriver;
 import java.awt.CardLayout;
 import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
@@ -18,13 +20,20 @@ import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.math.BigInteger;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import net.glxn.qrgen.QRCode;
 import net.glxn.qrgen.image.ImageType;
+import java.math.BigInteger;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Date;
 
 /**
  *
@@ -36,12 +45,79 @@ public class MainFrame extends javax.swing.JFrame {
      * Creates new form MainFrame
      */
     
+    private ArrayList<AirPakAdministrator> admins = new ArrayList();
+    private ArrayList<TruckDriver> drivers = new ArrayList();
+    
+    private BigInteger E = new BigInteger("9418184158730347444446775315558590173540190533184634994047588599008253939061442730113386563381887736165223445083252184968664619755805916676767180711351901");
+    private BigInteger N = new BigInteger("13204267032333868174128464997986962686610273815681447887297976830878608089475658483477293231336089032867721833922224147027645078086359446562226557743968607541744227543833038371055247295449017470090526491624099245977100036772451967732639283601316116041553267907955405883209098169138495347291870358198303396896091005548609244900505570109527988629041359063101447070204117123056803902165538549802755576580387254545181987826670019217883003659185681030541714954726194210055070165806799383061390182503365836285525535913036508727319115128139816322029597640726022388552056124408986879051987128039091416468549213094086119641797");
+    
     Toolkit tk = Toolkit.getDefaultToolkit();
     
     public MainFrame() {
+        try{
+            onLoad();
+        }
+        catch(Exception e){
+            System.out.println("Error in database connection. Ensure you have a valid Internet connection.");
+        }
         initComponents();
     }
-
+    
+    private void onLoad() throws SQLException{
+       //byte[] password = encrypt("chocolate thunder");
+       //System.out.println("your password is " + bytesToString(password));
+       
+          String url = "jdbc:mysql://sql2.freemysqlhosting.net/";
+          String dbName = "sql27768";
+          String driver = "com.mysql.jdbc.Driver";
+          String userName = "sql27768";
+          String password = "xS3*kU7*";
+          
+          try {
+            Class.forName(driver).newInstance();
+            Connection conn = DriverManager.getConnection(url+dbName,userName,password);
+           
+            System.out.println("Connection Successfully Opened.");
+            
+             Statement st = conn.createStatement();
+             ResultSet res = st.executeQuery("SELECT * FROM logins JOIN administrator WHERE administrator.emp_id = logins.emp_id");
+             
+             while (res.next()) {
+                String id = res.getString("emp_id");
+                String pass = res.getString("password");
+                //admins.add(new AirPakAdministrator(id,fname,lname,address,trn,pass));
+                admins.add(new AirPakAdministrator(id,pass));
+             }
+             
+             ResultSet res2 = st.executeQuery("SELECT * FROM logins JOIN truck_driver ON truck_driver.emp_id = logins.emp_id JOIN employee ON logins.emp_id = employee.emp_id");
+             while (res2.next()) {
+                String id = res2.getString("emp_id");
+                String fname = res2.getString("fname");
+                String lname = res2.getString("lname");
+                String address = res2.getString("street_no") + " " + res2.getString("street_name") + " " + res2.getString("city");
+                drivers.add(new TruckDriver(id,fname,lname,address));
+             }
+             
+             
+            conn.close();
+          } catch (Exception e) {
+            e.printStackTrace();
+          }
+    }
+    
+    private static String bytesToString(byte[] encrypted) {  
+        String test = "";  
+        for (byte b : encrypted) {  
+            test += Byte.toString(b);  
+        }  
+        return test;  
+    } 
+    
+    public byte[] encrypt(String text) { 
+        byte[] message = text.getBytes();
+        return (new BigInteger(message)).modPow(E, N).toByteArray();  
+    }  
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -70,7 +146,7 @@ public class MainFrame extends javax.swing.JFrame {
         manageAgentPanel = new javax.swing.JPanel();
         addAgentButton = new javax.swing.JButton();
         editAgentButton = new javax.swing.JButton();
-        routePanel2 = new javax.swing.JPanel();
+        agentPanel = new javax.swing.JPanel();
         addAgentPanel = new javax.swing.JPanel();
         selectUserLabel1 = new javax.swing.JLabel();
         selectUserLabel2 = new javax.swing.JLabel();
@@ -165,7 +241,7 @@ public class MainFrame extends javax.swing.JFrame {
         addManifestButton = new javax.swing.JButton();
         editManifestButton = new javax.swing.JButton();
         removeManifestButton = new javax.swing.JButton();
-        routePanel = new javax.swing.JPanel();
+        manifestPanel = new javax.swing.JPanel();
         addManifestPanel = new javax.swing.JPanel();
         driverLabel = new javax.swing.JLabel();
         addAgentLname2 = new javax.swing.JLabel();
@@ -173,13 +249,13 @@ public class MainFrame extends javax.swing.JFrame {
         addUserCancelButton2 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList();
-        jButton1 = new javax.swing.JButton();
+        addAgentToManifestButton = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jList2 = new javax.swing.JList();
-        jComboBox1 = new javax.swing.JComboBox();
+        agentsWaitingList = new javax.swing.JList();
+        addManifestDriverComboBox = new javax.swing.JComboBox();
         hubLabel = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox();
+        addManifestHubComboBox = new javax.swing.JComboBox();
         editManifestPanel = new javax.swing.JPanel();
         driverLabel2 = new javax.swing.JLabel();
         addAgentLname4 = new javax.swing.JLabel();
@@ -350,8 +426,8 @@ public class MainFrame extends javax.swing.JFrame {
         editAgentButton.setText("Edit Agent");
         editAgentButton.setPreferredSize(new java.awt.Dimension(103, 23));
 
-        routePanel2.setPreferredSize(new java.awt.Dimension(338, 195));
-        routePanel2.setLayout(new java.awt.CardLayout());
+        agentPanel.setPreferredSize(new java.awt.Dimension(338, 195));
+        agentPanel.setLayout(new java.awt.CardLayout());
 
         selectUserLabel1.setText("Please select what type of");
 
@@ -679,7 +755,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        routePanel2.add(addAgentPanel, "addAgentCard");
+        agentPanel.add(addAgentPanel, "addAgentCard");
 
         selectUserLabel3.setText("Agent Type");
 
@@ -993,7 +1069,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        routePanel2.add(editAgentPanel, "editAgentCard");
+        agentPanel.add(editAgentPanel, "editAgentCard");
 
         javax.swing.GroupLayout manageAgentPanelLayout = new javax.swing.GroupLayout(manageAgentPanel);
         manageAgentPanel.setLayout(manageAgentPanelLayout);
@@ -1007,7 +1083,7 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(manageAgentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(manageAgentPanelLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(routePanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 464, Short.MAX_VALUE)
+                    .addComponent(agentPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 464, Short.MAX_VALUE)
                     .addContainerGap()))
         );
         manageAgentPanelLayout.setVerticalGroup(
@@ -1021,7 +1097,7 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(manageAgentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, manageAgentPanelLayout.createSequentialGroup()
                     .addGap(36, 36, 36)
-                    .addComponent(routePanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+                    .addComponent(agentPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 260, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
@@ -1040,8 +1116,8 @@ public class MainFrame extends javax.swing.JFrame {
 
         removeManifestButton.setText("Remove Manifest");
 
-        routePanel.setPreferredSize(new java.awt.Dimension(338, 195));
-        routePanel.setLayout(new java.awt.CardLayout());
+        manifestPanel.setPreferredSize(new java.awt.Dimension(338, 195));
+        manifestPanel.setLayout(new java.awt.CardLayout());
 
         driverLabel.setText("Driver");
 
@@ -1062,16 +1138,16 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jList1.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            String[] strings = {  };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
         jScrollPane1.setViewportView(jList1);
 
-        jButton1.setText(">>");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        addAgentToManifestButton.setText(">>");
+        addAgentToManifestButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                addAgentToManifestButtonActionPerformed(evt);
             }
         });
 
@@ -1082,23 +1158,23 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        jList2.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+        agentsWaitingList.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane2.setViewportView(jList2);
+        jScrollPane2.setViewportView(agentsWaitingList);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        addManifestDriverComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        addManifestDriverComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                addManifestDriverComboBoxActionPerformed(evt);
             }
         });
 
         hubLabel.setText("Hub");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        addManifestHubComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "MailPac Head Office, Old Hope Road, Kingston, Jamaica" }));
 
         javax.swing.GroupLayout addManifestPanelLayout = new javax.swing.GroupLayout(addManifestPanel);
         addManifestPanel.setLayout(addManifestPanelLayout);
@@ -1113,7 +1189,7 @@ public class MainFrame extends javax.swing.JFrame {
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(addManifestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1)
+                            .addComponent(addAgentToManifestButton)
                             .addComponent(jButton2))
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1128,8 +1204,8 @@ public class MainFrame extends javax.swing.JFrame {
                                 .addComponent(hubLabel)))
                         .addGap(51, 51, 51)
                         .addGroup(addManifestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jComboBox2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(addManifestDriverComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(addManifestHubComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(addManifestPanelLayout.createSequentialGroup()
                                 .addComponent(addManifestButton2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -1143,18 +1219,18 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(addManifestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(driverLabel)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(addManifestDriverComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
                 .addGroup(addManifestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(hubLabel)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(addManifestHubComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(addManifestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(addManifestPanelLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(addManifestPanelLayout.createSequentialGroup()
                         .addGap(32, 32, 32)
-                        .addComponent(jButton1)
+                        .addComponent(addAgentToManifestButton)
                         .addGap(18, 18, 18)
                         .addComponent(jButton2)
                         .addGap(0, 0, Short.MAX_VALUE))
@@ -1170,7 +1246,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(26, 26, 26))
         );
 
-        routePanel.add(addManifestPanel, "addManifestCard");
+        manifestPanel.add(addManifestPanel, "addManifestCard");
 
         driverLabel2.setText("Driver");
 
@@ -1306,7 +1382,7 @@ public class MainFrame extends javax.swing.JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
-        routePanel.add(editManifestPanel, "editManifestCard");
+        manifestPanel.add(editManifestPanel, "editManifestCard");
 
         jLabel8.setText("Manifest ID");
 
@@ -1391,7 +1467,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap(47, Short.MAX_VALUE))
         );
 
-        routePanel.add(removeRoutePanel, "removeRouteCard");
+        manifestPanel.add(removeRoutePanel, "removeRouteCard");
 
         javax.swing.GroupLayout manageManifestPanelLayout = new javax.swing.GroupLayout(manageManifestPanel);
         manageManifestPanel.setLayout(manageManifestPanelLayout);
@@ -1405,7 +1481,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(removeManifestButton)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(manageManifestPanelLayout.createSequentialGroup()
-                .addComponent(routePanel, javax.swing.GroupLayout.DEFAULT_SIZE, 474, Short.MAX_VALUE)
+                .addComponent(manifestPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 474, Short.MAX_VALUE)
                 .addContainerGap())
         );
         manageManifestPanelLayout.setVerticalGroup(
@@ -1417,7 +1493,7 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(editManifestButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(removeManifestButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(routePanel, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE)
+                .addComponent(manifestPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1933,8 +2009,24 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
         // TODO add your handling code here:
-        CardLayout c = (CardLayout)(backgroundPanel.getLayout());
-        c.show(backgroundPanel, "homeCard");
+        String user = loginUsernameField.getText();
+        String pass = loginPasswordField.getText();
+        
+        byte [] pw = encrypt(pass);
+        pass = bytesToString(pw);
+        
+        System.out.println(pass);
+        
+        for(int i=0; i<admins.size();i++)
+        {
+            System.out.println(admins.get(i).getPassword());
+            
+            if(user.equals(admins.get(i).getId()) && pass.trim().equals(admins.get(i).getPassword())){
+                CardLayout c = (CardLayout)(backgroundPanel.getLayout());
+                c.show(backgroundPanel, "homeCard");
+            }
+        }
+        
     }//GEN-LAST:event_loginButtonActionPerformed
 
     private void loginPasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginPasswordFieldActionPerformed
@@ -1965,17 +2057,17 @@ public class MainFrame extends javax.swing.JFrame {
         c.show(homeIdlePanel, "manageResourceCard");
     }//GEN-LAST:event_manageResourcesButtonActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void addManifestDriverComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addManifestDriverComboBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_addManifestDriverComboBoxActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void addAgentToManifestButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addAgentToManifestButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_addAgentToManifestButtonActionPerformed
 
     private void addUserCancelButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addUserCancelButton2ActionPerformed
         // TODO add your handling code here:
@@ -2044,12 +2136,12 @@ public class MainFrame extends javax.swing.JFrame {
                     byte[] encrypted = rsa.encrypt(password.getBytes());
 
                     BigInteger e = rsa.getE();
-                    BigInteger N = rsa.getN();
+                    BigInteger n = rsa.getN();
 
                     System.out.println("e is " + e);
-                    System.out.println("n is " + N);
+                    System.out.println("n is " + n);
 
-                    ByteArrayOutputStream out = QRCode.from("" + e + ", " + N).to(ImageType.PNG).stream();
+                    ByteArrayOutputStream out = QRCode.from("" + e + ", " + n).to(ImageType.PNG).stream();
 
                     try {
                         FileOutputStream fout = new FileOutputStream(new File(
@@ -2129,6 +2221,30 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void addManifestButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addManifestButtonActionPerformed
         // TODO add your handling code here:
+        
+        final ArrayList<String> strings = new ArrayList();
+            
+        for(int i=0;  i< drivers.size();i++){
+            strings.add(drivers.get(i).getFirstName() + " " + drivers.get(i).getLastName() + " | " + drivers.get(i).getAddress());
+        }
+        
+        agentsWaitingList.setModel(new javax.swing.AbstractListModel() {
+            @Override
+            //String[] strings = { "Item ", "Item ", "Item ", "Item ", "Item " };
+            public int getSize() { return strings.size(); }
+            @Override
+            public Object getElementAt(int i) { return strings.get(i); }
+        });
+        
+        String[] driv = new String[drivers.size()];
+        for(int j=0;j<drivers.size();j++){
+            driv[j] = drivers.get(j).getId() + " " + drivers.get(j).getFirstName() + " " + drivers.get(j).getLastName();
+        }
+        
+        addManifestDriverComboBox.setModel(new javax.swing.DefaultComboBoxModel(
+                driv
+            )
+        );
     }//GEN-LAST:event_addManifestButtonActionPerformed
 
     private void addAgentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addAgentButtonActionPerformed
@@ -2325,6 +2441,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JTextField addAgentPhoneField1;
     private javax.swing.JTextField addAgentPhoneField2;
     private javax.swing.JTextField addAgentPhoneField3;
+    private javax.swing.JButton addAgentToManifestButton;
     private javax.swing.JLabel addAgentTrn;
     private javax.swing.JLabel addAgentTrn1;
     private javax.swing.JLabel addAgentTrn2;
@@ -2349,6 +2466,8 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton addManifestButton2;
     private javax.swing.JButton addManifestButton4;
     private javax.swing.JButton addManifestButton5;
+    private javax.swing.JComboBox addManifestDriverComboBox;
+    private javax.swing.JComboBox addManifestHubComboBox;
     private javax.swing.JPanel addManifestPanel;
     private javax.swing.JButton addNewspaperCancelButton;
     private javax.swing.JTextField addNewspaperNameField;
@@ -2386,6 +2505,8 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel addUsernameLabel1;
     private javax.swing.JPanel addVendorAgentPanel;
     private javax.swing.JPanel addVendorAgentPanel1;
+    private javax.swing.JPanel agentPanel;
+    private javax.swing.JList agentsWaitingList;
     private javax.swing.JPanel backgroundPanel;
     private javax.swing.JPanel comparePanel;
     private javax.swing.JPanel compareRoutesPanel;
@@ -2416,12 +2537,9 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel homePanel;
     private javax.swing.JLabel hubLabel;
     private javax.swing.JLabel hubLabel2;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JComboBox jComboBox1;
-    private javax.swing.JComboBox jComboBox2;
     private javax.swing.JComboBox jComboBox3;
     private javax.swing.JComboBox jComboBox5;
     private javax.swing.JComboBox jComboBox6;
@@ -2435,7 +2553,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JList jList1;
-    private javax.swing.JList jList2;
     private javax.swing.JList jList3;
     private javax.swing.JList jList6;
     private javax.swing.JList jList7;
@@ -2465,6 +2582,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel managePublicationsPanel;
     private javax.swing.JButton manageResourcesButton;
     private javax.swing.JTabbedPane manageResourcetab;
+    private javax.swing.JPanel manifestPanel;
     private javax.swing.JButton removeManifestButton;
     private javax.swing.JPanel removePublicationPanel;
     private javax.swing.JButton removePublicationsButton;
@@ -2472,9 +2590,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel routeAPanel;
     private javax.swing.JPanel routeBPanel;
     private javax.swing.JPanel routeCPanel;
-    private javax.swing.JPanel routePanel;
     private javax.swing.JPanel routePanel1;
-    private javax.swing.JPanel routePanel2;
     private javax.swing.JLabel saveNewspaperLabel;
     private javax.swing.JLabel saveNewspaperLabel2;
     private javax.swing.JButton selectUserCancelButton;
